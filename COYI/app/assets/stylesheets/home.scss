@@ -25,10 +25,11 @@
   text-decoration: none;
 }
 
-#landing_page {
+body#landing_page {
   background-image: image-url('/images/landing_logo.gif');
-  background-repeat: no-repeat;
   background-size: 100%;
+  background-repeat: repeat;
+  background-color: black;
 }
 
 
