@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<%= stylesheet_link_tag 'home' %>
-
-
-<h1>Home#landing</h1>
-<p>Find me in app/views/home/landing.html.erb</p>
-
-<%=link_to 'home' , home_path%>
-<%=link_to image_tag('/images/landing_logo.gif', :border=>0, :alt => 'circle of intrapreneurs'), {action: 'home', controller: 'home'}%>
-=======
-<%=link_to image_tag('/images/landing_logo.gif', :border=>0, :width => '100%', :height => 'auto',:alt => 'circle of intrapreneurs'), {action: 'home', controller: 'home'}%>
->>>>>>> b01d49efd6779ec22aed39577fe017cd89d33cb9
+<body class='landing_page'>
+  <%=link_to 'home' , home_path%>
+</body>

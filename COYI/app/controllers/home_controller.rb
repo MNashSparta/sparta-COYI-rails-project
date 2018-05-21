@@ -3,6 +3,5 @@ class HomeController < ApplicationController
   end
 
   def landing
-    render :layout=> false
   end
 end
