@@ -214,7 +214,11 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootsnap (>= 1.1.0)
+<<<<<<< HEAD
   bootstrap-sass (~> 3.3.7)
+=======
+  bootstrap-sass (= 3.3.7)
+>>>>>>> 5dfbcb9d7a991b3f2081e1acd242225161529ed1
   byebug
   capybara (>= 2.15, < 4.0)
   chromedriver-helper
