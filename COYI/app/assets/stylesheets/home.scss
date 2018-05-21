@@ -11,9 +11,16 @@
 
 }
 #body-home {
-  // margin: 0 !important;
   font-family: inherit;
+  text-align: center;
 
+}
+.home-link {
+  color: #F0564E;
+}
+.home-link:hover {
+  color: #F0564E;
+  text-decoration: none;
 }
 
 body.landing_page {
@@ -22,9 +29,6 @@ body.landing_page {
   background-size: 100%;
 }
 
-body.home{
-  text-align: center;
-}
 
 .nav-bar-style {
   background-color: #F0564E;
