@@ -6,10 +6,12 @@
     font-family: "Roboto";
     src: url('/roboto/Roboto-Regular.ttf');
 }
+
 * {
   font-family: "Roboto";
 
 }
+
 #body-home {
   font-family: inherit;
   text-align: center;
@@ -23,7 +25,7 @@
   text-decoration: none;
 }
 
-body.landing_page {
+#landing_page {
   background-image: image-url('/images/landing_logo.gif');
   background-repeat: no-repeat;
   background-size: 100%;
@@ -33,19 +35,18 @@ body.landing_page {
 .nav-bar-style {
   background-color: #F0564E;
   border-bottom: 1px solid red;
-  margin-bottom: 70px;
 }
 
 .nav-link {
-  color: #f1f1f1;
+  color: #f1f1f1 !important;
 }
 .nav-link:hover {
- color: white;
+ color: white !important;
  background-color: #F0564E;
 }
 
 .nav-link:active {
-  color: #fafafa;
+  color: #fafafa !important;
 }
 
 .pad-left {
