@@ -56,7 +56,7 @@ $('body').css('font-family', 'Roboto-Thin');
       'twitter': 'circleofyi',
       'linkedin': 'https://www.linkedin.com/in/hallie-stebbins-76b170133/',
       'email': 'mailto:hallie.stebbins@gmail.com',
-      'image': '../images/no_profile.jpg'
+      'image': 'images/no_profile.jpg'
     },
     {
       'lat': '42.36008',
@@ -275,7 +275,7 @@ $('body').css('font-family', 'Roboto-Thin');
       'facebook': 'https://www.facebook.com/Circle-of-Young-Intrapreneurs-Santiago-161754641086172/',
       'linkedin': 'https://www.linkedin.com/in/cristianguerreroa/',
       'email': '',
-      'image': '../images/no_profile.jpg'
+      'image': 'images/no_profile.jpg'
     },
     {
       'lat': '50.8503',
@@ -289,7 +289,7 @@ $('body').css('font-family', 'Roboto-Thin');
       'linkedin1': 'https://www.linkedin.com/in/jason-stamm/',
       'linkedin2': 'https://www.linkedin.com/in/elizabethmwoodward/',
       'email': '',
-      'image1': '../images/no_profile.jpg',
+      'image1': 'images/no_profile.jpg',
       'image2': 'https://media.licdn.com/dms/image/C5603AQGktFNQ25feLg/profile-displayphoto-shrink_800_800/0?e=1527721200&v=alpha&t=fKVxZ5C1VPK81n9cG2M6K-OFHZ97W5U1ATviQk5qPRE'
     }
   ];
@@ -534,7 +534,7 @@ $('body').css('font-family', 'Roboto-Thin');
                 '</div>' +
                 '<div class="col-md-8">' +
                 '<div class="card-body">' +
-                `<h5 class="card-title mt-1">${data.lead}</h5>` +
+                `<h5 class="card-title mt-1">${data.lead1}</h5>` +
                 `<h6 class="card-title"> ${data.city}</h6>` +
                 '</div>' +
                 '</div>' +
