@@ -19,7 +19,32 @@ body.landing_page {
   background-size: 100%;
 }
 
+body.home{
+  text-align: center;
+}
 
 .nav-bar-style {
   background-color: #F0564E;
+  border-bottom: 1px solid red;
+}
+
+.nav-link {
+  color: #f1f1f1 !important;
+}
+.nav-link:hover {
+ color: white !important;
+ background-color: #F0564E;
+}
+
+.nav-link:active {
+  color: #fafafa !important;
+}
+
+.pad-left {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.brand-img{
+  width: 100%;
 }
