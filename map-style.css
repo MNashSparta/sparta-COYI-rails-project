@@ -72,6 +72,7 @@ html, body {
 .hr {
     border-top: grey solid 1.5px;
     width: 100%;
+    align: center;
     /* font-size: 1px;
     color: rgba(0, 0, 0, 0);
     line-height: 1px;

@@ -104,7 +104,7 @@ $('body').css('font-family', 'Roboto-Thin');
       'twitter': 'Anna_Donnahie ',
       'linkedin': 'https://www.linkedin.com/in/annadonahie/',
       'email': 'mailto:annadonahie@gmail.com',
-      'image': 'https://media-exp2.licdn.com/media/AAEAAQAAAAAAAAToAAAAJGM0OTcyYWQ5LTNkODUtNDY2Ny1hY2Q5LTVjMTQ4YmVjYmI1MA.jpg'
+      'image': 'images/no_profile.jpg'
     },
     {
       'lat': '43.73841',
@@ -178,7 +178,7 @@ $('body').css('font-family', 'Roboto-Thin');
       'linkedin1': 'https://www.linkedin.com/in/fabiohenriquez/',
       'linkedin2': 'https://www.linkedin.com/in/garciahiram/',
       'email': '',
-      'image1': 'https://media-exp2.licdn.com/media/p/5/005/074/23a/215429f.jpg',
+      'image1': 'images/no_profile.jpg',
       'image2': 'https://media.licdn.com/dms/image/C5603AQF3Ql1Z01VpHg/profile-displayphoto-shrink_800_800/0?e=1527595200&v=alpha&t=oWNRCZW1l8msdDilHfaorWJIXMpxPGvzevsYyZl4hIc'
     },
     {
@@ -248,7 +248,7 @@ $('body').css('font-family', 'Roboto-Thin');
       'linkedin2': 'https://www.linkedin.com/in/juliemuggli/',
       'email': '',
       'image1': 'https://media.licdn.com/dms/image/C5603AQGezNRBULuJCA/profile-displayphoto-shrink_800_800/0?e=1527699600&v=alpha&t=5LWNqgVRNIX-quXjAW57Tgkmlwy2zVXDCCHyovOVrPo',
-      'image2': 'https://media.licdn.com/dms/image/C4D03AQFS0qLaBkZQCQ/profile-displayphoto-shrink_800_800/0?e=1527699600&v=alpha&t=oQuYlgE2WQW6fu3GNHJXrTPMWrEDgTOMHYBXBRF86S0'
+      'image2': 'images/no_profile.jpg'
     },
     {
       'lat': '59.3293',
@@ -490,7 +490,7 @@ $('body').css('font-family', 'Roboto-Thin');
             infoWindow.setContent(
               '<section class="section text-center" id="siteNotice">' +
               '<div class="row">' +
-              '<div class="col-md-4">' +
+              '<div class="col-md-4 col-sm-4 col-xs-4">' +
               '<div class="my-auto">' +
               '<div class="card-up teal lighten-2"></div>' +
               '<div class="avatar mx-auto white">' +
@@ -498,7 +498,7 @@ $('body').css('font-family', 'Roboto-Thin');
               '</div>' +
               '</div>' +
               '</div>' +
-              '<div class="col-md-8">' +
+              '<div class="col-md-8 col-sm-8 col-xs-8">' +
               '<div class="card-body">' +
               `<h5 class="card-title mt-1">${data.lead}</h5>` +
               `<h6 class="card-title">${data.city}</h6>` +
@@ -518,13 +518,13 @@ $('body').css('font-family', 'Roboto-Thin');
               '<div class="hr"></div>'+
               '<div class="row center">' +
               '<br>' +
-              '<div class="col-md-12 text-center" > <a href="#" class="success">Chapter Success Stories...</a> </div>' +
+              '<div class="col-md-12 col-sm-12 col-xs-12 text-center" > <a href="#" class="success">Chapter Success Stories...</a> </div>' +
               '</div>');
             } else if (coleads === 'Johannesburg' || coleads === 'Dubai' || coleads === 'Toronto' || coleads === 'Chicago' || coleads === 'Washington DC' || coleads === 'London' || coleads === 'Stockholm' || coleads === 'Brussels') {
               infoWindow.setContent(
                 '<section class="section text-center" id="siteNotice">' +
                 '<div class="row">' +
-                '<div class="col-md-4">' +
+                '<div class="col-md-4 col-sm-4 col-xs-4">' +
                 '<div class="my-auto">' +
                 '<div class="card-up teal lighten-2"></div>' +
                 '<div class="avatar mx-auto white">' +
@@ -532,7 +532,7 @@ $('body').css('font-family', 'Roboto-Thin');
                 '</div>' +
                 '</div>' +
                 '</div>' +
-                '<div class="col-md-8">' +
+                '<div class="col-md-8 col-sm-8 col-xs-8">' +
                 '<div class="card-body">' +
                 `<h5 class="card-title mt-1">${data.lead1}</h5>` +
                 `<h6 class="card-title"> ${data.city}</h6>` +
@@ -551,7 +551,7 @@ $('body').css('font-family', 'Roboto-Thin');
                 '</section>' +
                 '<section class="section text-center" id="siteNotice">' +
                 '<div class="row">' +
-                '<div class="col-md-4">' +
+                '<div class="col-md-4 col-sm-4 col-xs-4">' +
                 '<div class="my-auto">' +
                 '<div class="card-up teal lighten-2"></div>' +
                 '<div class="avatar mx-auto white">' +
@@ -559,7 +559,7 @@ $('body').css('font-family', 'Roboto-Thin');
                 '</div>' +
                 '</div>' +
                 '</div>' +
-                '<div class="col-md-8">' +
+                '<div class="col-md-8 col-sm-8 col-xs-8">' +
                 '<div class="card-body">' +
                 `<h5 class="card-title mt-1">${data.lead2}</h5>` +
                 `<h6 class="card-title">${data.city}</h6>` +
@@ -579,7 +579,7 @@ $('body').css('font-family', 'Roboto-Thin');
                 '<div class="hr"></div>'+
                 '<div class="row center">' +
                 '<br>' +
-                '<div class="col-md-12 text-center" > <a href="#" class="success">Chapter Success Stories...</a> </div>' +
+                '<div class="col-md-12 col-sm-12 col-xs-12 text-center" > <a href="#" class="success">Chapter Success Stories...</a> </div>' +
                 '</div>');
               } else {
                 infoWindow.setContent('<div id="content" style="background:#F0564E;padding:25px;color:white;">'+
