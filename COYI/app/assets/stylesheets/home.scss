@@ -1,9 +1,16 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body{
-  // Do not edit
+
+@font-face {
+    font-family: "Roboto";
+    src: url('/roboto/Roboto-Regular.ttf');
+}
+
+#body-home {
   margin: 0 !important;
+  font-family: "Roboto";
+
 }
 
 body.landing_page {
@@ -18,4 +25,26 @@ body.home{
 
 .nav-bar-style {
   background-color: #F0564E;
+  border-bottom: 1px solid red;
+}
+
+.nav-link {
+  color: #f1f1f1 !important;
+}
+.nav-link:hover {
+ color: white !important;
+ background-color: #F0564E;
+}
+
+.nav-link:active {
+  color: #fafafa !important;
+}
+
+.pad-left {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.brand-img{
+  width: 100%;
 }
