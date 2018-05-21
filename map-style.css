@@ -1,0 +1,97 @@
+/* Style all font awesome icons */
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: url(fonts/roboto/Roboto-Thin.ttf);
+}
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url(fonts/roboto/Roboto-Bold.ttf)
+}
+#map {
+  padding-top: 500px;
+  height: 60%;
+  width: 100%;
+
+}
+.success{
+  font-size: 1.1em;
+  font-family: 'Roboto-Bold';
+  color: #F0564E;
+}
+.success:hover{
+  font-size: 1.1em;
+  font-family: 'Roboto-Bold';
+  color: #F0564E;
+}
+/* Map Modals */
+.map-social {
+  margin: auto;
+  display: flex;
+}
+.map-social a {
+  flex: 1;
+}
+#map-container {
+  height: 70vh;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.rounded-circle{
+  width: 10vw;
+}
+#map-twitter,
+#map-email,
+#map-facebook,
+#map-linkedin {
+  font-size:1.5em;
+  margin:0;
+}
+
+#map-twitter {
+  color:#0074b8;
+}
+
+#map-email {
+  color:#c72121;
+}
+
+#map-facebook {
+  color:#0074b8;
+}
+
+#map-linkedin {
+  color:#0074b8;
+}
+.card-title{
+  color: #F0564E;
+}
+
+.hr {
+    border-top: grey solid 1.5px;
+    width: 100%;
+    /* font-size: 1px;
+    color: rgba(0, 0, 0, 0);
+    line-height: 1px;
+
+    background-color: grey;
+    margin-top: -6px;
+    margin-bottom: 10px; */
+}
+/* Social Link */
+.fab {
+  /* padding: .5em; */
+  font-size: 1.7em;
+  line-height: 1.7em;
+  height: 1.7em;
+  width: 1.7em;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px .7em;
+  border-radius: 50%;
+  border: 1px solid white;
+  color:white;
+  transition: .2s;
+}
