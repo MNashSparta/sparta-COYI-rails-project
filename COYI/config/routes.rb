@@ -6,4 +6,9 @@ Rails.application.routes.draw do
 
   root to: "chapters#index"
 
+  resources :users do
+    member do
+      get :confirm_email
+    end
+  end
 end
