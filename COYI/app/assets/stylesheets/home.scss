@@ -1,8 +1,9 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
-  margin: 0 !important
+body{
+  // Do not edit
+  margin: 0 !important;
 }
 
 body.landing_page {
@@ -11,6 +12,9 @@ body.landing_page {
   background-size: 100%;
 }
 
+body.home{
+  text-align: center;
+}
 
 .nav-bar-style {
   background-color: #F0564E;
