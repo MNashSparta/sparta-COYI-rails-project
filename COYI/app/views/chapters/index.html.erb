@@ -8,7 +8,7 @@
       <th>Name</th>
       <th>City</th>
       <th>Country</th>
-      <th>User</th>
+
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,7 +19,7 @@
         <td><%= chapter.name %></td>
         <td><%= chapter.city %></td>
         <td><%= chapter.country %></td>
-        <td><%= chapter.user %></td>
+
         <td><%= link_to 'Show', chapter %></td>
         <td><%= link_to 'Edit', edit_chapter_path(chapter) %></td>
         <td><%= link_to 'Destroy', chapter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
