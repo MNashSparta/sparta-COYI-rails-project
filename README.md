@@ -1,1 +1,0 @@
-# sparta-COYI-rails-project
