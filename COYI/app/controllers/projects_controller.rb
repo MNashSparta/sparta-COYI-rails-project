@@ -18,6 +18,14 @@ class ProjectsController < ApplicationController
     @project = Project.new
   end
 
+  def upload
+    uploaded_io = params[:user][:uploaded]
+
+    File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
+      file.write(uploaded_io.read)
+    end
+  end
+
   # GET /projects/1/edit
   def edit
   end
@@ -26,7 +34,7 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(project_params)
-
+    puts @project
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }

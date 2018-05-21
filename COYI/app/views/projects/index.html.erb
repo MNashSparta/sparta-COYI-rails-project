@@ -17,7 +17,7 @@
       <tr>
         <td><%= project.title %></td>
         <td><%= project.status %></td>
-        <td><%= project.user %></td>
+        <td><%= User.find(project.user_id).email %></td>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>
         <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
