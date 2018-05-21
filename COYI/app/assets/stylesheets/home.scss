@@ -1,16 +1,17 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  margin: 0 !important
+}
+
 body.landing_page {
   background-image: image-url('/images/landing_logo.gif');
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
-nav {
-  color: red;
-}
 
-p {
-  font-size: 100000px;
+.nav-bar-style {
+  background-color: #F0564E;
 }
