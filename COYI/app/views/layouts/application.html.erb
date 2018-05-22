@@ -17,8 +17,9 @@
     <%else%>
       <!-- renders the navbar on every page unless we say otherwise -->
       <%= render 'layouts/navbar' %>
-      <br><br><br>
+      <div class="top_of_page"></div>
       <%= yield %>
+
       <!-- renders the footer on every page unless we say otherwise -->
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
