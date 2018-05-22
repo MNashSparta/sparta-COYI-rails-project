@@ -14,6 +14,10 @@
 #body-home {
   font-family: inherit;
   text-align: center;
+  background-image: image-url('/images/city_bg.jpeg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .home-link {
@@ -40,8 +44,13 @@ body#landing_page {
   padding: 0;
 }
 
-.page-band {
+.page-band-red {
   background-color: #F0564E;
+  width: 100%;
+}
+
+.page-band-white {
+  background-color: white;
   width: 100%;
 }
 
@@ -57,15 +66,58 @@ body#landing_page {
   text-transform: uppercase;
 }
 
+
 .shadow-one {
   box-shadow: 0px 0px 2px lightgrey;
+}
+
+.video-margin {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.back-img {
+  position: fixed;
+}
+
+#title-on-img {
+  color: white;
+  text-shadow: 0px 0px 1px black;
+  z-index: 1;
+  margin-top: 10%;
+}
+
+@media only screen and (max-width: 882px) {
+  #title-on-img {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+    z-index: 1;
+    margin-top: 15%;
+    font-size: 35px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #title-on-img {
+    display: none;
+  }
+
+  .video-margin {
+    margin-top: 10%;
+  }
 }
 
 // Navbar
 .nav-bar-style {
   background-color: #F0564E;
   color: white;
-  margin-bottom: 2%;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 }
 
 .navbar-toggler-icon {
