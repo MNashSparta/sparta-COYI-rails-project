@@ -31,8 +31,7 @@ class ProjectsController < ApplicationController
   end
 
   def user_projects
-    user = params[:user]
-    @projects = Project.where(user_id: user)
+    @projects = Project.where(user_id: @user)
   end
 
   # POST /projects
