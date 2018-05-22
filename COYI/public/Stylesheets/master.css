@@ -20,6 +20,10 @@
   color: #F0564E;
 }
 
+.top_of_page {
+  height: 76px;
+}
+
 .home-link:hover {
   color: #F0564E;
   text-decoration: none;
