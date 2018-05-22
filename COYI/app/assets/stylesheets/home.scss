@@ -6,25 +6,32 @@
     font-family: "Roboto";
     src: url('/roboto/Roboto-Regular.ttf');
 }
+
 * {
   font-family: "Roboto";
 
 }
+
 #body-home {
-  // margin: 0 !important;
   font-family: inherit;
-
-}
-
-body.landing_page {
-  background-image: image-url('/images/landing_logo.gif');
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-
-body.home{
   text-align: center;
+
 }
+.home-link {
+  color: #F0564E;
+}
+.home-link:hover {
+  color: #F0564E;
+  text-decoration: none;
+}
+
+body#landing_page {
+  background-image: image-url('/images/landing_logo.gif');
+  background-size: 100%;
+  background-repeat: repeat;
+  background-color: black;
+}
+
 
 .nav-bar-style {
   background-color: #F0564E;
@@ -33,14 +40,14 @@ body.home{
 }
 
 .nav-link {
-  color: #f1f1f1;
+  color: #f1f1f1 !important;
 }
 .nav-link:hover {
   color: white;
 }
 
 .nav-link:active {
-  color: #fafafa;
+  color: #fafafa !important;
 }
 
 .pad-left {
@@ -54,4 +61,13 @@ body.home{
 
 .no-pad {
   padding: 0;
+}
+
+.page-band {
+  background-color: #F0564E;
+  width: 100%;
+}
+
+.no-margin {
+  margin: 0;
 }

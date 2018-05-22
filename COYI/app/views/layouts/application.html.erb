@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
     <title>COYI</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,10 +11,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- gives the page a favicon icon on the page tab -->
+    <link rel="shortcut icon" href="/images/favicon.ico">
   </head>
   <body>
-    <p class="notice" style="display: none"><%= notice %></p>
-    <p class="alert" style="display: none"><%= alert %></p>
+    <%= render 'layouts/navbar' %>
     <%= yield %>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

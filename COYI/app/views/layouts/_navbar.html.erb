@@ -3,7 +3,11 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand no-pad" href="/home"><img class="brand-img" src="/images/logo.png" alt=""></a>
+  <%= link_to home_path do %>
+    <%= image_tag '/images/logo_200.png', class: 'navbar-brand pad-left', id: 'COYI-logo', onmouseover: 'hover(this)', onmouseout: 'unhover(this)',  width:'50px' , height:'50px' , alt: 'COYI Logo'%>
+  <% end %>
+  <script src='Javascript/LogoAnimation.js'>
+  </script>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
@@ -13,10 +17,13 @@
         <a class="nav-link" href="#">SUCCESS STORIES</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="#">PROJECT HUB</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#">RESOURCES</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">NEWS</a>
+        <a class="nav-link" href="/news">NEWS</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
@@ -27,7 +34,7 @@
         <a class="nav-link" href="#">SIGN UP</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">ABOUT US</a>
+        <a class="nav-link" href="/about">ABOUT US</a>
       </li>
     </ul>
   </div>
