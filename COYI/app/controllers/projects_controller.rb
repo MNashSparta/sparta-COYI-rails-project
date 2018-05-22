@@ -31,14 +31,15 @@ class ProjectsController < ApplicationController
   end
 
   def user_projects
-    user = params[:user]
-    @projects = Project.where(user_id: user)
+    @projects = Project.where(user_id: @user)
   end
 
   # POST /projects
   # POST /projects.json
   def create
     @project = Project.new(project_params)
+    @project.user_id = current_user.id
+    puts "NOOOOOOOOOOOOOO"
     puts @project
     respond_to do |format|
       if @project.save
