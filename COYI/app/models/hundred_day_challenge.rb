@@ -1,0 +1,2 @@
+class HundredDayChallenge < ApplicationRecord
+end
