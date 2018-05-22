@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'circle/ourCircle'
   get '/stories',  to: 'sucess#stories'
   root to: 'home#landing'
   get 'home', to: 'home#home', as: 'home'
