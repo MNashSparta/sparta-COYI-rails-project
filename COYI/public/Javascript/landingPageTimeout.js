@@ -1,7 +1,7 @@
 // redirect the user after 10 seconds if they don't click into the site
 setTimeout(function(){
   document.cookie = "visited=true;";
-  if(window.location.href == '/'){
+  if(window.location.pathname == '/'){
     window.location.href = '/home';
   }
 },10000);
@@ -10,7 +10,7 @@ setTimeout(function(){
 if(document.cookie == 'visited=true'){
   setTimeout(function(){
     document.cookie = "visited=true;";
-    if(window.location.href == '/'){
+    if(window.location.pathname == '/'){
       window.location.href = '/home';
     }
   },4000);
