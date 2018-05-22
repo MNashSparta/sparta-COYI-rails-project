@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :challenges
-  get '/stories',  to: 'sucess#stories'
   get 'circle/global', to: 'circle#global', as: 'global'
   get 'circle/chapter', to: 'circle#chapter', as: 'chapter'
   get 'circle/advocate', to: 'circle#advocate', as: 'advocate'
@@ -17,7 +15,7 @@ Rails.application.routes.draw do
   get 'faq', to: 'about#faq', as: 'faq'
   get 'resources', to: 'resources#resources', as: 'resources'
 
-
+  resources :challenges
   resources :resources
   resources :news
   resources :projects
