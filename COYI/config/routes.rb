@@ -21,6 +21,10 @@ Rails.application.routes.draw do
   resources :news
   resources :projects
   resources :chapters
-  devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  devise_for :users, controllers: {registrations: 'users/registrations'}
+  get 'profile/projects', to: 'projects#user_projects', as: 'user_projects'
+  resources :projects, only: [:create, :new]
+
+  get 'about', to: 'about#about'
 end
