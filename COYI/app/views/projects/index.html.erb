@@ -4,8 +4,9 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Status</th>
+      <th>Description</th>
       <th>User</th>
+      <th>Location</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,17 +14,13 @@
   <tbody>
     <% @projects.each do |project| %>
       <tr>
-        <td><%= project.title %></td>
-        <td><%= project.status %></td>
-        <td><%= project.user %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to project.title, project %></td>
+        <td><%= link_to project.description, project %></td>
+        <td><%= User.find(project.user_id).username %></td>
+        <td><%= User.find(project.user_id).location %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
 
 <%= link_to 'New Project', new_project_path %>
