@@ -17,13 +17,13 @@
         <a class="nav-link" href="#">SUCCESS STORIES</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">PROJECT HUB</a>
+        <%= link_to 'PROJECT HUB', projects_path, :class => "nav-link" %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">RESOURCES</a>
+        <%= link_to 'RESOURCES', resources_path, :class => "nav-link" %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/news">NEWS</a>
+        <%= link_to 'NEWS', news_path, :class => "nav-link" %>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
@@ -34,7 +34,7 @@
         <a class="nav-link" href="#">SIGN UP</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/about">ABOUT US</a>
+        <%= link_to 'ABOUT US', about_path, :class => "nav-link" %>
       </li>
     </ul>
   </div>
