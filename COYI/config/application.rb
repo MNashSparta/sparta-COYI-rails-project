@@ -23,8 +23,8 @@ module COYI
       :address => "smtp.gmail.com",
       :domain => 'gmail.com',
       :port => "587",
-      :user_name => 'coyi@gmail.com',
-      :password => '123456',
+      :user_name => 'osamaahmed2096@gmail.com',
+      :password => 'OsamaAhmed123',
       :authentication => 'plain',
       :enable_starttls_auto => true
     }
