@@ -3,6 +3,15 @@ Rails.application.routes.draw do
   get 'home', to: 'home#home', as: 'home'
   get 'home/home'
   get 'home/landing'
+  get 'about/about'
+  get 'about/contact'
+  get 'about/faq'
+  get 'resources', to: 'resources#resources'
+
+
+  resources :resources
+  resources :hundred_day_challenges
+  resources :news
   resources :projects
   resources :chapters
   devise_for :users
@@ -12,5 +21,8 @@ Rails.application.routes.draw do
 
   root to: "chapters#index"
   resources :projects, only: [:create, :new]
+
+  get 'about', to: 'about#about'
+
 
 end
