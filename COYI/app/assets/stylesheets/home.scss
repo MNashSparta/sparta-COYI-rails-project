@@ -7,21 +7,36 @@
     src: url('/roboto/Roboto-Regular.ttf');
 }
 
-#body-home {
-  margin: 0 !important;
+* {
   font-family: "Roboto";
-  text-align: center;
+
 }
 
-#landing_page {
-  background-image: image-url('/images/landing_logo.gif');
-  background-repeat: no-repeat;
-  background-size: 100%;
+#body-home {
+  font-family: inherit;
+  text-align: center;
+
 }
+.home-link {
+  color: #F0564E;
+}
+.home-link:hover {
+  color: #F0564E;
+  text-decoration: none;
+}
+
+body#landing_page {
+  background-image: image-url('/images/landing_logo.gif');
+  background-size: 100%;
+  background-repeat: repeat;
+  background-color: black;
+}
+
 
 .nav-bar-style {
   background-color: #F0564E;
   border-bottom: 1px solid red;
+  margin-bottom: 70px;
 }
 
 .nav-link {
