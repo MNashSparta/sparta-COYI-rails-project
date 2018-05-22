@@ -27,11 +27,12 @@
 }
 
 /* NAVBAR */
-
 .nav-bar-style {
   background-color: #F0564E;
   color: white;
-  margin-bottom: 2%;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 }
 
 .navbar-toggler-icon {
