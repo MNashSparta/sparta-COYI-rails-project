@@ -8,6 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <!-- gives the page a favicon icon on the page tab -->
     <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, user-scalable=false;">
   </head>
   <body>
     <link rel="stylesheet" href="/Stylesheets/master.css">
@@ -17,7 +18,10 @@
     <%else%>
       <!-- renders the navbar on every page unless we say otherwise -->
       <%= render 'layouts/navbar' %>
+<<<<<<< HEAD
       <div class="top_of_page"></div>
+=======
+>>>>>>> 4e056b0a0a0c35eefe8caf899d26ea360d610bc2
       <%= yield %>
 
       <!-- renders the footer on every page unless we say otherwise -->
