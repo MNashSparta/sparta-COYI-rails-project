@@ -6,7 +6,6 @@ class User < ApplicationRecord
   # belongs_to :chapter
   has_many :chapters
   has_many :projects
-  after_create :send_admin_mail
 
   validates :first_name, :second_name, :email, :username, :location, :country, :dob, :role, presence: true
   validates :first_name, :second_name, :location, :country, :role, format: { with: /\A[a-zA-Z]+\z/, message: "No special characters or numbers, only letters" }
@@ -15,8 +14,9 @@ class User < ApplicationRecord
   validates :email, :username, uniqueness: true
 
 
-  def send_admin_mail
-    UserMailer.send_new_user_message(self).deliver
-  end
+  after_create :welcome_send
 
+  def welcome_send
+    UserMailer.welcome_email(self).deliver_now
+  end
 end

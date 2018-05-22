@@ -1,8 +1,8 @@
-class UserMailer < ActionMailer::Base
-    default :from => "me@mydomain.com"
+class UserMailer < ApplicationMailer
+  default from: 'notifications@example.com'
 
- def registration_confirmation(user)
+  def welcome_email(user)
     @user = user
-    mail(:to => "#{user.name} <#{user.email}>", :subject => "Registration Confirmation")
+    mail(:to => @user.email, :subject => "Welcome to My Awesome Site")
   end
- end
+end
