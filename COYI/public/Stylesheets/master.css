@@ -34,6 +34,10 @@
   text-decoration: none;
 }
 
+.top-margin {
+  margin-top: 10%;
+}
+
 body#landing_page {
   background-image: url('/images/landing_logo.gif');
   background-size: 100%;
@@ -62,6 +66,9 @@ body#landing_page {
 .no-margin {
   margin: 0;
 }
+.top_of_page{
+  padding-bottom: 76px;
+}
 
 .abso {
   position: absolute;
@@ -69,8 +76,13 @@ body#landing_page {
 
 .title-style {
   text-transform: uppercase;
+  text-align: center;
 }
 
+.profile-pic {
+  width: 200px;
+  border-radius: 50%
+}
 
 .shadow-one {
   box-shadow: 0px 0px 2px lightgrey;
@@ -98,6 +110,10 @@ body#landing_page {
   font-size: 21px;
 }
 
+#stories {
+  padding: 10% 0%;
+}
+
 @media only screen and (max-width: 882px) {
   #title-on-img {
     color: white;
@@ -118,6 +134,10 @@ body#landing_page {
   }
 
   .video-margin {
-    margin-top: 10%;
+    margin-top: 20%;
+  }
+
+  #mission-state {
+    font-size: 15px;
   }
 }
