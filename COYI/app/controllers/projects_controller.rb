@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @projects = Project.where(status: 0)
   end
 
   # GET /projects/1
@@ -18,15 +18,28 @@ class ProjectsController < ApplicationController
     @project = Project.new
   end
 
+  def upload
+    uploaded_io = params[:user][:uploaded]
+
+    File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
+      file.write(uploaded_io.read)
+    end
+  end
+
   # GET /projects/1/edit
   def edit
+  end
+
+  def user_projects
+    user = params[:user]
+    @projects = Project.where(user_id: user)
   end
 
   # POST /projects
   # POST /projects.json
   def create
     @project = Project.new(project_params)
-
+    puts @project
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
