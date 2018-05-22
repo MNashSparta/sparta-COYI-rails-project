@@ -84,6 +84,11 @@ body#landing_page {
   display: none;
 }
 
+#mission-state {
+  padding: 3%;
+  font-size: 21px;
+}
+
 @media only screen and (max-width: 882px) {
   #title-on-img {
     color: white;

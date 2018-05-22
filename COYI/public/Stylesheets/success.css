@@ -5,4 +5,9 @@
 #widen-row {
   margin-right: -150px;
   margin-left: -150px;
+  margin-top: 70px;
+}
+
+.carousel-images {
+  display: block;
 }
