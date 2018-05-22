@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'resources', to: 'resources#resources', as: 'resources'
   get 'projects', to: 'projects#index', as: 'projects'
   get 'news', to: 'news#index', as: 'news'
+  get 'success', to: 'success#success', as: 'success'
 
 
   resources :resources
