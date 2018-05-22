@@ -1,9 +1,11 @@
-<footer class="footer">
-  <div class="container" class>
-    <ul>
-      <li class="foot"><%= link_to 'Contact Us', contact_path, :class => 'nav-link' %></li>
-      <li class="foot"><%= link_to 'FAQ', faq_path, :class => 'nav-link' %></li>
-      <li class="foot"><span>Footer content here</span></li>
-    </ul>
+<footer class="footer" style="top: 90px">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 nav-item">
+        <%= link_to 'CONTACT US', contact_path, :class => "nav-link", :style => "display: inline-block" %>
+        <%= link_to 'FAQS', faq_path, :class => "nav-link", :style => "display: inline-block" %>
+        <span>Copyright © Circle of Young Intrapreneurs 2015-2018</span>
+      </div>
+    </div>
   </div>
 </footer>
