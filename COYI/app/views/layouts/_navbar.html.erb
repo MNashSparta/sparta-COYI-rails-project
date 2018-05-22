@@ -3,31 +3,41 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand pad-left" href="/home"><img src="image.png" alt=""></a>
+  <a class="navbar-brand pad-left" href="/home"><img src="images/image.png" alt="Logo" width="50" height="50"></a>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Our Circle</a>
+        <div class="dropdown-menu" id="navdrop">
+          <%= link_to 'Global Forum', global_path, :class => 'nav-link' %>
+          <%= link_to 'Chapter Forum', chapter_path, :class => 'nav-link' %>
+          <%= link_to 'Ask an Advocate', advocate_path, :class => 'nav-link' %>
+          <%= link_to 'News', news_path, :class => 'nav-link' %>
+        <div class="dropdown-divider"></div>
+          <%= link_to 'Forum Rules', rules_path, :class => 'nav-link' %>
+        </div>
+      </li>
+
       <li class="nav-item">
-        <a class="nav-link" href="#">OUR CIRCLE</a>
+        <%= link_to 'Success Stories', stories_path, :class => 'nav-link' %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/stories">SUCCESS STORIES</a>
+        <%= link_to 'Resources', resources_path, :class => 'nav-link' %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/resources">RESOURCES</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/news">NEWS</a>
+        <%= link_to 'News', news_path, :class => 'nav-link' %>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">LOGIN</a>
+        <a class="nav-link" href="#">Log In</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">SIGN UP</a>
+        <a class="nav-link" href="#">Sign Up</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/about">ABOUT US</a>
+        <%= link_to 'About Us', about_path, :class => 'nav-link' %>
       </li>
     </ul>
   </div>
