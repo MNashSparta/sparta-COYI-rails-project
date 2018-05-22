@@ -16,6 +16,7 @@
     <% if url == '/' %>
       <%= yield %>
     <%else%>
+      <link rel="stylesheet" href="/Stylesheets/layouts.css">
       <%= render 'layouts/navbar' %>
       <%= yield %>
       <%= render 'layouts/footer' %>
