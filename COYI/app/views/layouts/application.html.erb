@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.ico">
   </head>
   <body>
+    <link rel="stylesheet" href="/Stylesheets/master.css">
     <% url = request.path_info%>
     <% if url == '/' %>
       <%= yield %>
@@ -19,6 +20,7 @@
       <%= yield %>
       <!-- renders the footer on every page unless we say otherwise -->
       <%= render 'layouts/footer' %>
+      <link rel="stylesheet" href="/Stylesheets/layouts.css">
     <%end%>
   </body>
 </html>

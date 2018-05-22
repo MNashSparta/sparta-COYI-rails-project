@@ -1,0 +1,63 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url('/roboto/Roboto-Regular.ttf');
+}
+
+* {
+  font-family: "Roboto";
+}
+
+#body-home {
+  font-family: inherit;
+  text-align: center;
+}
+
+.home-link {
+  color: #F0564E;
+}
+
+.home-link:hover {
+  color: #F0564E;
+  text-decoration: none;
+}
+
+body#landing_page {
+  background-image: url('/images/landing_logo.gif');
+  background-size: 100%;
+  background-repeat: repeat;
+  background-color: black;
+}
+
+.brand-img{
+  width: 50px;
+}
+
+.no-pad {
+  padding: 0;
+}
+
+.page-band {
+  background-color: #F0564E;
+  width: 100%;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.abso {
+  position: absolute;
+}
+
+.title-style {
+  text-transform: uppercase;
+}
+
+.shadow-one {
+  box-shadow: 0px 0px 2px lightgrey;
+}
