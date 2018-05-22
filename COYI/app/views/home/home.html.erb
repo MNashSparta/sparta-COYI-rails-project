@@ -17,5 +17,17 @@
         <h1>2</h1>
       </div>
     </div>
-  </div>
+
+    <!-- MAPS HERE -->
+    <button type="button" name="button" id="refreshPage" onclick="btnrefresh()">Show Map</button>
+      <div class="row">
+        <div id="map-container" class="offset-md-1 col-md-10">
+          <div id="map"></div>
+        </div>
+      </div>
+
+      <!-- END OF MAPS -->
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6cQBeZvCwZ149vp7zKAP60TEwjlc1d5Q&callback=initMap"
+    async defer data-turbolinks-eval="false"></script>
 </body>
