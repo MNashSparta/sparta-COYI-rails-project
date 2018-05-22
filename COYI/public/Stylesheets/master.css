@@ -27,7 +27,7 @@ body {
 }
 
 body#landing_page {
-  background-image: image-url('/images/landing_logo.gif');
+  background-image: url('/images/landing_logo.gif');
   background-size: 100%;
   background-repeat: repeat;
   background-color: black;
