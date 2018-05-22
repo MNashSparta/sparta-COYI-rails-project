@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @projects = Project.where(status: 0)
   end
 
   # GET /projects/1
@@ -28,6 +28,11 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
+  end
+
+  def user_projects
+    user = params[:user]
+    @projects = Project.where(user_id: user)
   end
 
   # POST /projects
