@@ -1,11 +1,8 @@
-
-
 function btnrefresh(){
   window.location.reload(true);
 }
 
 function initMap() {
-// document.getElementsByTagName('body').style.fontFamily='Roboto-Thin';
   var markers = [
     {
       'lat': '51.509865',
