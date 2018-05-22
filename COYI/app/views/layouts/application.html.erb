@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>COYI</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!-- gives the page a favicon icon on the page tab -->
     <link rel="shortcut icon" href="/images/favicon.ico">
   </head>
   <body>
+    <link rel="stylesheet" href="/Stylesheets/master.css">
     <% url = request.path_info%>
     <% if url == '/' %>
       <%= yield %>
     <%else%>
+      <!-- renders the navbar on every page unless we say otherwise -->
       <%= render 'layouts/navbar' %>
       <%= yield %>
+      <!-- renders the footer on every page unless we say otherwise -->
       <%= render 'layouts/footer' %>
+      <link rel="stylesheet" href="/Stylesheets/layouts.css">
     <%end%>
   </body>
 </html>
