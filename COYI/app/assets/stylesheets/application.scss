@@ -10,15 +10,14 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
-<<<<<<< HEAD:COYI/app/assets/stylesheets/application.css
  *= require_tree .
  *= require_self
  *= require_bootstrap
  *= require_home
-=======
->>>>>>> 4918dec57e8401b7cf081ec722fa953a93b76c22:COYI/app/assets/stylesheets/application.scss
+
  */
 
-@import "bootstrap";
-@import "home";
-@import "about";
+ @import "bootstrap";
+ @import "home";
+ @import "about";
+ @import "success";
