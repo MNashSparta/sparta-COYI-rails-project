@@ -16,17 +16,12 @@
     <%= form.text_field :title %>
   </div>
 
-  <div class="field">
-    <%= form.label :status %>
-    <%= form.text_field :status %>
-  </div>
+  <%= form.file_field :uploaded %>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
+
 
   <div class="actions">
     <%= form.submit %>
   </div>
+
 <% end %>

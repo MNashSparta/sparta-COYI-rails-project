@@ -17,7 +17,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @chapter.user %>
+  <%= User.find(@chapter.user_id).first_name %>
 </p>
 
 <%= link_to 'Edit', edit_chapter_path(@chapter) %> |
