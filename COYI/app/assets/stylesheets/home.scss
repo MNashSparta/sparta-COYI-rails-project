@@ -43,8 +43,7 @@ body#landing_page {
   color: #f1f1f1 !important;
 }
 .nav-link:hover {
- color: white !important;
- background-color: #F0564E;
+  color: white;
 }
 
 .nav-link:active {
@@ -57,5 +56,18 @@ body#landing_page {
 }
 
 .brand-img{
+  width: 50px;
+}
+
+.no-pad {
+  padding: 0;
+}
+
+.page-band {
+  background-color: #F0564E;
   width: 100%;
+}
+
+.no-margin {
+  margin: 0;
 }
