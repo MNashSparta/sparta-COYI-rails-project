@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :challenges
   get '/stories',  to: 'sucess#stories'
   root to: 'home#landing'
   get 'home', to: 'home#home', as: 'home'
@@ -11,7 +12,6 @@ Rails.application.routes.draw do
 
 
   resources :resources
-  resources :hundred_day_challenges
   resources :news
   resources :projects
   resources :chapters
