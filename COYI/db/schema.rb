@@ -25,6 +25,17 @@ ActiveRecord::Schema.define(version: 2018_05_21_174053) do
     t.index ["user_id"], name: "index_chapters_on_user_id"
   end
 
+  create_table "hundred_day_challenges", force: :cascade do |t|
+    t.string "Email"
+    t.string "Address"
+    t.string "First_name"
+    t.string "Last_name"
+    t.string "Location"
+    t.string "Organisation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "news", force: :cascade do |t|
     t.string "title"
     t.string "story"
