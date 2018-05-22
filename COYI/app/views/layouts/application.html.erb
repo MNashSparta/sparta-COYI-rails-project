@@ -14,6 +14,8 @@
   <body>
     <p class="notice" style="display: none"><%= notice %></p>
     <p class="alert" style="display: none"><%= alert %></p>
+    <%= render 'layouts/navbar' %>
     <%= yield %>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

@@ -1,4 +1,4 @@
 class ResourcesController < ApplicationController
-  def index
+  def resources
   end
 end

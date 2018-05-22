@@ -6,9 +6,12 @@ Rails.application.routes.draw do
   get 'about/about'
   get 'about/contact'
   get 'about/faq'
+  get 'resources', to: 'resources#resources'
+
+
   resources :resources
   resources :hundred_day_challenges
-
+  resources :news
   resources :projects
   resources :chapters
   devise_for :users
