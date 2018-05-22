@@ -3,19 +3,48 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :second_name %><br />
+    <%= f.text_field :second_name, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username, autocomplete: "off" %>
+  </div>
+
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autocomplete: "email" %>
   </div>
 
   <div class="field">
-
-    <%= f.label :username %>
-    <%= f.text_field :username, class: 'form-control' %>
+    <%= f.label :location %><br />
+    <%= f.text_field :location, autocomplete: "off" %>
   </div>
 
   <div class="field">
+    <%= f.label :country %><br />
+    <%= f.text_field :country, autocomplete: "off" %>
+  </div>
 
+  <div class="field">
+    <%= f.label :dob %><br />
+    <%= f.date_field :dob, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :role %><br />
+    <%= f.text_field :role, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>

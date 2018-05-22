@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'home/landing'
   resources :projects
   resources :chapters
-  devise_for :users
+  devise_for :users, controllers: {registrations: 'users/registrations'}
   get 'profile/projects', to: 'projects#user_projects', as: 'user_projects'
   resources :projects, only: [:create, :new]
 
