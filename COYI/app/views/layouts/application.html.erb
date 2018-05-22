@@ -4,14 +4,13 @@
     <title>COYI</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- gives the page a favicon icon on the page tab -->
+    <link rel="shortcut icon" href="/images/favicon.ico">
   </head>
   <body>
+
 
     <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
@@ -24,9 +23,6 @@
         'navbar-link' %>
         <%= link_to 'Logout', destroy_user_session_path,
         method: :delete, :class => 'navbar-link' %>
-
-
-
         <%else%>
         <%= link_to 'Sign up', new_user_registration_path,
         :class => 'navbar-link' %>
@@ -34,11 +30,17 @@
         :class => 'navbar-link' %>
       <%end%>
 
-
-    <p class="notice" style="display: none"><%= notice %></p>
-    <p class="alert" style="display: none"><%= alert %></p>
-    <%= render 'layouts/navbar' %>
-    <%= yield %>
-    <%= render 'layouts/footer' %>
+    <link rel="stylesheet" href="/Stylesheets/master.css">
+    <% url = request.path_info%>
+    <% if url == '/' %>
+      <%= yield %>
+    <%else%>
+      <!-- renders the navbar on every page unless we say otherwise -->
+      <%= render 'layouts/navbar' %>
+      <%= yield %>
+      <!-- renders the footer on every page unless we say otherwise -->
+      <%= render 'layouts/footer' %>
+      <link rel="stylesheet" href="/Stylesheets/layouts.css">
+    <%end%>
   </body>
 </html>
