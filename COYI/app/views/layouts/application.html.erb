@@ -14,8 +14,13 @@
     <link rel="shortcut icon" href="/images/favicon.ico">
   </head>
   <body>
-    <%= render 'layouts/navbar' %>
-    <%= yield %>
-    <%= render 'layouts/footer' %>
+    <% url = request.path_info%>
+    <% if url == '/' %>
+      <%= yield %>
+    <%else%>
+      <%= render 'layouts/navbar' %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    <%end%>
   </body>
 </html>
