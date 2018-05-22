@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-md nav-bar-style shadow-one">
+<nav class="navbar navbar-expand-md nav-bar-style">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -24,7 +24,7 @@
       </li>
 
       <li class="nav-item">
-        <%= link_to 'SUCESS STORIES', stories_path, :class => 'nav-link' %>
+        <%= link_to 'SUCCESS STORIES', stories_path, :class => 'nav-link' %>
       </li>
       <li class="nav-item">
         <%= link_to 'PROJECT HUB', projects_path, :class => "nav-link" %>
@@ -37,11 +37,23 @@
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Log In</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Sign Up</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">PROFILE</a>
+        <div class="dropdown-menu" id="navdrop">
+          <%if user_signed_in? %>
+            logged in as <strong><%=
+            current_user.email %></strong>
+            <%= link_to 'Edit profile',
+            edit_user_registration_path, :class=>
+            'nav-link' %>
+            <%= link_to 'Logout', destroy_user_session_path,
+            method: :delete, :class => 'nav-link' %>
+            <%else%>
+            <%= link_to 'Sign up', new_user_registration_path,
+            :class => 'nav-link' %>
+            <%= link_to 'Login', new_user_session_path,
+            :class => 'nav-link' %>
+          <%end%>
       </li>
       <li class="nav-item">
         <%= link_to 'ABOUT US', about_path, :class => "nav-link" %>
