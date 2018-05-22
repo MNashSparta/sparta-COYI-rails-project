@@ -36,8 +36,7 @@ body.home{
   color: #f1f1f1;
 }
 .nav-link:hover {
- color: white;
- background-color: #F0564E;
+  color: white;
 }
 
 .nav-link:active {
@@ -50,5 +49,9 @@ body.home{
 }
 
 .brand-img{
-  width: 100%;
+  width: 50px;
+}
+
+.no-pad {
+  padding: 0;
 }
