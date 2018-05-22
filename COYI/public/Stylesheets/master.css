@@ -25,6 +25,10 @@
   text-decoration: none;
 }
 
+.top-margin {
+  margin-top: 10%;
+}
+
 body#landing_page {
   background-image: url('/images/landing_logo.gif');
   background-size: 100%;
@@ -60,8 +64,13 @@ body#landing_page {
 
 .title-style {
   text-transform: uppercase;
+  text-align: center;
 }
 
+.profile-pic {
+  width: 200px;
+  border-radius: 50%
+}
 
 .shadow-one {
   box-shadow: 0px 0px 2px lightgrey;
