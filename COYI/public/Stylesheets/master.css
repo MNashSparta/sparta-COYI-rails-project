@@ -48,7 +48,7 @@ body {
   color: #F0564E;
 }
 
-.jumbotron{
+.clear-background{
   background: none;
   text-shadow: 2px 2px 4px white;
 }
@@ -159,7 +159,7 @@ body#landing_page {
 }
 
 .shadow-one {
-  box-shadow: 0px 0px 2px lightgrey;
+  box-shadow: 0px 0px 20px 0px #be6f6f40;
 }
 
 .video-margin {
@@ -202,7 +202,7 @@ body#landing_page {
 }
 
 .advocate-div {
-  padding: 5%;
+  padding: 0 0 5%;
 }
 
 .input-style {

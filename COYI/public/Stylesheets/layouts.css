@@ -1,13 +1,17 @@
 /* FOOTER */
 
 .footer {
-  width: 100%;
-  padding: 10px;
+  /* padding: 10px; */
   background-color: #F0564E;
-  font-size: 20px;
+  font-size: 12px;
   text-align: center;
-  /* vertical-align: bottom; */
+  width: 100%;
+  bottom: 0;
   /* margin-top: 120px; */
+}
+
+.copy-text {
+  font-size: 10px;
 }
 
 .container {

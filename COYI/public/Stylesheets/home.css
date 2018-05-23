@@ -22,7 +22,7 @@
   flex: 1;
 }
 #map-container {
-  height: 70vh;
+  /* height: 70vh; */
 }
 .rounded-circle{
   width: 10vw;
