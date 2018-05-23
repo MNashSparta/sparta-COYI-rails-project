@@ -23,7 +23,10 @@
 
 body {
   background-image: url('/images/city_bg.jpeg');
-  background-size: 100% 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -197,5 +200,12 @@ body#landing_page {
 
   #mission-state {
     font-size: 15px;
+  }
+}
+
+@media all and (max-width: 1024px) and (min-height:  400px){
+  .navbar-collapse .navbar-expand-md {
+    display: flex !important;
+    flex-basis: auto !important;
   }
 }
