@@ -99,8 +99,13 @@ body#landing_page {
 }
 
 .profile-pic {
-  width: 200px;
-  border-radius: 50%
+  width: 100%;
+  border-radius: 50%;
+  display: inline;
+}
+
+.descrip {
+  display: block;
 }
 
 .shadow-one {
@@ -114,6 +119,9 @@ body#landing_page {
 
 .back-img {
   position: fixed;
+}
+.team {
+  padding: 5%;
 }
 
 .red-background {
@@ -139,6 +147,7 @@ body#landing_page {
 
 #stories {
   padding: 10% 0%;
+  color: white;
 }
 
 @media only screen and (max-width: 882px) {
@@ -161,7 +170,7 @@ body#landing_page {
   }
 
   .video-margin {
-    margin-top: 20%;
+    margin-top: 2:q0%;
   }
 
   #mission-state {
