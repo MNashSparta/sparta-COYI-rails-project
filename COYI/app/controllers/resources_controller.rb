@@ -1,4 +1,9 @@
 class ResourcesController < ApplicationController
-  def resources
+  before_action :authenticate_user!
+
+  def level
+    authorize :resource, :level?
   end
+
+
 end

@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<footer class="footer">
-<div class="container">
-  <a href="/about/contact" >Contact Us</a>
-  <span>Footer content here</span>
-</div>
-<footer class="footer" style="top: 90px">
+<footer id="footer" class="footer footer-wrapper">
   <div class="container">
     <div class="row">
       <div class="col-md-12 nav-item">
@@ -14,4 +8,9 @@
       </div>
     </div>
   </div>
+  <script type="text/javascript">
+    if ($(document.body).height() < $(window).height()) {
+      $('.footer-wrapper').attr('style', 'position: fixed; bottom: 0px;');
+    }
+  </script>
 </footer>
