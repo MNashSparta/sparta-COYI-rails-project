@@ -5,11 +5,7 @@ def level_1?
 end
 def level_2?
   user.access_level == 2
-end
-def level_3?
   user.access_level == 3
-end
-def level_4?
   user.access_level == 4
 end
 def level_5?
