@@ -73,3 +73,17 @@
   color:white;
   transition: .2s;
 }
+/* FAQ Styling */
+.question{
+  list-style-type: none;
+  line-height: 1.7;
+}
+.FAQ{
+
+  text-decoration: underline;
+}
+#A1, #A2, #A3, #A4{
+  border: solid black 1px;
+  padding: 10px;
+  display: none;
+}
