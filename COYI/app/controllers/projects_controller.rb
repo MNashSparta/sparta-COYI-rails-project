@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @projects = Project.where(status: 0)
   end
 
   # GET /projects/1
@@ -18,15 +18,28 @@ class ProjectsController < ApplicationController
     @project = Project.new
   end
 
+  def upload
+    uploaded_io = params[:user][:uploaded]
+
+    File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
+      file.write(uploaded_io.read)
+    end
+  end
+
   # GET /projects/1/edit
   def edit
+  end
+
+  def user_projects
+    @projects = Project.where(user_id: current_user.id)
   end
 
   # POST /projects
   # POST /projects.json
   def create
     @project = Project.new(project_params)
-
+    @project.user_id = current_user.id
+    @project.status = 0
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
@@ -43,7 +56,7 @@ class ProjectsController < ApplicationController
   def update
     respond_to do |format|
       if @project.update(project_params)
-        format.html { redirect_to @project, notice: 'Project was successfully updated.' }
+        format.html { redirect_to "/", notice: 'Project was successfully updated.' }
         format.json { render :show, status: :ok, location: @project }
       else
         format.html { render :edit }
@@ -70,6 +83,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:title, :status, :user_id)
+      params.require(:project).permit(:title, :description, :status, :user_id)
     end
 end

@@ -2,17 +2,25 @@
 <html>
   <head>
     <title>COYI</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   </head>
   <body>
-    <p class="notice" style="display: none"><%= notice %></p>
-    <p class="alert" style="display: none"><%= alert %></p>
-    <%= render 'layouts/navbar' %>
-    <%= yield %>
-    <%= render 'layouts/footer' %>
+    <link rel="stylesheet" href="/Stylesheets/master.css">
+    <% url = request.path_info%>
+    <% if url == '/' %>
+      <%= yield %>
+    <%else%>
+      <!-- renders the navbar on every page unless we say otherwise -->
+      <%= render 'layouts/navbar' %>
+      <div class="top-of-page"></div>
+      <%= yield %>
+      <!-- renders the footer on every page unless we say otherwise -->
+      <%= render 'layouts/footer' %>
+      <link rel="stylesheet" href="/Stylesheets/layouts.css">
+    <%end%>
+    <!-- <p class="notice"><%= notice %></p> -->
+    <!-- <p class="alert"><%= alert %></p> -->
   </body>
 </html>
