@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'profile/projects/:id', to: 'projects#show_user_project', as: 'show_user_project'
 
   get 'profile/my_resources/new', to: 'my_resources#new', as: 'new_my_resource'
-  get 'profile/my_resources/:id', to: 'my_resources#show_user_my_resource', as: 'show_user_my_resource'
+  get 'profile/my_resources/:id', to: 'resources#show_user_my_resource', as: 'show_user_my_resource'
 
   root to: 'home#landing'
 
@@ -29,7 +29,7 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: {registrations: 'users/registrations'}
   get 'profile/projects', to: 'projects#user_projects', as: 'user_projects'
-  get 'profile/my_resources', to: 'resources#user_my_resources', as: 'user_my_resources'
+  get 'profile/my_resources', to: 'my_resources#user_my_resources', as: 'user_my_resources'
 
   resources :projects, only: [:create, :new]
   resources :my_resources, only: [:create, :new]
