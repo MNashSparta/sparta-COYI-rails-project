@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'faq',              to: 'about#faq',          as: 'faq'
   get 'resources',        to: 'resources#resources', as: 'resources'
   get 'success',          to: 'success#success',    as: 'stories'
-  get 'profile',          to: 'profile#profile',    as: 'profile'
+  get 'users',          to: 'profile#profile',    as: 'user_profile'
 
 
   resources :challenges
