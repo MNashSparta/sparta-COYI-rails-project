@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
   include ActiveModel::Validations
   include Pundit
 
-  protected
 
   def configure_permitted_parameters
     added_attrs = [:username, :email, :password, :password_confirmation, :remember_me, :first_name, :second_name, :username, :location, :country, :dob]
