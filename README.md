@@ -38,3 +38,23 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+# User authentication
+
+Authentication is handled with a gem called Devise.
+
+For the user to sign up requires :
+* username
+* first name
+* second name
+* password (of sufficient complexity)
+* email
+* location
+* country
+* date of birth
+
+There are no optional fields.
+
+The password complexity requires at least 1 of each of the following: capital, lowercase, number, and special character. It also requires that the password is at least 8 characters long.
+The file for this is in "app/models/user.rb" in the method "password_complexity".
