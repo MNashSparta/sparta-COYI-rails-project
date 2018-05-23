@@ -20,15 +20,25 @@
   font-family: inherit;
   text-align: center;
 }
+
 body {
   background-image: url('/images/city_bg.jpeg');
-  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
 }
 
 .home-link {
   color: #F0564E;
+}
+
+.jumbotron{
+  background: none;
+  text-shadow: 2px 2px 4px white;
 }
 
 .top-of-page {
@@ -62,7 +72,6 @@ body {
   color: #F0564E;
 }
 
-
 .top-margin {
   margin-top: 10%;
 }
@@ -94,6 +103,11 @@ body#landing_page {
 
 .no-margin {
   margin: 0;
+}
+
+.marketing{
+  background: none;
+  text-shadow: 2px 2px 4px white;
 }
 
 .small-margin {
@@ -174,6 +188,13 @@ body#landing_page {
 .text-on-bk {
   color: white;
 }
+
+.login-button {
+  margin: 0 33% 0 33%;
+  width: 33%;
+  padding: 0 2% 0 2%;
+  border-radius: 0.25rem;
+}
 #title-on-img {
   color: white;
   text-shadow: 0px 0px 1px black;
@@ -217,5 +238,12 @@ body#landing_page {
 
   #mission-state {
     font-size: 15px;
+  }
+}
+
+@media all and (max-width: 1024px) and (min-height:  400px){
+  .navbar-collapse .navbar-expand-md {
+    display: flex !important;
+    flex-basis: auto !important;
   }
 }
