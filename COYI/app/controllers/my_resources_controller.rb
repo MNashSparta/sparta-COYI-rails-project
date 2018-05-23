@@ -30,7 +30,7 @@ class MyResourcesController < ApplicationController
   def edit
   end
 
-  def user_my_resources
+  def user_my_resource
     @my_resources = MyResource.where(user_id: current_user.id)
   end
 

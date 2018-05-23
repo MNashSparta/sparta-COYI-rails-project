@@ -21,10 +21,8 @@
     <%= form.text_field :description %>
   </div>
 
-  <div class="field">
-    <%= form.label :status %>
-    <%= form.number_field :status %>
-  </div>
+  <%= form.file_field :uploaded %>
+
 
   <div class="actions">
     <%= form.submit %>
