@@ -1,8 +1,10 @@
-function btnrefresh(){
-  window.location.reload(true);
-}
+// function btnrefresh(){
+//   window.location.reload(true);
+// }
 
+//Run map after callback from API
 function initMap() {
+  // Map markers. All are hard coded
   var markers = [
     {
       'lat': '51.509865',
@@ -293,14 +295,19 @@ function initMap() {
       'image2': 'https://media.licdn.com/dms/image/C5603AQGktFNQ25feLg/profile-displayphoto-shrink_800_800/0?e=1527721200&v=alpha&t=fKVxZ5C1VPK81n9cG2M6K-OFHZ97W5U1ATviQk5qPRE'
     }
   ];
+  //After window is loaded load map
   window.onload = function () {
     LoadMap();
   }
+  //images selected for map marker
   var icon = 'images/marker.png';
 
+  //Load map function. Sets all map options and styles(color, border sizes)
   function LoadMap() {
     var mapOptions = {
+      //Maps default location. Set to Dublin currently.
       center: new google.maps.LatLng(markers[5].lat, markers[5].lng),
+      //Zoomed out view
       zoom: 2,
       styles: [{
           elementType: 'geometry.fill',
@@ -410,12 +417,13 @@ function initMap() {
 
     //Create and open InfoWindow.
     var infoWindow = new google.maps.InfoWindow();
-
+    //Loop through map marker data and place pegs
     for (var i = 0; i < markers.length; i++) {
       // var icon = 'marker.png';
       var icon = 'https://i.imgur.com/d2DM8vA.png';
       var data = markers[i];
       var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+      //Create map marker icon with data.
       var marker = new google.maps.Marker({
         position: myLatlng,
         map: map,
@@ -429,111 +437,115 @@ function initMap() {
           var coleads = data.city.toString();
 
           //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
-
+          //Check if there is one or two chapter leads. Top if statement is for one lead. Bottom is for two.
           if(data.twitter && coleads !== 'Johannesburg' && coleads !== 'Dubai' && coleads !== 'Toronto' && coleads !== 'Chicago' && coleads !== 'Washington DC' && coleads !== 'London' && coleads !== 'Stockholm' && coleads !== 'Brussels') {
             infoWindow.setContent(
               '<section class="section text-center" id="siteNotice">' +
-              '<div class="row">' +
-              '<div class="col-md-4 col-sm-4 col-xs-4">' +
-              '<div class="my-auto">' +
-              '<div class="card-up teal lighten-2"></div>' +
-              '<div class="avatar mx-auto white">' +
-              `<img class="rounded-circle" src="${data.image}" alt="${data.lead}">` +
-              '</div>' +
-              '</div>' +
-              '</div>' +
-              '<div class="col-md-8 col-sm-8 col-xs-8">' +
-              '<div class="card-body">' +
-              `<h5 class="card-title mt-1">${data.lead}</h5>` +
-              `<h6 class="card-title">${data.city}</h6>` +
-              '</div>' +
-              '</div>' +
-              '</div>' +
-              '<div class="row center">' +
-              '<div class="map-social" >' +
-              `<a target="_blank" href="https://twitter.com/search?q=${data.twitter}&src=typd&lang=en-gb">` +
-              '<i class="fab fa-twitter" id="map-twitter"></i></a>' +
-              `<a target="_blank" href="${data.linkedin}">` +
-              '<i class="fab fa-linkedin-in" id="map-linkedin"></i></a>' +
-              `<a target="_blank" href="${data.facebook}">` +
-              '<i class="fab fa-facebook-f" id="map-facebook" ></i></a>' +
-              '</div>' +
-              '</section>' +
-              '<div class="hr"></div>'+
-              '<div class="row center">' +
-              '<br>' +
-              '<div class="col-md-12 col-sm-12 col-xs-12 text-center" > <a href="#" class="success">Chapter Success Stories...</a> </div>' +
-              '</div>');
+                '<div class="row">' +
+                  '<div class="col-md-4 col-sm-4 col-xs-4">' +
+                    '<div class="my-auto">' +
+                      '<div class="card-up teal lighten-2"></div>' +
+                      '<div class="avatar mx-auto white">' +
+                        `<img class="rounded-circle" src="${data.image}" alt="${data.lead}">` +
+                      '</div>' +
+                    '</div>' +
+                  '</div>' +
+                    '<div class="col-md-8 col-sm-8 col-xs-8">' +
+                      '<div class="card-body">' +
+                        `<h5 class="card-title mt-1">${data.lead}</h5>` +
+                        `<h6 class="card-title">${data.city}</h6>` +
+                      '</div>' +
+                    '</div>' +
+                  '</div>' +
+                '<div class="row center">' +
+                  '<div class="map-social" >' +
+                    `<a target="_blank" href="https://twitter.com/search?q=${data.twitter}&src=typd&lang=en-gb">` +
+                    '<i class="fab fa-twitter" id="map-twitter"></i></a>' +
+                    `<a target="_blank" href="${data.linkedin}">` +
+                    '<i class="fab fa-linkedin-in" id="map-linkedin"></i></a>' +
+                    `<a target="_blank" href="${data.facebook}">` +
+                    '<i class="fab fa-facebook-f" id="map-facebook" ></i></a>' +
+                  '</div>' +
+                '</section>' +
+              // '<div class="hr"></div>'+
+              // '<div class="row center">' +
+              // '<br>' +
+              // '<div class="col-md-12 col-sm-12 col-xs-12 text-center" > <a href="#" class="success">Chapter Success Stories...</a> </div>' +
+              '</div>'
+              );
+              // This is where the check occurs for two chapter leads
             } else if (coleads === 'Johannesburg' || coleads === 'Dubai' || coleads === 'Toronto' || coleads === 'Chicago' || coleads === 'Washington DC' || coleads === 'London' || coleads === 'Stockholm' || coleads === 'Brussels') {
               infoWindow.setContent(
                 '<section class="section text-center" id="siteNotice">' +
-                '<div class="row">' +
-                '<div class="col-md-4 col-sm-4 col-xs-4">' +
-                '<div class="my-auto">' +
-                '<div class="card-up teal lighten-2"></div>' +
-                '<div class="avatar mx-auto white">' +
-                `<img class="rounded-circle" src="${data.image1}" alt="${data.lead1}">` +
-                '</div>' +
-                '</div>' +
-                '</div>' +
-                '<div class="col-md-8 col-sm-8 col-xs-8">' +
-                '<div class="card-body">' +
-                `<h5 class="card-title mt-1">${data.lead1}</h5>` +
-                `<h6 class="card-title"> ${data.city}</h6>` +
-                '</div>' +
-                '</div>' +
-                '</div>' +
-                '<div class="row center">' +
-                '<div class="map-social" >' +
-                `<a target="_blank" href="https://twitter.com/search?q= ${data.twitter} &src=typd&lang=en-gb">` +
-                '<i class="fab fa-twitter" id="map-twitter"></i></a>' +
-                `<a target="_blank" href="${data.linkedin1}">` +
-                '<i class="fab fa-linkedin-in" id="map-linkedin"></i></a>' +
-                `<a target="_blank" href="${data.facebook}">` +
-                '<i class="fab fa-facebook-f" id="map-facebook" ></i></a>' +
-                '</div>' +
+                  '<div class="row">' +
+                    '<div class="col-md-4 col-sm-4 col-xs-4">' +
+                      '<div class="my-auto">' +
+                        '<div class="card-up teal lighten-2"></div>' +
+                        '<div class="avatar mx-auto white">' +
+                          `<img class="rounded-circle" src="${data.image1}" alt="${data.lead1}">` +
+                        '</div>' +
+                      '</div>' +
+                    '</div>' +
+                    '<div class="col-md-8 col-sm-8 col-xs-8">' +
+                      '<div class="card-body">' +
+                        `<h5 class="card-title mt-1">${data.lead1}</h5>` +
+                        `<h6 class="card-title"> ${data.city}</h6>` +
+                      '</div>' +
+                    '</div>' +
+                  '</div>' +
+                  '<div class="row center">' +
+                    '<div class="map-social" >' +
+                      `<a target="_blank" href="https://twitter.com/search?q= ${data.twitter} &src=typd&lang=en-gb">` +
+                      '<i class="fab fa-twitter" id="map-twitter"></i></a>' +
+                      `<a target="_blank" href="${data.linkedin1}">` +
+                      '<i class="fab fa-linkedin-in" id="map-linkedin"></i></a>' +
+                      `<a target="_blank" href="${data.facebook}">` +
+                      '<i class="fab fa-facebook-f" id="map-facebook" ></i></a>' +
+                    '</div>' +
                 '</section>' +
                 '<section class="section text-center" id="siteNotice">' +
-                '<div class="row">' +
-                '<div class="col-md-4 col-sm-4 col-xs-4">' +
-                '<div class="my-auto">' +
-                '<div class="card-up teal lighten-2"></div>' +
-                '<div class="avatar mx-auto white">' +
-                `<img class="rounded-circle" src="${data.image2}" alt="${data.lead2}">` +
-                '</div>' +
-                '</div>' +
-                '</div>' +
-                '<div class="col-md-8 col-sm-8 col-xs-8">' +
-                '<div class="card-body">' +
-                `<h5 class="card-title mt-1">${data.lead2}</h5>` +
-                `<h6 class="card-title">${data.city}</h6>` +
-                '</div>' +
-                '</div>' +
-                '</div>' +
-                '<div class="row center">' +
-                '<div class="map-social" >' +
-                `<a target="_blank" href="https://twitter.com/search?q= ${data.twitter} &src=typd&lang=en-gb">` +
-                '<i class="fab fa-twitter" id="map-twitter"></i></a>' +
-                `<a target="_blank" href="${data.linkedin2}">`+
-                '<i class="fab fa-linkedin-in" id="map-linkedin"></i></a>' +
-                `<a target="_blank" href="${data.facebook}">` +
-                '<i class="fab fa-facebook-f" id="map-facebook" ></i></a>' +
-                '</div>' +
+                  '<div class="row">' +
+                    '<div class="col-md-4 col-sm-4 col-xs-4">' +
+                      '<div class="my-auto">' +
+                        '<div class="card-up teal lighten-2"></div>' +
+                        '<div class="avatar mx-auto white">' +
+                          `<img class="rounded-circle" src="${data.image2}" alt="${data.lead2}">` +
+                        '</div>' +
+                      '</div>' +
+                    '</div>' +
+                    '<div class="col-md-8 col-sm-8 col-xs-8">' +
+                      '<div class="card-body">' +
+                        `<h5 class="card-title mt-1">${data.lead2}</h5>` +
+                        `<h6 class="card-title">${data.city}</h6>` +
+                      '</div>' +
+                    '</div>' +
+                  '</div>' +
+                  '<div class="row center">' +
+                    '<div class="map-social" >' +
+                      `<a target="_blank" href="https://twitter.com/search?q= ${data.twitter} &src=typd&lang=en-gb">` +
+                      '<i class="fab fa-twitter" id="map-twitter"></i></a>' +
+                      `<a target="_blank" href="${data.linkedin2}">`+
+                      '<i class="fab fa-linkedin-in" id="map-linkedin"></i></a>' +
+                      `<a target="_blank" href="${data.facebook}">` +
+                      '<i class="fab fa-facebook-f" id="map-facebook" ></i></a>' +
+                  '</div>' +
                 '</section>' +
-                '<div class="hr"></div>'+
-                '<div class="row center">' +
-                '<br>' +
-                '<div class="col-md-12 col-sm-12 col-xs-12 text-center" > <a href="#" class="success">Chapter Success Stories...</a> </div>' +
+                // '<div class="hr"></div>'+
+                // '<div class="row center">' +
+                // '<br>' +
+                // '<div class="col-md-12 col-sm-12 col-xs-12 text-center" > <a href="#" class="success">Chapter Success Stories...</a> </div>' +
                 '</div>');
               } else {
-                infoWindow.setContent('<div id="content" style="background:#F0564E;padding:25px;color:white;">'+
-                '<div id="siteNotice">' +
-                `<h4>${data.city}</h4>` +
-                `<h5>${data.lead}</h5>` +
-                '</div>'+
-                '</div>');
+                // This styles the info window adding the city name and the chapter leads name
+                infoWindow.setContent(
+                  '<div id="content" style="background:#F0564E;padding:25px;color:white;">'+
+                    '<div id="siteNotice">' +
+                      `<h4>${data.city}</h4>` +
+                      `<h5>${data.lead}</h5>` +
+                    '</div>'+
+                  '</div>');
               }
-
+              // Simply opens the map and marker
               infoWindow.open(map, marker);
             });
           })(marker, data);
