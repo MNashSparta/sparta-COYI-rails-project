@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 2018_05_23_124412) do
     t.string "organisation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_challenges_on_user_id"
   end
 
   create_table "chapters", force: :cascade do |t|
@@ -107,15 +109,15 @@ ActiveRecord::Schema.define(version: 2018_05_23_124412) do
     t.datetime "updated_at", null: false
     t.boolean "email_confirmed", default: false
     t.string "confirm_token"
-    t.string "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string "unconfirmed_email"
+
+    t.integer "access_level"
+
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "challenges", "users"
   add_foreign_key "chapters", "users"
   add_foreign_key "projects", "users"
 end
