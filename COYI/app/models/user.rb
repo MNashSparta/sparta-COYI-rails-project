@@ -25,10 +25,10 @@ class User < ApplicationRecord
     end
   end
 
-  validates :username, :email, presence: :true, uniqueness: { case_sensitive: false }
-  validate :validate_username
+  validates :email, presence: :true, uniqueness: { case_sensitive: false }
+  # validate :validate_username
   validates :email, :format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/ }
-  validates :first_name, :second_name, :email, :username, :location, :country, :dob, presence: true
+  validates :first_name, :second_name, :email, :location, :country, presence: true
   validates :first_name, :second_name, :location, :country, format: { with: /\A[a-zA-Z]+\z/, message: "No special characters or numbers, only letters" }
 
   def validate_username
@@ -47,23 +47,4 @@ class User < ApplicationRecord
    end
   end
 
-  def level_1?
-    user_level == 1
-  end
-
-  def level_2?
-    user_level == 2
-  end
-
-  def level_3?
-    user_level == 3
-  end
-
-  def level_4?
-    user_level == 4
-  end
-
-  def level_5?
-    user_level == 5
-  end
 end
