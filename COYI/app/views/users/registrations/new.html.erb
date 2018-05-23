@@ -15,9 +15,6 @@
         <div class="field small-margin">
           <%= f.text_field :second_name, placeholder: 'Last name', autocomplete: "off" %>
         </div>
-        <div class="field small-margin">
-          <%= f.text_field :username, placeholder: 'User name', autocomplete: "off" %>
-        </div>
         <%= f.label 'Email and Location' %><br />
         <div class="field small-margin">
           <%= f.email_field :email, placeholder: 'Email', autocomplete: "email" %>
@@ -28,13 +25,9 @@
         <div class="field small-margin">
           <%= f.text_field :country, placeholder: 'Country', autocomplete: "off" %>
         </div>
-        <%= f.label 'Date of Birth' %><br />
+        <%= f.label 'Company' %><br />
         <div class="field small-margin">
-          <%= f.date_field :dob, autocomplete: "off" %>
-        </div>
-        <%= f.label 'Job role' %><br />
-        <div class="field small-margin">
-          <%= f.text_field :role, placeholder: 'Job role', autocomplete: "off" %>
+          <%= f.text_field :role, placeholder: 'Company', autocomplete: "off" %>
         </div>
         <%= f.label 'Password' %>
         <% if @minimum_password_length %>
