@@ -2,34 +2,11 @@
 <html>
   <head>
     <title>COYI</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <!-- gives the page a favicon icon on the page tab -->
-    <link rel="shortcut icon" href="/images/favicon.ico">
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   </head>
   <body>
-
-
-    <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-
-      <%if user_signed_in? %>
-        logged in as <strong><%=
-        current_user.email %></strong>
-        <%= link_to 'Edit profile',
-        edit_user_registration_path, :class=>
-        'navbar-link' %>
-        <%= link_to 'Logout', destroy_user_session_path,
-        method: :delete, :class => 'navbar-link' %>
-        <%else%>
-        <%= link_to 'Sign up', new_user_registration_path,
-        :class => 'navbar-link' %>
-        <%= link_to 'Login', new_user_session_path,
-        :class => 'navbar-link' %>
-      <%end%>
-
     <link rel="stylesheet" href="/Stylesheets/master.css">
     <% url = request.path_info%>
     <% if url == '/' %>
@@ -37,10 +14,13 @@
     <%else%>
       <!-- renders the navbar on every page unless we say otherwise -->
       <%= render 'layouts/navbar' %>
+      <div class="top-of-page"></div>
       <%= yield %>
       <!-- renders the footer on every page unless we say otherwise -->
       <%= render 'layouts/footer' %>
       <link rel="stylesheet" href="/Stylesheets/layouts.css">
     <%end%>
+    <!-- <p class="notice"><%= notice %></p> -->
+    <!-- <p class="alert"><%= alert %></p> -->
   </body>
 </html>
