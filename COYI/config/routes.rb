@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'profile/projects/new', to: 'projects#new', as: 'new_project'
   get 'profile/projects/:id', to: 'projects#show_user_project', as: 'show_user_project'
 
