@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get 'resources', to: 'resources#resources', as: 'resources'
   get 'projects', to: 'projects#index', as: 'projects'
   get 'success', to: 'success#success', as: 'stories'
-
+  get 'profile', to: 'users#profile', as: 'profile'
 
   resources :challenges
   resources :resources
