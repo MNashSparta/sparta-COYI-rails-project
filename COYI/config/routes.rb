@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'profile/projects/new', to: 'projects#new', as: 'new_project'
+  get 'profile/projects/:id', to: 'projects#show_user_project', as: 'show_user_project'
 
   root to: 'home#landing'
 
@@ -12,7 +14,6 @@ Rails.application.routes.draw do
   get 'contact', to: 'about#contact', as: 'contact'
   get 'faq', to: 'about#faq', as: 'faq'
   get 'resources', to: 'resources#resources', as: 'resources'
-  get 'projects', to: 'projects#index', as: 'projects'
   get 'success', to: 'success#success', as: 'stories'
 
 
@@ -24,6 +25,7 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: {registrations: 'users/registrations'}
   get 'profile/projects', to: 'projects#user_projects', as: 'user_projects'
+
   resources :projects, only: [:create, :new]
 
   get 'about', to: 'about#about'

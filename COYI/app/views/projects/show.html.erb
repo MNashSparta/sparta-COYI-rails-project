@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @project.title %>
+  <h1>  <%= @project.title %></h1>
 </p>
 
 <p>
@@ -11,9 +10,15 @@
 </p>
 
 <p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+
+<p>
   <strong>User:</strong>
-  <%= @project.user %>
+  <%= @project.user.username %>
 </p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<%= link_to 'Projects Index', projects_path %> |
+<%= link_to 'My Projects', user_projects_path %>
