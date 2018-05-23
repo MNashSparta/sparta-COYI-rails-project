@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'profile/projects/:id', to: 'projects#show_user_project', as: 'show_user_project'
 
   get 'profile/my_resources/new', to: 'my_resources#new', as: 'new_my_resource'
-  get 'profile/my_resources/:id', to: 'my_resources#show_user_my_resource', as: 'show_user_my_resource'
+  get 'profile/my_resources/:id', to: 'my_resources#show', as: 'show_user_my_resource'
 
   root to: 'home#landing'
 
@@ -17,12 +17,13 @@ Rails.application.routes.draw do
   get 'about', to: 'about#about', as: 'about'
   get 'contact', to: 'about#contact', as: 'contact'
   get 'faq', to: 'about#faq', as: 'faq'
-  get 'resources', to: 'resources#resources', as: 'resources'
+  get 'resources', to: 'my_resources#resources', as: 'resources'
   get 'success', to: 'success#success', as: 'stories'
 
 
   resources :challenges
   resources :resources
+  resources :my_resources
   resources :news
   resources :projects
   resources :chapters

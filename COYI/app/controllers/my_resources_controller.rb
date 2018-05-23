@@ -2,6 +2,10 @@ class MyResourcesController < ApplicationController
   before_action :set_my_resource, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
+  # Get /resources.html.erb
+  def resources
+  end
+
   # GET /my_resources
   # GET /my_resources.json
   def index
