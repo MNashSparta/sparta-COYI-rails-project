@@ -19,6 +19,13 @@
         <td><%= project.description %></td>
         <td><%= User.find(project.user_id).email %></td>
         <td><%= User.find(project.user_id).location %></td>
+        <td>
+          <% project.project_files.each do |file| %>
+            <li>
+              <%= image_tag file.preview(resize: "100x100>") %>
+            </li>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>

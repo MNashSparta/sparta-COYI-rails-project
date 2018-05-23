@@ -19,6 +19,17 @@
   <%= @project.user.username %>
 </p>
 
+<p>
+  <strong>Files:</strong>
+  <ul>
+  <% @project.avatar.each do |file| %>
+    <li>
+      <%= image_tag file.preview(resize: "100x100>") %>
+    </li>
+  <% end %>
+</ul>
+</p>
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Projects Index', projects_path %> |
 <%= link_to 'My Projects', user_projects_path %>
