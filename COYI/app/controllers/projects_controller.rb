@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  # Only allows logged in users to access those methods
+  before_action :authenticate_user!, only: [:user_projects, :new, :edit, :create, :destroy]
 
   # GET /projects
   # GET /projects.json
@@ -18,9 +19,9 @@ class ProjectsController < ApplicationController
     @project = Project.new
   end
 
+
   def upload
     uploaded_io = params[:user][:uploaded]
-
     File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
       file.write(uploaded_io.read)
     end
@@ -74,6 +75,7 @@ class ProjectsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
