@@ -40,8 +40,9 @@ body {
 #user-profile {
   background-image: url('/images/city_lights.jpeg');
   background-size: 100%;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 .home-link {
@@ -149,8 +150,12 @@ body#landing_page {
   border-radius: 100%;
   display: inline;
 }
+.profile-hr {
+  border: 1px solid white;
+}
 .profile-background {
-  opacity: 0.5;
+  background-color: black;
+  opacity: 0.7;
   filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
@@ -184,6 +189,9 @@ body#landing_page {
   padding: 25px;
 }
 
+.profile-info {
+  margin-left: 50px;
+}
 .white-background{
   background-color: white;
 }
