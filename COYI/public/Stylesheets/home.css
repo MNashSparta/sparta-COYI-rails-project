@@ -1,79 +1,75 @@
-
-@font-face {
-    font-family: "Roboto";
-    src: url('/roboto/Roboto-Regular.ttf');
-}
-
-* {
-  font-family: "Roboto";
-}
-
-#body-home {
-  font-family: inherit;
-  text-align: center;
-}
-
-.home-link {
-  color: #F0564E;
-}
-
-.home-link:hover {
-  color: #F0564E;
-  text-decoration: none;
-}
-
-body#landing_page {
-  background-image: image-url('/images/landing_logo.gif');
-  background-size: 100%;
-  background-repeat: repeat;
-  background-color: black;
-}
-
-.brand-img{
-  width: 50px;
-}
-
-.no-pad {
-  padding: 0;
-}
-
-.page-band {
-  background-color: #F0564E;
+#map {
+  padding-top: 500px;
+  height: 60%;
   width: 100%;
 }
-
-.no-margin {
-  margin: 0;
+.success{
+  font-size: 1.1em;
+  font-family: 'Roboto-Bold';
+  color: #F0564E;
+}
+.success:hover{
+  font-size: 1.1em;
+  font-family: 'Roboto-Bold';
+  color: #F0564E;
+}
+/* Map Modals */
+.map-social {
+  margin: auto;
+  display: flex;
+}
+.map-social a {
+  flex: 1;
+}
+#map-container {
+  height: 70vh;
+}
+.rounded-circle{
+  width: 10vw;
+}
+#map-twitter,
+#map-email,
+#map-facebook,
+#map-linkedin {
+  font-size:1.5em;
+  margin:0;
 }
 
-.abso {
-  position: absolute;
+#map-twitter {
+  color:#0074b8;
 }
 
-.title-style {
-  text-transform: uppercase;
+#map-email {
+  color:#c72121;
 }
 
-.shadow-one {
-  box-shadow: 0px 0px 2px lightgrey;
+#map-facebook {
+  color:#0074b8;
 }
 
-/* NAVBAR */
-.nav-bar-style {
-  background-color: #F0564E;
-  color: white;
-  margin-bottom: 2%;
+#map-linkedin {
+  color:#0074b8;
 }
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+.card-title{
+  color: #F0564E;
 }
-
-.nav-link {
-  color: rgba(255,255,255,1);
+.hr {
+    border-top: grey solid 1.5px;
+    width: 100%;
+    align: center;
 }
-
-.nav-link:hover {
-  color: white;
-  text-shadow: 0px 0px 1px white;
+/* Social Link */
+.fab {
+  /* padding: .5em; */
+  font-size: 1.7em;
+  line-height: 1.7em;
+  height: 1.7em;
+  width: 1.7em;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px .7em;
+  border-radius: 50%;
+  border: 1px solid white;
+  color:white;
+  transition: .2s;
 }
