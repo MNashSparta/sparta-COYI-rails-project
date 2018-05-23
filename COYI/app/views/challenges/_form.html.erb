@@ -16,6 +16,11 @@
     <%= form.text_field :emailaddress %>
   </div>
 
+  <!-- <div class="field">
+    <%= form.label :emailaddress %>
+    <%= form.text_field :emailaddress, value: current_user.email %>
+  </div> -->
+
   <div class="field">
     <%= form.label :firstname %>
     <%= form.text_field :firstname %>
@@ -34,6 +39,11 @@
   <div class="field">
     <%= form.label :organisation %>
     <%= form.text_field :organisation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
   </div>
 
   <div class="actions">
