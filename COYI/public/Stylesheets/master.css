@@ -7,6 +7,11 @@
   font-family: "Roboto";
 }
 
+.title {
+  font-family: 'Roboto';
+}
+
+
 #body-home {
   font-family: inherit;
   text-align: center;

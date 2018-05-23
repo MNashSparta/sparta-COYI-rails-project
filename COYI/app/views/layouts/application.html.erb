@@ -7,9 +7,12 @@
     <!-- gives the page a favicon icon on the page tab -->
     <link rel="shortcut icon" href="/images/favicon.ico">
     <meta name="viewport" content="width=device-width">
-  </head>
-  <body>
+
+    <!-- our custom styles come after Bootstrap -->
     <link rel="stylesheet" href="/Stylesheets/master.css">
+
+  </head>
+  <body class="title">
     <% url = request.path_info%>
     <% if url == '/' %>
       <%= yield %>
@@ -22,7 +25,5 @@
       <%= render 'layouts/footer' %>
       <link rel="stylesheet" href="/Stylesheets/layouts.css">
     <%end%>
-    <!-- <p class="notice"><%= notice %></p> -->
-    <!-- <p class="alert"><%= alert %></p> -->
   </body>
 </html>
