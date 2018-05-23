@@ -1,5 +1,7 @@
 <h1> <%= current_user.first_name%>'s Projects</h1>
 
+<%= link_to 'New Project', new_project_path %>
+
 <table>
   <thead>
     <tr>
@@ -23,5 +25,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Project', new_project_path %>

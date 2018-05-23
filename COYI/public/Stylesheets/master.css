@@ -20,10 +20,37 @@
   color: #F0564E;
 }
 
+.top-of-page {
+  height: 76px;
+}
+
 .home-link:hover {
   color: #F0564E;
   text-decoration: none;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: #F0564E;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: #F0564E;
+}
+
 
 .top-margin {
   margin-top: 10%;
@@ -56,6 +83,10 @@ body#landing_page {
 
 .no-margin {
   margin: 0;
+}
+
+.small-margin {
+  margin: 10px;
 }
 
 .abso {
@@ -91,6 +122,14 @@ body#landing_page {
 }
 .team {
   padding: 5%;
+}
+
+.red-background {
+  background-color: #F0564E;
+}
+
+.center-text {
+  text-align: center;
 }
 
 #title-on-img {
