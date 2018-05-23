@@ -3,6 +3,15 @@
     src: url('/roboto/Roboto-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: url('/roboto/Roboto-Thin.ttf');
+}
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('/roboto/Roboto-Bold.ttf')
+}
+
 * {
   font-family: "Roboto";
 }
@@ -15,10 +24,17 @@
 #body-home {
   font-family: inherit;
   text-align: center;
+}
+
+body {
   background-image: url('/images/city_bg.jpeg');
-  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
 }
 
 #user-profile {
@@ -30,6 +46,11 @@
 
 .home-link {
   color: #F0564E;
+}
+
+.jumbotron{
+  background: none;
+  text-shadow: 2px 2px 4px white;
 }
 
 .top-of-page {
@@ -62,7 +83,6 @@
   font-size: 55px;
   color: #F0564E;
 }
-
 
 .top-margin {
   margin-top: 10%;
@@ -97,6 +117,10 @@ body#landing_page {
   margin: 0;
 }
 
+.success{
+  background: white;
+}
+
 .small-margin {
   margin: 10px;
 }
@@ -108,6 +132,10 @@ body#landing_page {
 .title-style {
   text-transform: uppercase;
   text-align: center;
+}
+
+.option-title {
+  font-size: 15px;
 }
 
 .profile-pic {
@@ -135,7 +163,7 @@ body#landing_page {
 }
 
 .video-margin {
-  margin-top: 13%;
+  margin-top: 5%;
   margin-bottom: 8%;
 }
 
@@ -150,10 +178,48 @@ body#landing_page {
   background-color: #F0564E;
 }
 
+.white-background{
+  background-color: white;
+}
+
 .center-text {
   text-align: center;
 }
 
+.form-div {
+  background-color: #F0564E;
+  opacity: 0.9;
+  color: white;
+  margin: 10% 0;
+  border-radius: 0.25em;
+  padding: 2% 0% 2% 0%;
+}
+
+.question-form {
+  width: 100%;
+  height: 120px;
+  min-height: 120px;
+}
+
+.advocate-div {
+  padding: 5%;
+}
+
+.input-style {
+  border-radius: 0.25em;
+  width: 100%
+}
+
+.text-on-bk {
+  color: white;
+}
+
+.login-button {
+  margin: 0 33% 0 33%;
+  width: 33%;
+  padding: 0 2% 0 2%;
+  border-radius: 0.25rem;
+}
 #title-on-img {
   color: white;
   text-shadow: 0px 0px 1px black;
@@ -181,6 +247,10 @@ body#landing_page {
     font-size: 35px;
   }
 
+  .carousel-container{
+    display: none;
+  }
+
   .nav-link {
     font-size: 13px;
   }
@@ -197,5 +267,12 @@ body#landing_page {
 
   #mission-state {
     font-size: 15px;
+  }
+}
+
+@media all and (max-width: 1024px) and (min-height:  400px){
+  .navbar-collapse .navbar-expand-md {
+    display: flex !important;
+    flex-basis: auto !important;
   }
 }
