@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -58,3 +59,62 @@
 <% end %>
 
 <%= render "users/shared/links" %>
+=======
+<div class="top-of-page">
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4 red-background center-text">
+      <h2>Sign up</h2>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+        <%= f.label 'Details' %><br />
+        <div class="field small-margin">
+          <%= f.text_field :first_name, placeholder: 'First name', autofocus: true, autocomplete: "off" %>
+        </div>
+        <div class="field small-margin">
+          <%= f.text_field :second_name, placeholder: 'Last name', autocomplete: "off" %>
+        </div>
+        <div class="field small-margin">
+          <%= f.text_field :username, placeholder: 'User name', autocomplete: "off" %>
+        </div>
+        <%= f.label 'Email and Location' %><br />
+        <div class="field small-margin">
+          <%= f.email_field :email, placeholder: 'Email', autocomplete: "email" %>
+        </div>
+        <div class="field small-margin">
+          <%= f.text_field :location, placeholder: 'Address', autocomplete: "off" %>
+        </div>
+        <div class="field small-margin">
+          <%= f.text_field :country, placeholder: 'Country', autocomplete: "off" %>
+        </div>
+        <%= f.label 'Date of Birth' %><br />
+        <div class="field small-margin">
+          <%= f.date_field :dob, autocomplete: "off" %>
+        </div>
+        <%= f.label 'Job role' %><br />
+        <div class="field small-margin">
+          <%= f.text_field :role, placeholder: 'Job role', autocomplete: "off" %>
+        </div>
+        <%= f.label 'Password' %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <div class="field small-margin">
+          <%= f.password_field :password, placeholder: '********', autocomplete: "off" %>
+        </div>
+        <div class="field small-margin">
+          <%= f.password_field :password_confirmation, placeholder: '********', autocomplete: "off" %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Sign up" %>
+        </div>
+      <% end %>
+      <%= render "users/shared/links" %>
+    </div>
+  </div>
+</div>
+<br>
+>>>>>>> 97fdbea1d4ef81035c0ed7c2f0fafde3e69a887e
