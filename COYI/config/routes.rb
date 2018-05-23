@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'profile/profile'
   get 'profile/projects/new', to: 'projects#new', as: 'new_project'
   get 'profile/projects/:id', to: 'projects#show_user_project', as: 'show_user_project'
 
@@ -15,6 +16,7 @@ Rails.application.routes.draw do
   get 'faq', to: 'about#faq', as: 'faq'
   get 'resources', to: 'resources#resources', as: 'resources'
   get 'success', to: 'success#success', as: 'stories'
+  get 'profile', to: 'users#profile', as: 'profile'
 
 
   resources :challenges

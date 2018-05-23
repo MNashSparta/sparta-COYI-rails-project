@@ -1,0 +1,56 @@
+<!-- The Member’s picture -->
+<!-- - this will need a feature to be able to upload the user's picture -->
+<!-- Michael is doing it for the project page, which can be used here thereafter -->
+
+<p>
+  <%= current_user.first_name %> + ' ' + <%= current_user.second_name %>
+</p>
+
+<p>
+  <%= current_user.location %>
+</p>
+
+<!-- This doesnt exist yet  - This is job_role-->
+<!-- <p>
+  <%=  %>
+</p> -->
+
+<!-- Linkedin, Facebook and Twitter logos with links -->
+
+<p>
+  <strong>User:</strong>
+  <%= current_user.username %>
+</p>
+
+<!-- Link to edit -->
+<p>
+  <%= link_to 'Edit',  %>
+</p>
+<!-- Link to project hub -->
+<p>
+  <%= link_to 'Project Hub',  %>
+</p>
+<!-- Link to chapter -->
+<p>
+  <%= link_to 'Chapter',  %>
+</p>
+
+
+<!-- This doesnt exist yet  - This is bio-->
+<!-- <p>
+  <%=  %>
+</p> -->
+
+
+<!-- Information extracted from registration form
+- Name
+- Username
+-
+
+A Bio - Some information about the member, their organisation
+
+Members will be able to select and join their nearest Chapter through their profile, will be automatically linked to Chapter Hub section of OUR CIRCLE (see below)
+
+Purpose of Member Profiles: COYI can reference who the person is and what project they are working on and can assign Chapter lead
+
+Assuming we are use LinkedIn to register, profile information can be extracted -->
