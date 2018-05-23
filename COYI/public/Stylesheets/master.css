@@ -20,7 +20,7 @@
   color: #F0564E;
 }
 
-.top_of_page {
+.top-of-page {
   height: 76px;
 }
 
@@ -62,6 +62,10 @@ body#landing_page {
   margin: 0;
 }
 
+.small-margin {
+  margin: 10px;
+}
+
 .abso {
   position: absolute;
 }
@@ -87,6 +91,14 @@ body#landing_page {
 
 .back-img {
   position: fixed;
+}
+
+.red-background {
+  background-color: #F0564E;
+}
+
+.center-text {
+  text-align: center;
 }
 
 #title-on-img {
