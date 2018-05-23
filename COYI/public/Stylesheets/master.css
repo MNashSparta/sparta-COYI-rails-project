@@ -178,6 +178,12 @@ body#landing_page {
   background-color: #F0564E;
 }
 
+/* to make input boxes etc more circular */
+#smooth-edges {
+  border-radius: 10%;
+  padding: 25px;
+}
+
 .white-background{
   background-color: white;
 }
@@ -212,6 +218,7 @@ body#landing_page {
 
 .text-on-bk {
   color: white;
+
 }
 
 .login-button {
