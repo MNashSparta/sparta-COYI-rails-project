@@ -44,7 +44,6 @@ class MyResourcesController < ApplicationController
     @my_resource = MyResource.new(my_resource_params)
     @my_resource.user_id = current_user.id
     @my_resource.status = 0
-
     respond_to do |format|
       if @my_resource.save
         format.html { redirect_to @my_resource, notice: 'My resource was successfully created.' }
@@ -61,7 +60,7 @@ class MyResourcesController < ApplicationController
   def update
     respond_to do |format|
       if @my_resource.update(my_resource_params)
-        format.html { redirect_to @my_resource, notice: 'My resource was successfully updated.' }
+        format.html { redirect_to @my_resource, notice: 'Resource was successfully updated.' }
         format.json { render :show, status: :ok, location: @my_resource }
       else
         format.html { render :edit }

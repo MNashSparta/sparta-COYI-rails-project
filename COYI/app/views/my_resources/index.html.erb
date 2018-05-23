@@ -1,6 +1,5 @@
-<p id="notice"><%= notice %></p>
-
 <h1>My Resources</h1>
+<p id="notice"><%= notice %></p>
 
 <table>
   <thead>
@@ -17,7 +16,6 @@
       <tr>
         <td><%= my_resource.title %></td>
         <td><%= my_resource.description %></td>
-        <td><%= my_resource.status %></td>
         <td><%= link_to 'Show', my_resource %></td>
         <td><%= link_to 'Edit', edit_my_resource_path(my_resource) %></td>
         <td><%= link_to 'Destroy', my_resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -28,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New My Resource', new_my_resource_path %>
+<%= link_to 'New Resource', new_my_resource_path %>
