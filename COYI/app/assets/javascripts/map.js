@@ -389,7 +389,7 @@ function initMap() {
         {
           featureType: 'landscape.natural.terrain',
           stylers: [{
-              color: '#ffffff'
+              color: '#FFFFFF'
             }]},
         {
           featureType: 'road',
