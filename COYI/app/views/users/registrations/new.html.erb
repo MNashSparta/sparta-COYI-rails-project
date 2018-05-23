@@ -4,54 +4,55 @@
   <div class="row">
     <div class="col-md-4">
     </div>
-    <div class="col-md-4 red-background center-text">
+    <div class="col-md-4 red-background text-on-bk">
       <h2>Sign up</h2>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
         <%= f.label 'Details' %><br />
         <div class="field small-margin">
-          <%= f.text_field :first_name, placeholder: 'First name', autofocus: true, autocomplete: "off" %>
+          <%= f.text_field :first_name, placeholder: 'First name', autofocus: true, autocomplete: "off", class: 'form-control' %>
         </div>
         <div class="field small-margin">
-          <%= f.text_field :second_name, placeholder: 'Last name', autocomplete: "off" %>
+          <%= f.text_field :second_name, placeholder: 'Last name', autocomplete: "off", class: 'form-control' %>
         </div>
         <div class="field small-margin">
-          <%= f.text_field :username, placeholder: 'User name', autocomplete: "off" %>
+          <%= f.text_field :username, placeholder: 'User name', autocomplete: "off", class: 'form-control' %>
         </div>
         <%= f.label 'Email and Location' %><br />
         <div class="field small-margin">
-          <%= f.email_field :email, placeholder: 'Email', autocomplete: "email" %>
+          <%= f.email_field :email, placeholder: 'Email', autocomplete: "email", class: 'form-control' %>
         </div>
         <div class="field small-margin">
-          <%= f.text_field :location, placeholder: 'Address', autocomplete: "off" %>
+          <%= f.text_field :location, placeholder: 'Address', autocomplete: "off", class: 'form-control' %>
         </div>
         <div class="field small-margin">
-          <%= f.text_field :country, placeholder: 'Country', autocomplete: "off" %>
+          <%= f.text_field :country, placeholder: 'Country', autocomplete: "off", class: 'form-control' %>
         </div>
         <%= f.label 'Date of Birth' %><br />
         <div class="field small-margin">
-          <%= f.date_field :dob, autocomplete: "off" %>
+          <%= f.date_field :dob, autocomplete: "off", class: 'form-control' %>
         </div>
         <%= f.label 'Job role' %><br />
         <div class="field small-margin">
-          <%= f.text_field :role, placeholder: 'Job role', autocomplete: "off" %>
+          <%= f.text_field :role, placeholder: 'Job role', autocomplete: "off", class: 'form-control' %>
         </div>
         <%= f.label 'Password' %>
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
         <% end %><br />
         <div class="field small-margin">
-          <%= f.password_field :password, placeholder: '********', autocomplete: "off" %>
+          <%= f.password_field :password, placeholder: '********', autocomplete: "off", class: 'form-control' %>
         </div>
         <div class="field small-margin">
-          <%= f.password_field :password_confirmation, placeholder: '********', autocomplete: "off" %>
+          <%= f.password_field :password_confirmation, placeholder: '********', autocomplete: "off", class: 'form-control' %>
         </div>
         <div class="actions">
-          <%= f.submit "Sign up" %>
+          <%= f.submit "Sign up", :class => 'login-button' %>
         </div>
       <% end %>
       <%= render "users/shared/links" %>
     </div>
   </div>
 </div>
-<br>
+<div class="top-of-page">
+</div>
