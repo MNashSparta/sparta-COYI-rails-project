@@ -10,6 +10,8 @@
 #body-home {
   font-family: inherit;
   text-align: center;
+}
+body {
   background-image: url('/images/city_bg.jpeg');
   background-size: 100%;
   background-repeat: no-repeat;
