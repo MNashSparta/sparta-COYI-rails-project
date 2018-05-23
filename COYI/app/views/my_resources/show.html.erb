@@ -1,8 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
   <%= @my_resource.title %>
+</p>
+
+<p>
+  <strong>Current Status:</strong>
+  <%= @my_resource.status %>
 </p>
 
 <p>
@@ -11,9 +15,10 @@
 </p>
 
 <p>
-  <strong>Status:</strong>
-  <%= @my_resource.status %>
+  <strong>User:</strong>
+  <%= @my_resource.user.username %>
 </p>
 
 <%= link_to 'Edit', edit_my_resource_path(@my_resource) %> |
-<%= link_to 'Back', my_resources_path %>
+<%= link_to 'My Resource Index', my_resources_path %> |
+<%= link_to 'My Resources', user_my_resources_path %>
