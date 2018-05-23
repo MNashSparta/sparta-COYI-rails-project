@@ -1,7 +1,7 @@
 class ResourcesController < ApplicationController
 
 
-  def level_2
+  def level
     authorize :resource, :show?
   end
 

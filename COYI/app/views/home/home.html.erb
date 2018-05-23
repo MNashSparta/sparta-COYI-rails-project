@@ -1,12 +1,16 @@
 <body id="body-home">
-  <div class="">
     <div class="row no-margin">
       <div class="col-md-12">
-        <h1 class="title-style">The Circle of Young Intrapreneurs</h1>
+        <h1 id="title-on-img" class="title-style">Circle of Young Intrapreneurs</h1>
       </div>
     </div>
     <div class="row no-margin">
-      <div class="col-sm-8 offset-sm-2">
+      <div class="embed-responsive embed-responsive-16by9 col-md-8 offset-md-2 video-margin">
+        <iframe width="100%" height="auto" src="https://www.youtube-nocookie.com/embed/r47ac_6I7-Y?rel=0&modestbranding=1&showinfo=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div id="mission-state" class="row no-margin page-band-white">
+      <div class="col-sm-10 offset-sm-1">
         <p>
           A movement designed to inspire, guide, develop & deliver purpose-driven business ideas
           from social intrapreneurs inside corporate organisations globally. We drive positive social change
@@ -17,24 +21,8 @@
         </p>
       </div>
     </div>
-    <div class="page-band shadow-one row no-margin">
-      <div class="embed-responsive embed-responsive-16by9 col-md-8 offset-md-2">
-        <iframe width="100%" height="auto" src="https://www.youtube-nocookie.com/embed/r47ac_6I7-Y?rel=0&modestbranding=1&showinfo=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="row no-margin">
-      <div class="col-md-12">
-        <h1 class="title-style">TicketAid</h1>
-      </div>
-    </div>
-    <div class="row no-margin">
-      <div class="col-md-12">
-        <h1 class="title-style">Connected Homeless</h1>
-      </div>
-    </div>
-    <div class="row no-margin">
-      <div class="col-md-12">
-        <h1 class="title-style">Round Up</h1>
-      </div>
+
+    <div id="stories" class="page-band-red">
+      <%= render 'layouts/success_stories_home' %>
     </div>
 </body>
