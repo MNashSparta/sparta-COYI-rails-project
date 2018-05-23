@@ -31,7 +31,7 @@ class ProjectsController < ApplicationController
   end
 
   def user_projects
-    @projects = Project.where(user_id: @user)
+    @projects = Project.where(user_id: current_user.id)
   end
 
   # POST /projects
@@ -56,7 +56,7 @@ class ProjectsController < ApplicationController
   def update
     respond_to do |format|
       if @project.update(project_params)
-        format.html { redirect_to @project, notice: 'Project was successfully updated.' }
+        format.html { redirect_to "/", notice: 'Project was successfully updated.' }
         format.json { render :show, status: :ok, location: @project }
       else
         format.html { render :edit }
