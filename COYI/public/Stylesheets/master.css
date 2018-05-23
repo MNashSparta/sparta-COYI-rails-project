@@ -105,9 +105,8 @@ body#landing_page {
   margin: 0;
 }
 
-.marketing{
-  background: none;
-  text-shadow: 2px 2px 4px white;
+.success{
+  background: white;
 }
 
 .small-margin {
@@ -153,6 +152,10 @@ body#landing_page {
   background-color: #F0564E;
 }
 
+.white-background{
+  background-color: white;
+}
+
 .center-text {
   text-align: center;
 }
@@ -189,6 +192,10 @@ body#landing_page {
     z-index: 1;
     margin-top: 15%;
     font-size: 35px;
+  }
+
+  .carousel-container{
+    display: none;
   }
 
   .nav-link {
