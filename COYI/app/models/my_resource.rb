@@ -1,0 +1,2 @@
+class MyResource < ApplicationRecord
+end
