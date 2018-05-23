@@ -48,22 +48,22 @@ class User < ApplicationRecord
   end
 
   def level_1?
-    user_level == 1
+    access_level == 1
   end
 
   def level_2?
-    user_level == 2
+    access_level == 2
   end
 
   def level_3?
-    user_level == 3
+    access_level == 3
   end
 
   def level_4?
-    user_level == 4
+    access_level == 4
   end
 
   def level_5?
-    user_level == 5
+    access_level == 5
   end
 end
