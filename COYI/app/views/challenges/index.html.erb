@@ -2,7 +2,7 @@
 
 <h1>100 Day Challenge</h1>
 <p>You want to kick-start your own intrapreneur project within your company but don’t know where to begin? No panic, everyone can become a social super hero! We have developed a simple and free 100-day program for you to get all the basics right. You will receive new tips every 10 days to set up and move forward with your project.</p>
-<!-- <%if user_signed_in? && current_user.user_level == 5%> -->
+<%if user_signed_in? && current_user.user_level == 5%>
 <table>
   <thead>
     <tr>
@@ -27,7 +27,7 @@
           <td><%= link_to 'Edit', edit_challenge_path(challenge) %></td>
           <td><%= link_to 'Destroy', challenge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <!-- <% end %> -->
+    <% end %>
   </tbody>
 </table>
 <%end%>
