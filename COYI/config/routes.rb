@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: 'users/registrations'}
   get 'profile/projects', to: 'projects#user_projects', as: 'user_projects'
   get 'profile/my_resources', to: 'my_resources#user_my_resource', as: 'user_my_resources'
+  get 'chapter/news', to: 'news#chapter_news', as: 'chapter_news'
 
   resources :projects, only: [:create, :new]
   resources :my_resources, only: [:create, :new]

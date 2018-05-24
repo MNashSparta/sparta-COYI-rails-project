@@ -13,6 +13,7 @@
 
 ActiveRecord::Schema.define(version: 2018_05_23_190319) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -76,6 +77,8 @@ ActiveRecord::Schema.define(version: 2018_05_23_190319) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.bigint "chapter_id"
+    t.index ["chapter_id"], name: "index_news_on_chapter_id"
     t.index ["user_id"], name: "index_news_on_user_id"
   end
 
@@ -119,6 +122,8 @@ ActiveRecord::Schema.define(version: 2018_05_23_190319) do
     t.boolean "email_confirmed", default: false
     t.string "confirm_token"
     t.integer "access_level"
+    t.bigint "chapter_id"
+    t.index ["chapter_id"], name: "index_users_on_chapter_id"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
@@ -126,10 +131,9 @@ ActiveRecord::Schema.define(version: 2018_05_23_190319) do
 
   add_foreign_key "challenges", "users"
   add_foreign_key "chapters", "users"
-<<<<<<< HEAD
   add_foreign_key "my_resources", "users"
-=======
+  add_foreign_key "news", "chapters"
   add_foreign_key "news", "users"
->>>>>>> b62a91978723bd6d632c486cf0fb93fcec0b21f5
   add_foreign_key "projects", "users"
+  add_foreign_key "users", "chapters"
 end
