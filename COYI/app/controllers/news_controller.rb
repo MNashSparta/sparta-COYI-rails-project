@@ -1,16 +1,20 @@
 class NewsController < ApplicationController
   before_action :set_news, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:create,  :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create,  :edit, :update, :destroy]
 
   # GET /news
   # GET /news.json
   def index
-    @news = News.all
+    @news = News.where(chapter_id:1)
   end
 
   # GET /news/1
   # GET /news/1.json
   def show
+  end
+
+  def chapter_news
+    @news = News.where(chapter_id: current_user.chapter_id)
   end
 
   # GET /news/new
@@ -70,6 +74,6 @@ class NewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def news_params
-      params.require(:news).permit(:title, :story).merge(user_id: current_user.id)
+      params.require(:news).permit(:title, :story, :chapter_id).merge(user_id: current_user.id)
     end
 end
