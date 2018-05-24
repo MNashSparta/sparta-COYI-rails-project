@@ -3,6 +3,7 @@ class CircleController < ApplicationController
   end
 
   def chapter
+    @chapter = Chapter.find(current_user.chapter_id).name
   end
 
   def advocate
