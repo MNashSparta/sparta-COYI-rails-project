@@ -1,0 +1,89 @@
+#map {
+  padding-top: 500px;
+  height: 60%;
+  width: 100%;
+}
+.success{
+  font-size: 1.1em;
+  font-family: 'Roboto-Bold';
+  color: #F0564E;
+}
+.success:hover{
+  font-size: 1.1em;
+  font-family: 'Roboto-Bold';
+  color: #F0564E;
+}
+/* Map Modals */
+.map-social {
+  margin: auto;
+  display: flex;
+}
+.map-social a {
+  flex: 1;
+}
+#map-container {
+  /* height: 70vh; */
+}
+.rounded-circle{
+  width: 10vw;
+}
+#map-twitter,
+#map-email,
+#map-facebook,
+#map-linkedin {
+  font-size:1.5em;
+  margin:0;
+}
+
+#map-twitter {
+  color:#0074b8;
+}
+
+#map-email {
+  color:#c72121;
+}
+
+#map-facebook {
+  color:#0074b8;
+}
+
+#map-linkedin {
+  color:#0074b8;
+}
+.card-title{
+  color: #F0564E;
+}
+.hr {
+    border-top: grey solid 1.5px;
+    width: 100%;
+    align: center;
+}
+/* Social Link */
+.fab {
+  /* padding: .5em; */
+  font-size: 1.7em;
+  line-height: 1.7em;
+  height: 1.7em;
+  width: 1.7em;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px .7em;
+  border-radius: 50%;
+  border: 1px solid white;
+  color:white;
+  transition: .2s;
+}
+/* FAQ Styling */
+.question{
+  list-style-type: none;
+  line-height: 1.7;
+}
+.FAQ{
+
+  text-decoration: underline;
+}
+#Q1A, #Q2A, #Q3A, #Q4A{
+  border: solid black 1px;
+  padding: 10px;
+  display: none;
+}

@@ -1,0 +1,58 @@
+<div class="top-of-page">
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4 red-background text-on-bk" id="smooth-edges">
+      <h2>Edit your profile</h2>
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+
+        <p>
+          <%= f.label :username %><br/>
+          <%= f.text_field :username, class: 'form-control' %>
+        </p>
+        </div>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
+
+        <div class="field">
+          <%= f.label 'New password' %>
+          <% if @minimum_password_length %>
+            <em><%= @minimum_password_length %> characters minimum</em>
+          <% end %>
+          <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: '********' %>
+
+        </div>
+
+        <div class="field">
+          <%= f.label 'Password confirmation ' %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: '********' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :current_password %><br />
+          <%= f.password_field :current_password, autocomplete: "off", class: 'form-control', placeholder: '********' %>
+        </div>
+        <br>
+        <div class="actions">
+          <%= f.submit "Update", class: 'login-button' %>
+        </div>
+      <% end %>
+
+      <h3>Remove my account</h3>
+      <%= button_to "Remove", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'login-button' %>
+      <br>
+    </div>
+  </div>
+</div>
+<div class="top-of-page">
+</div>

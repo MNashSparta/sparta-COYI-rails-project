@@ -1,0 +1,26 @@
+<h1>Projects</h1>
+
+<p id="notice"><%= notice %></p>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>User</th>
+      <th>Chapter</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= link_to project.title, project %></td>
+        <td><%= project.description %></td>
+        <td><%= User.find(project.user_id).email %></td>
+        <td><%= User.find(project.user_id).location %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
