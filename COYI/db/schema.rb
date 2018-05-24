@@ -10,13 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2018_05_24_105500) do
-=======
-
 ActiveRecord::Schema.define(version: 2018_05_24_132329) do
-
->>>>>>> 1dbb0c3f2a75cf9f008574bd376ae81b097d1366
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,6 +75,8 @@ ActiveRecord::Schema.define(version: 2018_05_24_132329) do
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_my_resources_on_user_id"
   end
 
   create_table "news", force: :cascade do |t|
@@ -142,6 +138,7 @@ ActiveRecord::Schema.define(version: 2018_05_24_132329) do
 
   add_foreign_key "challenges", "users"
   add_foreign_key "chapters", "users"
+  add_foreign_key "my_resources", "users"
   add_foreign_key "news", "chapters"
   add_foreign_key "news", "users"
   add_foreign_key "projects", "users"
