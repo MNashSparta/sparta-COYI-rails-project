@@ -24,11 +24,9 @@
   <ul>
 
   </ul>
-<% @my_resource.uploaded_files.each do |file| %>
-    <li>
-      <%= image_tag file.preview(resize: "100x100>") %>
-    </li>
-  <% end %>
+  <p style="background-color: white">
+<%= link_to rails_blob_path(@my_resource.uploaded_file, disposition: "attachment") %>
+</p>
 </p>
 
 <%- if user_signed_in? %>
