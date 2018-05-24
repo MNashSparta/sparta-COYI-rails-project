@@ -185,7 +185,7 @@ body#landing_page {
 
 /* to make input boxes etc more circular */
 #smooth-edges {
-  border-radius: 10%;
+  border-radius: 0.25em;
   padding: 25px;
 }
 
@@ -232,7 +232,7 @@ body#landing_page {
   margin: 0 33% 0 33%;
   width: 33%;
   padding: 0 2% 0 2%;
-  border-radius: 0.25rem;
+  border-radius: 0.25em;
 }
 #title-on-img {
   color: white;
