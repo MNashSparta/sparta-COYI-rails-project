@@ -1,4 +1,5 @@
 class AskAdvocatesController < ApplicationController
+
   before_action :set_ask_advocate, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   # GET /ask_advocates
@@ -30,6 +31,7 @@ class AskAdvocatesController < ApplicationController
       if @ask_advocate.save
         format.html { redirect_to @ask_advocate, notice: 'Ask advocate was successfully created.' }
         format.json { render :show, status: :created, location: @ask_advocate }
+        AdvocateMailer.with(ask_advocate: @ask_advocate).advocate_email.deliver_now
       else
         format.html { render :new }
         format.json { render json: @ask_advocate.errors, status: :unprocessable_entity }
