@@ -1,4 +1,4 @@
-class NewsController < ApplicationController
+class NewsController < ChaptersController
   before_action :set_news, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create,  :edit, :update, :destroy]
 
