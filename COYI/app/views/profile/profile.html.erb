@@ -26,7 +26,7 @@
   <div class="container">
 <!-- BUTTON"#{current_user.first_name}'s Projects" %> -->
     <div class="row">
-      <div class="col-md-3 profile-background" id="smooth-edges">
+      <div class="col-md-3 form-div" id="smooth-edges">
         <a href="users/edit" class="btn btn-outline-light btn-lg btn-block">Edit Profile</a>
         <a href="/profile/projects" class="btn btn-outline-light btn-lg btn-block"> My Projects</a>
         <a href="/circle/chapter"class="btn btn-outline-light btn-lg btn-block">My Chapter Hub</a>
@@ -35,7 +35,9 @@
         <h3>Bio</h3>
         <hr class="profile-hr">
         <p>
-          Flank tenderloin boudin, corned beef spare ribs beef ribs bacon. Bacon tenderloin flank turducken
+          <%= "#{current_user.bio}" %>
+          <%= "#{current_user.first_name}" %>
+          <!-- Flank tenderloin boudin, corned beef spare ribs beef ribs bacon. Bacon tenderloin flank turducken
           strip steak pancetta boudin short ribs venison, cow frankfurter. Pork belly pancetta chuck, ham
           tail flank ground round boudin pork chop short ribs jerky sausage porchetta. Turducken burgdoggen
           shoulder, leberkas shankle pancetta andouille chuck tail. Rump buffalo t-bone, venison corned beef
@@ -43,7 +45,7 @@
           rump filet mignon. Turkey frankfurter alcatra, boudin beef ribs tri-tip cow swine kevin shankle
           beef. Hamburger cow tongue filet mignon sausage shoulder jowl, prosciutto bresaola drumstick ham
           landjaeger beef ribs jerky chuck. Meatloaf porchetta picanha meatball ham hock. Spare ribs turkey
-          pork short loin sausage prosciutto. Tenderloin short loin tri-tip meatball cow.
+          pork short loin sausage prosciutto. Tenderloin short loin tri-tip meatball cow. -->
         </p>
 
       </div> <!--end of col-->
