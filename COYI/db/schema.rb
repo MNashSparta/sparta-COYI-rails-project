@@ -58,12 +58,25 @@ ActiveRecord::Schema.define(version: 2018_05_24_094733) do
     t.index ["user_id"], name: "index_chapters_on_user_id"
   end
 
-  create_table "news", force: :cascade do |t|
+  create_table "my_resources", force: :cascade do |t|
     t.string "title"
-    t.string "story"
-    t.date "published"
+    t.string "description"
+    t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_my_resources_on_user_id"
+  end
+  create_table "news", force: :cascade do |t|
+    t.string "title"
+    t.text "story"
+    t.datetime "published"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "chapter_id"
+    t.index ["chapter_id"], name: "index_news_on_chapter_id"
+    t.index ["user_id"], name: "index_news_on_user_id"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -115,6 +128,9 @@ ActiveRecord::Schema.define(version: 2018_05_24_094733) do
 
   add_foreign_key "challenges", "users"
   add_foreign_key "chapters", "users"
+  add_foreign_key "my_resources", "users"
+  add_foreign_key "news", "chapters"
+  add_foreign_key "news", "users"
   add_foreign_key "projects", "users"
   add_foreign_key "users", "chapters"
 end
