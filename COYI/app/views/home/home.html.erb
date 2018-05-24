@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="/stylesheets/home.css">
+<body id="body-home">
+    <div class="row no-margin">
+      <div class="col-md-12">
+        <h1 id="title-on-img" class="title-style">Circle of Young Intrapreneurs</h1>
+      </div>
+    </div>
+    <div class="row no-margin">
+      <div class="embed-responsive embed-responsive-16by9 col-md-8 offset-md-2 video-margin">
+        <iframe width="100%" height="auto" src="https://www.youtube-nocookie.com/embed/r47ac_6I7-Y?rel=0&modestbranding=1&showinfo=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div id="mission-state" class="row no-margin page-band-white">
+      <div class="col-sm-10 offset-sm-1">
+        <p>
+          A movement designed to inspire, guide, develop & deliver purpose-driven business ideas
+          from social intrapreneurs inside corporate organisations globally. We drive positive social change
+          through business by creating a community of changemakers and supporting them to deliver
+          their ideas, with tools, mentoring and advice from leading intrapreneurs.
+          Join us and together we can make business a force for good. <br>
+          <a href="https://twitter.com/circleofyi" class="home-link">#dowelldogood.</a>
+        </p>
+      </div>
+    </div>
+
+    <div id="stories" class="page-band-red">
+      <%= render 'layouts/success_stories_home' %>
+    </div>
+    <div class="top-of-page">
+    </div>
+    <!-- MAPS HERE -->
+    <!-- <button type="button" name="button" id="refreshPage" onclick="btnrefresh()">Show Map</button> -->
+      <div class="row">
+        <div id="map-container" class="offset-md-1 col-md-10">
+          <div id="map"></div>
+        </div>
+      </div>
+
+      <!-- END OF MAPS -->
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6cQBeZvCwZ149vp7zKAP60TEwjlc1d5Q&callback=initMap"
+    async defer data-turbolinks-eval="false"></script>
+</body>

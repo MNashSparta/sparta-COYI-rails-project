@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+<h1>100 Day Challenge</h1>
+<p>You want to kick-start your own intrapreneur project within your company but don’t know where to begin? No panic, everyone can become a social super hero! We have developed a simple and free 100-day program for you to get all the basics right. You will receive new tips every 10 days to set up and move forward with your project.</p>
+
+<table>
+  <thead>
+    <%if current_user.access_level == 5%>
+    <tr>
+      <th>Email address</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Location</th>
+      <th>Organisation</th>
+      <th colspan="3"></th>
+    </tr>
+    <%end%>
+  </thead>
+
+  <tbody>
+    <% @challenges.each do |challenge| %>
+      <tr>
+          <td><%= challenge.emailaddress %></td>
+          <td><%= challenge.firstname %></td>
+          <td><%= challenge.lastname %></td>
+          <td><%= challenge.location %></td>
+          <td><%= challenge.organisation %></td>
+          <td><%= link_to 'Show', challenge %></td>
+          <td><%= link_to 'Edit', edit_challenge_path(challenge) %></td>
+          <td><%= link_to 'Unsubscribe', challenge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Challenge', new_challenge_path %>
