@@ -79,10 +79,10 @@ ActiveRecord::Schema.define(version: 2018_05_23_124412) do
 
   create_table "projects", force: :cascade do |t|
     t.string "title"
+    t.integer "status"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "status"
     t.text "description"
     t.index ["user_id"], name: "index_projects_on_user_id"
   end

@@ -10,11 +10,11 @@
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">CIRCLES</a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">OUR CIRCLE</a>
         <div class="dropdown-menu" id="navdrop">
           <%= link_to 'GLOBAL FORUM', global_path, :class => 'nav-link' %>
           <%= link_to 'CHAPTER FORUM', chapter_path, :class => 'nav-link' %>
-          <%= link_to 'ASK AN ADVOCATE', advocate_path, :class => 'nav-link' %>
+          <%= link_to 'ASK AN EXPERT', advocate_path, :class => 'nav-link' %>
           <%= link_to 'NEWS', news_path, :class => 'nav-link' %>
         <div class="dropdown-divider"></div>
           <%= link_to 'FORUM RULES', rules_path, :class => 'nav-link' %>
@@ -30,26 +30,25 @@
       <li class="nav-item">
         <%= link_to 'RESOURCES', resources_path, :class => "nav-link" %>
       </li>
-      <li class="nav-item">
-        <%= link_to 'NEWS', news_path, :class => "nav-link" %>
-      </li>
     </ul>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">PROFILE</a>
         <div class="dropdown-menu" id="navdrop">
           <%if user_signed_in? %>
+
             logged in as <strong><%=
             current_user.first_name %></strong>
+
             <%= link_to 'Edit profile',
             edit_user_registration_path, :class=>
             'nav-link' %>
             <%= link_to 'Logout', destroy_user_session_path,
             method: :delete, :class => 'nav-link' %>
             <%else%>
-            <%= link_to 'Sign up', new_user_registration_path,
+            <%= link_to 'SIGN UP', new_user_registration_path,
             :class => 'nav-link' %>
-            <%= link_to 'Login', new_user_session_path,
+            <%= link_to 'LOGIN', new_user_session_path,
             :class => 'nav-link' %>
           <%end%>
       </li>
@@ -58,6 +57,13 @@
       </li>
     </ul>
   </div>
-  <script src='Javascript/LogoAnimation.js'></script>
+  <script>
+    function hover(element) {
+      element.setAttribute('src', '/images/logo_gif_200.gif');
+    }
+    function unhover(element) {
+      element.setAttribute('src', '/images/logo_200.png');
+    }
+  </script>
   <script type="Javascript/NavBarAnimations.js"></script>
 </nav>
