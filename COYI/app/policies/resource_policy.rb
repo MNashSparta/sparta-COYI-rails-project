@@ -11,8 +11,8 @@ def level_1?
 end
 def level_2?
   user.present? &&
-  user.access_level == 2 &&
-  user.access_level == 3 &&
+  user.access_level == 2 ||
+  user.access_level == 3 ||
   user.access_level == 4
 end
 def level_5?
