@@ -16,7 +16,6 @@
     <% @my_resources.each do |my_resource| %>
       <tr>
         <td><%= link_to my_resource.title, my_resource %></td>
-        <td><%= my_resource.id%></td>
         <td><%= link_to my_resource.description, my_resource %></td>
         <td><%= my_resource.status %></td>
         <td><%= link_to 'Edit', edit_my_resource_path(my_resource) %></td>
