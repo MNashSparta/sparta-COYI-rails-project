@@ -1,3 +1,5 @@
+/* Applied on every page */
+
 @font-face {
     font-family: "Roboto";
     src: url('/roboto/Roboto-Regular.ttf');
@@ -12,14 +14,9 @@
   src: url('/roboto/Roboto-Bold.ttf')
 }
 
-* {
+*{
   font-family: "Roboto";
 }
-
-.title {
-  font-family: 'Roboto';
-}
-
 
 #body-home {
   font-family: inherit;
@@ -113,6 +110,51 @@ body#landing_page {
   width: 100%;
 }
 
+.news-band-white {
+  background-color: #FFFFFFed;
+  width: 100%;
+  margin: 2% 0;
+  border-radius: 0.25em;
+}
+
+.news-all {
+  margin: 0 5%;
+}
+
+.news-story {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 85px;
+}
+
+.news-body {
+  padding: 1% 10%;
+  margin: 0% 0% 0% 0%;
+}
+
+.news-title {
+  padding: 1% 10%;
+  text-align: left;
+  background-color: #f0564eed;
+  margin:0;
+  color: white;
+}
+
+.news-author {
+  margin: 0% 0% 0% 0%;
+}
+
+.admin-list > .edit-li {
+  list-style-type: none;
+  display: inline-block;
+  float: right;
+}
+
+.edit-li {
+  margin: 0% 2%;
+}
+
 .no-margin {
   margin: 0;
 }
@@ -184,7 +226,7 @@ body#landing_page {
 
 /* to make input boxes etc more circular */
 #smooth-edges {
-  border-radius: 10%;
+  border-radius: 0.25em;
   padding: 25px;
 }
 
@@ -224,15 +266,21 @@ body#landing_page {
 
 .text-on-bk {
   color: white;
-
 }
 
 .login-button {
   margin: 0 33% 0 33%;
   width: 33%;
   padding: 0 2% 0 2%;
-  border-radius: 0.25rem;
+  border-radius: 0.25em;
 }
+
+.button-style {
+  color: white;
+  background-color: #F0564E;
+  border-radius: 0.25em;
+}
+
 #title-on-img {
   color: white;
   text-shadow: 0px 0px 1px black;
@@ -269,13 +317,13 @@ body#landing_page {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 882px) {
   #title-on-img {
     display: none;
   }
 
   .video-margin {
-    margin-top: 2:q0%;
+    margin-top: 2%;
   }
 
   #mission-state {
@@ -288,4 +336,188 @@ body#landing_page {
     display: flex !important;
     flex-basis: auto !important;
   }
+}
+
+/* CSS specifically for the NAVBAR and FOOTER */
+
+/* FOOTER */
+
+.footer {
+  /* padding: 10px; */
+  background-color: #F0564E;
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  /* margin-top: 120px; */
+}
+
+.copy-text {
+  font-size: 10px;
+}
+
+.container {
+  width: auto;
+  padding: 0 15px;
+}
+
+.foot {
+  list-style-type: none;
+  display: inline-block;
+}
+
+#navdrop {
+  border: none;
+  border-radius: 10px;
+  background-color: #f0564e
+}
+
+/* NAVBAR */
+.nav-bar-style {
+  background-color: #F0564E;
+  color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.nav-link {
+  color: rgba(255,255,255,1);
+}
+
+.nav-link:hover {
+  color: white;
+  text-shadow: 0px 0px 1px white;
+}
+
+
+/* CSS specifically for the homepage */
+
+#map {
+  padding-top: 500px;
+  height: 60%;
+  width: 100%;
+}
+.success{
+  font-size: 1.1em;
+  font-family: 'Roboto-Bold';
+  color: #F0564E;
+}
+.success:hover{
+  font-size: 1.1em;
+  font-family: 'Roboto-Bold';
+  color: #F0564E;
+}
+/* Map Modals */
+.map-social {
+  margin: auto;
+  display: flex;
+}
+.map-social a {
+  flex: 1;
+}
+#map-container {
+  /* height: 70vh; */
+}
+#map-twitter,
+#map-email,
+#map-facebook,
+#map-linkedin {
+  font-size:1.5em;
+  margin:0;
+}
+
+#map-twitter {
+  color:#0074b8;
+}
+
+#map-email {
+  color:#c72121;
+}
+
+#map-facebook {
+  color:#0074b8;
+}
+
+#map-linkedin {
+  color:#0074b8;
+}
+.card-title{
+  color: #F0564E;
+}
+.hr {
+    border-top: grey solid 1.5px;
+    width: 100%;
+    align: center;
+}
+/* Social Link */
+.fab {
+  /* padding: .5em; */
+  font-size: 1.7em;
+  line-height: 1.7em;
+  height: 1.7em;
+  width: 1.7em;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px .7em;
+  border-radius: 50%;
+  border: 1px solid white;
+  color:white;
+  transition: .2s;
+}
+
+/* FAQ Styling */
+.question {
+  list-style-type: none;
+  line-height: 1.7;
+}
+
+.FAQ {
+  text-decoration: underline;
+}
+
+#Q1A, #Q2A, #Q3A, #Q4A{
+  border: solid black 1px;
+  padding: 10px;
+  display: none;
+}
+
+/* CSS specifically for the NEWS page */
+
+body {
+  text-align: center;
+}
+
+.sub {
+  margin: 50px;
+}
+
+/* CSS specifically for the sucesses page */
+
+
+#widen-row {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-images {
+  display: block;
+}
+
+.col-margin {
+  margin-bottom: 70px;
+}
+.wrapper {
+  max-width:200px;
+  width:100%;
+}
+
+.stories {
+  border: 2px solid #F0564E;
 }
