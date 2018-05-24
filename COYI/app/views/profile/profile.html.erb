@@ -11,15 +11,12 @@
           Current role: <%= current_user.role %>
         </span>
         <span class="profile-info">
-
           <i class="fab fa-linkedin"></i>
           <i class="fab fa-facebook-square"></i>
           <i class="fab fa-twitter-square"></i>
-      </span>
+        </span>
       </h4>
-
     </div> <!--end of container-->
-
   </div> <!--end of jtron-->
 
   <!-- BOOTSTRAP CONTAINER give everything pleasant margins -->
@@ -27,9 +24,9 @@
 <!-- BUTTON"#{current_user.first_name}'s Projects" %> -->
     <div class="row">
       <div class="col-md-3 form-div" id="smooth-edges">
-        <a href="users/edit" class="btn btn-outline-light btn-lg btn-block">Edit Profile</a>
+        <a href="/users/edit" class="btn btn-outline-light btn-lg btn-block">Edit Profile</a>
         <a href="/profile/projects" class="btn btn-outline-light btn-lg btn-block"> My Projects</a>
-        <a href="/circle/chapter"class="btn btn-outline-light btn-lg btn-block">My Chapter Hub</a>
+        <a href="/chapters/<%=current_user.chapter_id%>"class="btn btn-outline-light btn-lg btn-block">My Chapter Hub</a>
         <a href="/profile/my_resources"class="btn btn-outline-light btn-lg btn-block">My Resources</a>
       </div>
       <div class="col-md-8 offset-1 page-band-red text-on-bk" id="smooth-edges">
@@ -39,13 +36,10 @@
           <%= "#{current_user.bio}" %>
           <%= "#{current_user.first_name}" %>
         </p>
-
       </div> <!--end of col-->
     </div> <!--end of row-->
   </div> <!--end of container-->
-
   </div> <!--end of massive container-->
-
   <div class="top-of-page">
   </div>
   </body>

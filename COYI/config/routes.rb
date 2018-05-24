@@ -12,8 +12,6 @@ Rails.application.routes.draw do
   get 'profile/:id',              to: 'profile#show'
   get 'chapter/news',             to: 'news#chapter_news',          as: 'chapter_news'
 
-  root to: 'home#landing'
-
   get 'circle/global',    to: 'circle#global',      as: 'global'
   get 'circle/advocate',  to: 'circle#advocate',    as: 'advocate'
   get 'circle/rules',     to: 'circle#rules',       as: 'rules'
