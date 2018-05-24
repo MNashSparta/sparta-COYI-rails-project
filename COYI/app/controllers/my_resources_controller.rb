@@ -1,9 +1,9 @@
 class MyResourcesController < ApplicationController
   before_action :set_my_resource, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:user_my_resources, :new, :edit, :create, :destroy]
 
-  # Get /resources.html.erb
-  def resources
+  def level
+    authorize :resource, :level?
   end
 
   # GET /my_resources
@@ -22,14 +22,6 @@ class MyResourcesController < ApplicationController
     @my_resource = MyResource.new
   end
 
-  def upload
-    uploaded_io = params[:user][:uploaded]
-
-    File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
-      file.write(uploaded_io.read)
-    end
-  end
-
   # GET /my_resources/1/edit
   def edit
   end
@@ -41,8 +33,7 @@ class MyResourcesController < ApplicationController
   # POST /my_resources
   # POST /my_resources.json
   def create
-    @my_resource = MyResource.new(my_resource_params)
-    @my_resource.user_id = current_user.id
+    @my_resource = MyResource.create!(my_resource_params)
     @my_resource.status = 0
     respond_to do |format|
       if @my_resource.save
