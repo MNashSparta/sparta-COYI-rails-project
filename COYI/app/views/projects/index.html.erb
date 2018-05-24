@@ -19,6 +19,7 @@
         <td><%= project.description %></td>
         <td><%= User.find(project.user_id).email %></td>
         <td><%= User.find(project.user_id).location %></td>
+
       </tr>
     <% end %>
   </tbody>
