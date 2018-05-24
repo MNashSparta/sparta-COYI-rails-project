@@ -22,7 +22,7 @@
   flex: 1;
 }
 #map-container {
-  height: 70vh;
+  /* height: 70vh; */
 }
 .rounded-circle{
   width: 10vw;
@@ -72,4 +72,18 @@
   border: 1px solid white;
   color:white;
   transition: .2s;
+}
+/* FAQ Styling */
+.question{
+  list-style-type: none;
+  line-height: 1.7;
+}
+.FAQ{
+
+  text-decoration: underline;
+}
+#Q1A, #Q2A, #Q3A, #Q4A{
+  border: solid black 1px;
+  padding: 10px;
+  display: none;
 }
