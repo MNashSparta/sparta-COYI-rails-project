@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get 'about', to: 'about#about', as: 'about'
   get 'contact', to: 'about#contact', as: 'contact'
   get 'faq', to: 'about#faq', as: 'faq'
-  get 'resources', to: 'my_resources#resources', as: 'resources'
+  get 'resources', to: 'my_resources#index', as: 'resources'
   get 'success', to: 'success#success', as: 'stories'
 
 

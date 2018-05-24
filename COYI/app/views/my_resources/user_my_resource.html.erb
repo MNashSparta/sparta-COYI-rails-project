@@ -20,7 +20,7 @@
         <td><%= link_to my_resource.description, my_resource %></td>
         <td><%= my_resource.status %></td>
         <td><%= link_to 'Edit', edit_my_resource_path(my_resource) %></td>
-
+        <td><%= link_to 'Destroy', my_resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
