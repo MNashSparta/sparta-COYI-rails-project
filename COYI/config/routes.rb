@@ -19,10 +19,9 @@ Rails.application.routes.draw do
   get 'faq',              to: 'about#faq',          as: 'faq'
   get 'resources',        to: 'my_resources#index', as: 'resources'
   get 'success',          to: 'success#success',    as: 'stories'
-  get 'users/me',              to: 'profile#my_profile', as: 'user_profile'
+  get 'users/me',         to: 'profile#my_profile', as: 'user_profile'
 
-  get 'users/:name',     to: 'profile#show'
-  get 'users/:name/:lastname',     to: 'profile#show'
+  get 'users/:id',      to: 'profile#show'
 
 
   resources :challenges
