@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   get 'success',          to: 'success#success',    as: 'stories'
 
-  get 'users',            to: 'profile#profile',    as: 'user_profile'
+  get 'users',            to: 'profile#profile'
 
   resources :challenges
   resources :resources
@@ -36,6 +36,9 @@ Rails.application.routes.draw do
 
   get 'profile/projects', to: 'projects#user_projects', as: 'user_projects'
   get 'profile/my_resources', to: 'my_resources#user_my_resource', as: 'user_my_resources'
+  get 'profile/me',         to: 'profile#profile',    as: 'user_profile'
+  get 'users/me/edit',    to: 'devise/registrations#update'
+  get 'users/:id',        to: 'profile#show'
   get 'chapter/news', to: 'news#chapter_news', as: 'chapter_news'
 
 
