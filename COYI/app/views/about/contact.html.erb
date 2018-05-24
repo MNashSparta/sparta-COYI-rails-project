@@ -1,21 +1,43 @@
 <h1>Contact Us</h1>
+  <div class="row">
+    <div class="col-md-4 offset-md-4 text-on-bk-red" style="border-radius:10px;">
+      <form class="pad" action="contact.html.erb" method="post">
+        
+        <h3>Select level of membership:</h3>
+        <select name="membership">
+          <option value="non" selected>Non-member</option>
+          <option value="non-active">Non-active member</option>
+          <option value="aspiring">Aspiring Social Intrapreneur</option>
+          <option value="Practicing">Practicing Social Intrapreneur</option>
+        </select>
+        <h3>Full Name:</h3>
+        <input type="text" name="name" value="">
+        <h3>Email:</h3>
+        <input type="text" name="email" value="">
+        <h3>Question</h3>
+        <input type="text" name="question" value="">
 
-<form class="" action="contact.html.erb" method="post">
+        <input type="submit" name="" value="Submit">
 
-  <h3>Select level of membership:</h3>
-  <select name="membership">
-    <option value="non" selected>Non-member</option>
-    <option value="non-active">Non-active member</option>
-    <option value="aspiring">Aspiring Social Intrapreneur</option>
-    <option value="Practicing">Practicing Social Intrapreneur</option>
-  </select>
+      </form>
+    </div>
+  </div>
+
+<%= form_for :contact, url: "contact" do |form| %>
   <h3>Full Name:</h3>
-  <input type="text" name="name" value="">
-  <h3>Email:</h3>
-  <input type="text" name="email" value="">
+  <%= form.text_field :name %>
+
+  <h3>Your Email Address</h3>
+  <div class="field">
+    <%= form.text_field :email %>
+  </div>
+
   <h3>Question</h3>
-  <input type="text" name="question" value="">
+  <div class="field">
+    <%= form.text_area :body , cols:"50", rows:"10" %>
+  </div>
 
-  <input type="submit" name="" value="Submit">
-
-</form>
+  <div class="actions">
+    <%= form.submit "Send" %>
+  </div>
+<% end  %>
