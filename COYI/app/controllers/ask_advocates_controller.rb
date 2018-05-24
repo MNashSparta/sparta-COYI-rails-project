@@ -1,5 +1,4 @@
 class AskAdvocatesController < ApplicationController
-
   before_action :set_ask_advocate, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   # GET /ask_advocates
