@@ -130,8 +130,7 @@ ActiveRecord::Schema.define(version: 2018_05_24_132329) do
     t.boolean "email_confirmed", default: false
     t.string "confirm_token"
     t.integer "access_level"
-    t.bigint "chapter_id"
-    t.index ["chapter_id"], name: "index_users_on_chapter_id"
+    t.string "bio"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
@@ -144,5 +143,4 @@ ActiveRecord::Schema.define(version: 2018_05_24_132329) do
   add_foreign_key "news", "chapters"
   add_foreign_key "news", "users"
   add_foreign_key "projects", "users"
-  add_foreign_key "users", "chapters"
 end
