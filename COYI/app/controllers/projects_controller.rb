@@ -31,14 +31,8 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
-    @project = Project.new(project_params)
-    @project.user_id = current_user.id
+    @project = Project.create!(project_params)
     @project.status = 0
-
-    @project.avatar.attach(params[:avatar])
-    puts "NOOOOOOO"
-
-
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
@@ -83,6 +77,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:title, :description, :status, :user_id, images: [])
+      params.require(:project).permit(:title, :description, :status, uploaded_files: []).merge(user_id: current_user.id)
     end
 end

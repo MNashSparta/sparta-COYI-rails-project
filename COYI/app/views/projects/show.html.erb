@@ -22,12 +22,15 @@
 <p>
   <strong>Files:</strong>
   <ul>
-  <% @project.avatar.each do |file| %>
+
+
+
+</ul>
+<% @project.uploaded_files.each do |file| %>
     <li>
-      <%= image_tag file.preview(resize: "100x100>") %>
+      <%= image_tag file %>
     </li>
   <% end %>
-</ul>
 </p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |

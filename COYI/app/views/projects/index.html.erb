@@ -19,13 +19,11 @@
         <td><%= project.description %></td>
         <td><%= User.find(project.user_id).email %></td>
         <td><%= User.find(project.user_id).location %></td>
+        <%if project.avatar.attached?%>
         <td>
-          <% project.project_files.each do |file| %>
-            <li>
-              <%= image_tag file.preview(resize: "100x100>") %>
-            </li>
-          <% end %>
+          <%= image_tag project.avatar.variant(resize: "100x100") %>
         </td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>

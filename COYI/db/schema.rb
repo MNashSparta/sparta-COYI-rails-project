@@ -109,9 +109,11 @@ ActiveRecord::Schema.define(version: 2018_05_23_124412) do
     t.datetime "updated_at", null: false
     t.boolean "email_confirmed", default: false
     t.string "confirm_token"
-
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
     t.integer "access_level"
-
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
