@@ -19,10 +19,8 @@
         <td><%= project.description %></td>
         <td><%= User.find(project.user_id).email %></td>
         <td><%= User.find(project.user_id).location %></td>
-        <%if project.avatar.attached?%>
-        <td>
-          <%= image_tag project.avatar.variant(resize: "100x100") %>
-        </td>
+        <%if project.uploaded_files.attached?%>
+
         <%end%>
       </tr>
     <% end %>
