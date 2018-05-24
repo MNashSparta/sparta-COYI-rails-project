@@ -1,0 +1,52 @@
+<body id="user-profile">
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <img src="/images/user_placeholder_img.jpeg" class="user-profile-pic rounded-circle image-responsive" alt="Image of current user">
+      <h2><%= "#{@user_to_show.first_name} #{@user_to_show.second_name}'s Profile" %> </h2>
+      <h4>
+        <i class="fas fa-map-marker"></i>
+        <%= @user_to_show.location %>
+        <span class="profile-info">
+          Current role: <%= @user_to_show.role %>
+        </span>
+        <span class="profile-info">
+
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-twitter-square"></i>
+      </span>
+      </h4>
+
+    </div> <!--end of container-->
+
+  </div> <!--end of jtron-->
+
+  <!-- BOOTSTRAP CONTAINER give everything pleasant margins -->
+  <div class="container">
+<!-- BUTTON"#{current_user.first_name}'s Projects" %> -->
+    <div class="row">
+      <div class="col-md-8 offset-2 red-background text-on-bk" id="smooth-edges">
+        <h3>Bio</h3>
+        <hr class="profile-hr">
+        <p>
+          Flank tenderloin boudin, corned beef spare ribs beef ribs bacon. Bacon tenderloin flank turducken
+          strip steak pancetta boudin short ribs venison, cow frankfurter. Pork belly pancetta chuck, ham
+          tail flank ground round boudin pork chop short ribs jerky sausage porchetta. Turducken burgdoggen
+          shoulder, leberkas shankle pancetta andouille chuck tail. Rump buffalo t-bone, venison corned beef
+          cupim kielbasa tri-tip ham. Spare ribs beef meatloaf, ground round swine short loin pig turkey
+          rump filet mignon. Turkey frankfurter alcatra, boudin beef ribs tri-tip cow swine kevin shankle
+          beef. Hamburger cow tongue filet mignon sausage shoulder jowl, prosciutto bresaola drumstick ham
+          landjaeger beef ribs jerky chuck. Meatloaf porchetta picanha meatball ham hock. Spare ribs turkey
+          pork short loin sausage prosciutto. Tenderloin short loin tri-tip meatball cow.
+        </p>
+
+      </div> <!--end of col-->
+    </div> <!--end of row-->
+  </div> <!--end of container-->
+
+  </div> <!--end of massive container-->
+
+  <div class="top-of-page">
+  </div>
+  </body>
