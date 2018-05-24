@@ -20,8 +20,8 @@ Rails.application.routes.draw do
   get 'resources',        to: 'my_resources#index', as: 'resources'
   get 'success',          to: 'success#success',    as: 'stories'
 
-  get 'users/me',         to: 'profile#profile',    as: 'user_profile'
-  get 'users/:id',        to: 'profile#show'
+  get 'profile/me',         to: 'profile#profile',    as: 'user_profile'
+  get 'profile/:id',        to: 'profile#show'
 
 
 
