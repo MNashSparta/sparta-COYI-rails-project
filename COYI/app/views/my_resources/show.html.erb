@@ -26,7 +26,7 @@
   </ul>
 <% @my_resource.uploaded_files.each do |file| %>
     <li>
-      <%= image_tag file %>
+      <%= image_tag file.preview(resize: "100x100>") %>
     </li>
   <% end %>
 </p>
