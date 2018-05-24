@@ -15,7 +15,7 @@
           <%= link_to 'CHAPTERS', chapters_path, :class => 'nav-link' %>
             <%= link_to 'ASK AN EXPERT', ask_advocates_path, :class => 'nav-link' %>
           <%= link_to 'NEWS', news_path, :class => 'nav-link' %>
-        <div class="dropdown-divider"></div>
+          <div class="dropdown-divider"></div>
           <%= link_to 'FORUM RULES', rules_path, :class => 'nav-link' %>
         </div>
       </li>
@@ -27,7 +27,7 @@
         <%= link_to 'PROJECT HUB', projects_path, :class => "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to 'RESOURCES', resources_path, :class => "nav-link" %>
+        <%= link_to 'RESOURCES', my_resources_path, :class => "nav-link" %>
       </li>
       <li class="nav-item">
         <%= link_to 'NEWS', news_index_path, :class => "nav-link" %>
@@ -56,6 +56,7 @@
             <%= link_to 'LOGIN', new_user_session_path,
             :class => 'nav-link' %>
           <%end%>
+        </div>
       </li>
       <li class="nav-item">
         <%= link_to 'ABOUT US', about_path, :class => "nav-link" %>

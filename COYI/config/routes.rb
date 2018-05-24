@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'profile/projects/new',     to: 'projects#new',               as: 'new_project'
   get 'profile/projects/:id',     to: 'projects#show_user_project', as: 'show_user_project'
   get 'profile/projects',         to: 'projects#user_projects'
+  get 'profile/my_resources',     to: 'my_resources#user_my_resource', as: 'user_my_resource'
   get 'profile/my_resources/new', to: 'my_resources#new',           as: 'new_my_resource'
   get 'profile/my_resources/:id', to: 'my_resources#show',          as: 'show_user_my_resource'
   get 'profile/me',               to: 'profile#profile',            as: 'user_profile'
@@ -21,7 +22,7 @@ Rails.application.routes.draw do
   get 'about',            to: 'about#about',        as: 'about'
   get 'contact',          to: 'about#contact',      as: 'contact'
   get 'faq',              to: 'about#faq',          as: 'faq'
-  get 'resources',        to: 'my_resources#index', as: 'resources'
+  get 'my_resources',     to: 'my_resources#index', as: 'my_resources'
   get 'success',          to: 'success#success',    as: 'stories'
 
   resources :challenges
