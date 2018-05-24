@@ -17,3 +17,4 @@
 //= require popper
 //= require bootstrap
 //= require map
+//= require FAQ
