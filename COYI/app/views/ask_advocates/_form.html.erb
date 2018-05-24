@@ -1,31 +1,60 @@
-<%= form_with(model: ask_advocate, local: true) do |form| %>
-  <% if ask_advocate.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(ask_advocate.errors.count, "error") %> prohibited this ask_advocate from being saved:</h2>
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <div class="container">
+      <div class="form-div row">
+        <div class="col-md-12" id="smooth-edges">
+          <h1 class="title-style">Ask an Expert</h1>
+          <div class="advocate-div row">
+            <div class="col-md-10 offset-md-1">
+              <%= form_with(model: ask_advocate, local: true) do |form| %>
+                <% if ask_advocate.errors.any? %>
+                  <div id="error_explanation">
+                    <h2><%= pluralize(ask_advocate.errors.count, "error") %> prohibited this ask_advocate from being saved:</h2>
 
-      <ul>
-      <% ask_advocate.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+                    <ul>
+                    <% ask_advocate.errors.full_messages.each do |message| %>
+                      <li><%= message %></li>
+                    <% end %>
+                    </ul>
+                  </div>
+                <% end %>
+
+                <p class="center-text">Got a question?</p>
+                <p>Send us a message and one of our Experts with get back to you.</p>
+
+                <div class="field advocate-div row">
+                  <div class="col-md-4">
+                    <h3 class="title-style option-title"><%= form.label :email_to %></h3>
+                  </div>
+                  <div class="col-md-8">
+                    <%= form.text_field :email_to %>
+                  </div>
+                </div>
+
+                <div class="field advocate-div row">
+                  <div class="col-md-4">
+                    <h3 class="title-style option-title"><%= form.label :title %></h3>
+                  </div>
+                  <div class="col-md-8">
+                    <%= form.text_field :title %>
+                  </div>
+                </div>
+
+                <div class="advocate-div row">
+                  <div class="col-md-12">
+                    <h3 class="title-style option-title"><%= form.label :body %></h3>
+                    <%= form.text_area :body , cols:"50", rows:"10" %>
+                  </div>
+                  <div class="input-style actions">
+                    <%= form.submit %>
+                  </div>
+                </div>
+
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :email_to %>
-    <%= form.text_field :email_to %>
   </div>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body , cols:"50", rows:"10" %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
