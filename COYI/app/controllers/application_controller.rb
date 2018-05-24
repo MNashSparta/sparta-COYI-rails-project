@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   include ActiveModel::Validations
   include Pundit
 
+
   protect_from_forgery only: [:index, :show]
   protected
 
