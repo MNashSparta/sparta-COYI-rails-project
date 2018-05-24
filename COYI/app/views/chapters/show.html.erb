@@ -14,11 +14,3 @@
   <strong>Country:</strong>
   <%= @chapter.country %>
 </p>
-
-<p>
-  <strong>User:</strong>
-  <%= User.find(@chapter.user_id).first_name %>
-</p>
-
-<%= link_to 'Edit', edit_chapter_path(@chapter) %> |
-<%= link_to 'Back', chapters_path %>
