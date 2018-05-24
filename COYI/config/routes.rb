@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  namespace :admin do
+      resources :users
+      resources :challenges
+      resources :chapters
+      resources :news
+      resources :projects
+
+      root to: "users#index"
+    end
   get 'profile/projects/new', to: 'projects#new', as: 'new_project'
   get 'profile/projects/:id', to: 'projects#show_user_project', as: 'show_user_project'
 

@@ -1,10 +1,14 @@
 class ChaptersController < ApplicationController
   before_action :set_chapter, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /chapters
   # GET /chapters.json
   def index
-    @chapters = Chapter.all
+    if current_user.access_level == 5
+      @chapters = Chapter.all
+    else
+      @chapters = current_user.chapters
+    end
   end
 
   # GET /chapters/1
@@ -25,7 +29,7 @@ class ChaptersController < ApplicationController
   # POST /chapters.json
   def create
     @chapter = Chapter.new(chapter_params)
-
+    @chapter.user = current_user
     respond_to do |format|
       if @chapter.save
         format.html { redirect_to @chapter, notice: 'Chapter was successfully created.' }
