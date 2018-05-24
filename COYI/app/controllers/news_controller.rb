@@ -5,7 +5,7 @@ class NewsController < ApplicationController
   # GET /news
   # GET /news.json
   def index
-    @news = News.where(chapter_id:1)
+    @news = News.where(chapter_id: current_user.chapter_id)
   end
 
   # GET /news/1
