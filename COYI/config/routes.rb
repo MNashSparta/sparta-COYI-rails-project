@@ -11,11 +11,7 @@ Rails.application.routes.draw do
   get 'circle/advocate',  to: 'circle#advocate',    as: 'advocate'
   get 'circle/rules',     to: 'circle#rules',       as: 'rules'
 
-<<<<<<< HEAD
   get 'news',             to: 'news#index',         as: 'news'
-=======
-
->>>>>>> b387bbc89118b13d00a2cffc7a9c6718188e74b1
 
   get 'home',             to: 'home#home',          as: 'home'
 
