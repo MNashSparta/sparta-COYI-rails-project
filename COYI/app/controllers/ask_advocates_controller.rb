@@ -4,12 +4,8 @@ class AskAdvocatesController < ApplicationController
   # GET /ask_advocates
   # GET /ask_advocates.json
   def index
-
-
-      @ask_advocates = current_user.ask_advocates
-
-
-end
+      @ask_advocates = AskAdvocate.where(user_id: current_user.id)
+  end
 
   # GET /ask_advocates/1
   # GET /ask_advocates/1.json
@@ -29,8 +25,7 @@ end
   # POST /ask_advocates.json
   def create
     @ask_advocate = AskAdvocate.new(ask_advocate_params)
-    @ask_advocate.user=current_user
-# @ask_advocate.user = current_user
+    @ask_advocate.user_id = current_user.id
     respond_to do |format|
       if @ask_advocate.save
         format.html { redirect_to @ask_advocate, notice: 'Ask advocate was successfully created.' }
