@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'profile/projects', to: 'projects#user_projects'
   get 'profile/my_resources/new', to: 'my_resources#new', as: 'new_my_resource'
   get 'profile/my_resources/:id', to: 'my_resources#show', as: 'show_user_my_resource'
+  get 'profile/me',         to: 'profile#profile',    as: 'user_profile'
+  get 'profile/:id',        to: 'profile#show'
 
   root to: 'home#landing'
 
@@ -20,7 +22,7 @@ Rails.application.routes.draw do
   get 'resources',        to: 'my_resources#index', as: 'resources'
   get 'success',          to: 'success#success',    as: 'stories'
 
-  get 'users/me',         to: 'profile#profile',    as: 'user_profile'
+
 
 
 
@@ -42,6 +44,5 @@ Rails.application.routes.draw do
   get 'about', to: 'about#about'
 
   # Moved to the bottom to fix sign in issues
-  get 'users/:id',        to: 'profile#show'
 
 end
