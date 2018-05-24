@@ -69,7 +69,6 @@ ActiveRecord::Schema.define(version: 2018_05_23_190319) do
     t.bigint "user_id"
     t.index ["user_id"], name: "index_my_resources_on_user_id"
   end
-
   create_table "news", force: :cascade do |t|
     t.string "title"
     t.text "story"
