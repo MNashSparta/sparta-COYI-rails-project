@@ -92,12 +92,12 @@ body#landing_page {
 }
 
 .page-band-red {
-  background-color: #F0564E;
+  background-color: #f0564eed;
   width: 100%;
 }
 
 .page-band-white {
-  background-color: white;
+  background-color: #FFFFFFed;
   width: 100%;
 }
 
@@ -165,8 +165,7 @@ body#landing_page {
 }
 
 .form-div {
-  background-color: #F0564E;
-  opacity: 0.9;
+  background-color: #F0564Eed;
   color: white;
   margin: 10% 0;
   border-radius: 0.25em;
