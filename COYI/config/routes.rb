@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'home#landing'
+  devise_for :users, controllers: {registrations: 'users/registrations'}
 
   get 'profile/projects/new',     to: 'projects#new',               as: 'new_project'
   get 'profile/projects/:id',     to: 'projects#show_user_project', as: 'show_user_project'
@@ -7,6 +9,7 @@ Rails.application.routes.draw do
   get 'profile/my_resources/:id', to: 'my_resources#show',          as: 'show_user_my_resource'
   get 'profile/me',               to: 'profile#profile',            as: 'user_profile'
   get 'profile/:id',              to: 'profile#show'
+  get 'chapter/news',             to: 'news#chapter_news',          as: 'chapter_news'
 
   root to: 'home#landing'
 
@@ -21,10 +24,6 @@ Rails.application.routes.draw do
   get 'resources',        to: 'my_resources#index', as: 'resources'
   get 'success',          to: 'success#success',    as: 'stories'
 
-
-
-
-
   resources :challenges
   resources :resources
   resources :my_resources
@@ -33,16 +32,8 @@ Rails.application.routes.draw do
   resources :chapters
   resources :ask_advocates
 
-  devise_for :users, controllers: {registrations: 'users/registrations'}
-  get 'profile/projects', to: 'projects#user_projects', as: 'user_projects'
-  get 'profile/my_resources', to: 'my_resources#user_my_resource', as: 'user_my_resources'
-  get 'chapter/news', to: 'news#chapter_news', as: 'chapter_news'
-
-
   resources :my_resources, only: [:create, :new]
 
-  get 'about', to: 'about#about'
-
-  # Moved to the bottom to fix sign in issues
+  post 'contact', to: 'about#create'
 
 end
