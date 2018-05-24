@@ -1,10 +1,11 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery only: [:index, :show]
   # skip_before_action :verify_authenticity_token
   before_action :configure_permitted_parameters, if: :devise_controller?
   include ActiveModel::Validations
   include Pundit
 
+  protect_from_forgery only: [:index, :show]
+  protected
 
   def configure_permitted_parameters
     added_attrs = [:username, :email, :password, :password_confirmation, :remember_me, :first_name, :second_name, :username, :location, :country, :dob]
