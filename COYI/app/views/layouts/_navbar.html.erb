@@ -36,7 +36,10 @@
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">PROFILE</a>
         <div class="dropdown-menu" id="navdrop">
           <%if user_signed_in? %>
-            <%= link_to current_user.email, user_profile_path, :class => 'nav-link' %>
+
+            logged in as <strong><%=
+            current_user.first_name %></strong>
+
             <%= link_to 'Edit profile',
             edit_user_registration_path, :class=>
             'nav-link' %>
