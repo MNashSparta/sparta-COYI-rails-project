@@ -12,4 +12,5 @@ class ProfileController < ApplicationController
       @user_to_show = User.where({id: params[:id]}).first
   end
 
+
 end

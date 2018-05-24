@@ -20,8 +20,6 @@ Rails.application.routes.draw do
   get 'resources',        to: 'my_resources#index', as: 'resources'
   get 'success',          to: 'success#success',    as: 'stories'
 
-  get 'users/me',         to: 'profile#profile',    as: 'user_profile'
-  get 'users/:id',        to: 'profile#show'
 
 
 
@@ -35,6 +33,9 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: 'users/registrations'}
   get 'profile/projects', to: 'projects#user_projects', as: 'user_projects'
   get 'profile/my_resources', to: 'my_resources#user_my_resource', as: 'user_my_resources'
+  get 'profile/me',         to: 'profile#profile',    as: 'user_profile'
+  get 'users/me/edit',    to: 'devise/registrations#update'
+  get 'users/:id',        to: 'profile#show'
   get 'chapter/news', to: 'news#chapter_news', as: 'chapter_news'
 
   resources :projects, only: [:create, :new]
