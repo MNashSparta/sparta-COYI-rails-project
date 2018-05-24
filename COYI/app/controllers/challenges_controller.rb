@@ -1,10 +1,15 @@
 class ChallengesController < ApplicationController
   before_action :set_challenge, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /challenges
   # GET /challenges.json
   def index
-    @challenges = Challenge.all
+    if current_user.access_level == 5
+      @challenges = Challenge.all
+    else
+      @challenges = current_user.challenges
+    end
   end
 
   # GET /challenges/1
@@ -25,7 +30,7 @@ class ChallengesController < ApplicationController
   # POST /challenges.json
   def create
     @challenge = Challenge.new(challenge_params)
-
+    @challenge.user = current_user
     respond_to do |format|
       if @challenge.save
         format.html { redirect_to @challenge, notice: 'Challenge was successfully created.' }
@@ -69,6 +74,6 @@ class ChallengesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def challenge_params
-      params.require(:challenge).permit(:emailaddress, :firstname, :lastname, :location, :organisation)
+      params.require(:challenge).permit(:emailaddress, :firstname, :lastname, :location, :organisation, :user_id)
     end
 end
