@@ -5,13 +5,12 @@ Rails.application.routes.draw do
   get 'profile/projects',         to: 'projects#user_projects'
   get 'profile/my_resources/new', to: 'my_resources#new',           as: 'new_my_resource'
   get 'profile/my_resources/:id', to: 'my_resources#show',          as: 'show_user_my_resource'
-  get 'profile/me',               to: 'profile#profile',             as: 'user_profile'
+  get 'profile/me',               to: 'profile#profile',            as: 'user_profile'
   get 'profile/:id',              to: 'profile#show'
 
   root to: 'home#landing'
 
   get 'circle/global',    to: 'circle#global',      as: 'global'
-  get 'circle/chapter',   to: 'circle#chapter',     as: 'chapter'
   get 'circle/advocate',  to: 'circle#advocate',    as: 'advocate'
   get 'circle/rules',     to: 'circle#rules',       as: 'rules'
   get 'news',             to: 'news#index',         as: 'news'
@@ -32,13 +31,14 @@ Rails.application.routes.draw do
   resources :news
   resources :projects
   resources :chapters
+  resources :ask_advocates
 
   devise_for :users, controllers: {registrations: 'users/registrations'}
   get 'profile/projects', to: 'projects#user_projects', as: 'user_projects'
   get 'profile/my_resources', to: 'my_resources#user_my_resource', as: 'user_my_resources'
   get 'chapter/news', to: 'news#chapter_news', as: 'chapter_news'
 
-  resources :projects, only: [:create, :new]
+
   resources :my_resources, only: [:create, :new]
 
   get 'about', to: 'about#about'
