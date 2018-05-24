@@ -1,6 +1,13 @@
 <link rel="stylesheet" href="/Stylesheets/news.css">
 <p id="notice"><%= notice %></p>
-<h1>News</h1>
+<div class="row news-title">
+<div class="col-md-10">
+  <h1>News</h1>
+</div>
+<div class="col-md-2">
+  <button class="button-style" type="button" name="button" value="<%= link_to 'New Article', new_news_path %>"></button> 
+</div>
+</div>
 <table>
   <thead>
     <tr>
@@ -13,8 +20,8 @@
     </tr>
   </thead>
 
-  <tbody>
-    <% @news.each do |news| %>
+  <!-- <tbody> -->
+    <!-- <% @news.each do |news| %>
       <tr>
         <td><%= news.title %></td>
         <td><%= news.story %></td>
@@ -25,10 +32,9 @@
         <td><%= link_to 'Edit', edit_news_path(news) %></td>
         <td><%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
-  </tbody>
+    <% end %> -->
+    <%= render 'news/news_list' %>
+  <!-- </tbody> -->
 </table>
 
 <br>
-
-<%= link_to 'New News', new_news_path %>

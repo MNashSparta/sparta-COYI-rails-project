@@ -1,8 +1,12 @@
-<h1>Resources</h1>
+<div class="jumbotron jumbotron-fluid clear-background">
+  <div class="container">
+    <h1 class="display-4 text-on-bk">RESOURCES</h1>
+  </div>
+</div>
 
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <div id="carouselExampleIndicators" class="carousel slide" class="caro" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -79,27 +83,38 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
       </div>
     </div>
-<div class="col-md-3 first-column">
-  <ul class="docs">
+  </div>
+  <div class="top-of-page"></div>
+  <div class="row">
     <!-- We need a line or some small indication of which resources come from which level for higher levels -->
     <!-- Level 1 indication -->
-  <% if policy(:myresources).level_1? %>
+  <% if policy(:resource).level_1? || policy(:resource).level_2? || policy(:resource).level_5? %>
+  <div class="col-md-4 first-column">
+    <ul class="docs">
     <%= render "resources/resourceslevel1" %>
+      </ul>
+    </div>
+  <%end%>
     <!-- Level 2 indication -->
-  <%elsif policy(:myresources).level_2? || policy(:myresources).level_5?%>
-    <%= render "resources/resourceslevel1" %>
+  <%if policy(:resource).level_2? || policy(:resource).level_5?%>
     <!-- level 3 and up -->
+    <div class="col-md-4 second-column">
+      <ul class="docs">
     <%= render "resources/resourceslevel2-4" %>
+      </ul>
+    </div>
+  <%end%>
+
+    <!-- Level 5 indication -->
+  <% if policy(:resource).level_5? %>
+      <div class="col-md-4 third-column">
+        <ul class="docs">
+    <%= render "resources/resourceslevel5" %>
+        </ul>
+      </div>
   <%end%>
   </ul>
 </div>
-<div class="col-md-3 second-column">
-  <ul class="docs">
-    <!-- Level 5 indication -->
-  <% if policy(:myresources).level_5? %>
-    <%= render "resources/resourceslevel5" %>
-  <%end%>
-  </ul>
 </div>
 
 </div>
