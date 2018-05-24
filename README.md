@@ -47,6 +47,8 @@ Important gems
 * Bbootstrap
 * Jquery-rails
 * Popper_js
+* Figaro
+
 
 ---
 
@@ -60,7 +62,7 @@ Things you may want to cover:
 
 * Database creation
 
-* Database initialization
+* Database initialisation
 
 * How to run the test suite
 
@@ -68,9 +70,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
-
----
 
 # Whole site
 Site is built to be mobile first
