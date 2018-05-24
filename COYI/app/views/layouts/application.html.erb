@@ -9,6 +9,9 @@
   </head>
   <body>
     <link rel="stylesheet" href="/Stylesheets/master.css">
+
+  </head>
+  <body class="title">
     <% url = request.path_info%>
     <% if url == '/' %>
       <%= yield %>
@@ -21,7 +24,5 @@
       <%= render 'layouts/footer' %>
       <link rel="stylesheet" href="/Stylesheets/layouts.css">
     <%end%>
-    <!-- <p class="notice"><%= notice %></p> -->
-    <!-- <p class="alert"><%= alert %></p> -->
   </body>
 </html>

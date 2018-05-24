@@ -16,6 +16,11 @@
   font-family: "Roboto";
 }
 
+.title {
+  font-family: 'Roboto';
+}
+
+
 #body-home {
   font-family: inherit;
   text-align: center;
@@ -32,11 +37,19 @@ body {
   background-position: center;
 }
 
+#user-profile {
+  background-image: url('/images/city_lights.jpeg');
+  background-size: 100%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 .home-link {
   color: #F0564E;
 }
 
-.jumbotron{
+.clear-background{
   background: none;
   text-shadow: 2px 2px 4px white;
 }
@@ -131,6 +144,20 @@ body#landing_page {
   border-radius: 50%;
   display: inline;
 }
+.user-profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  display: inline;
+}
+.profile-hr {
+  border: 1px solid white;
+}
+.profile-background {
+  background-color: black;
+  opacity: 0.7;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
 
 .descrip {
   display: block;
@@ -156,6 +183,15 @@ body#landing_page {
   background-color: #F0564E;
 }
 
+/* to make input boxes etc more circular */
+#smooth-edges {
+  border-radius: 10%;
+  padding: 25px;
+}
+
+.profile-info {
+  margin-left: 50px;
+}
 .white-background{
   background-color: white;
 }
@@ -189,6 +225,7 @@ body#landing_page {
 
 .text-on-bk {
   color: white;
+
 }
 
 .login-button {
