@@ -16,7 +16,11 @@ Rails.application.routes.draw do
   root to: 'home#landing'
 
   get 'circle/global',    to: 'circle#global',      as: 'global'
+
   get 'circle/chapter',   to: 'circle#chapter',     as: 'chapter'
+
+
+  get 'circle/advocate',  to: 'circle#advocate',    as: 'advocate'
 
   get 'circle/rules',     to: 'circle#rules',       as: 'rules'
   get 'news',             to: 'news#index',         as: 'news'
