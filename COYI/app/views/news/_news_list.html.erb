@@ -1,5 +1,5 @@
 <div class="news-all">
-    <% @news.each do |news| %>
+  <% @news.each do |news| %>
     <div class="news-band-white">
       <div class="no-margin row">
         <div class="col-md-6 news-title"><%= news.title %></div>
@@ -19,5 +19,5 @@
         <div class="col-md-4 offset-md-2 news-author">Published by: <%= news.user.first_name + " " + news.user.second_name %></div>
       </div>
     </div>
-    <% end %>
+  <% end %>
 </div>

@@ -58,17 +58,6 @@ ActiveRecord::Schema.define(version: 2018_05_24_105500) do
     t.index ["user_id"], name: "index_chapters_on_user_id"
   end
 
-  create_table "hundred_day_challenges", force: :cascade do |t|
-    t.string "Email"
-    t.string "Address"
-    t.string "First_name"
-    t.string "Last_name"
-    t.string "Location"
-    t.string "Organisation"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "my_resources", force: :cascade do |t|
     t.string "title"
     t.string "description"
@@ -129,8 +118,8 @@ ActiveRecord::Schema.define(version: 2018_05_24_105500) do
     t.boolean "email_confirmed", default: false
     t.string "confirm_token"
     t.integer "access_level"
-    t.string "bio"
     t.bigint "chapter_id"
+    t.string "bio"
     t.index ["chapter_id"], name: "index_users_on_chapter_id"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
