@@ -125,10 +125,15 @@ body#landing_page {
 }
 
 .news-story {
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-height: 85px;
+  display: -webkit-box;
+  line-height: 16px;     /* fallback */
+  max-height: 100px;      /* fallback */
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  text-align: left;
+  margin-left: 0%;
 }
 
 .news-body {
@@ -145,7 +150,7 @@ body#landing_page {
 }
 
 .news-author {
-  margin: 0% 0% 0% 0%;
+  margin: 0% 0% 1% 0%;
 }
 
 .admin-list > .edit-li {
