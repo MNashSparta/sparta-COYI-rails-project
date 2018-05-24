@@ -15,9 +15,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # GET /resource/edit
-  # def edit
-  #   super
-  # end
+  def edit
+    @chapters = Chapter.all
+  end
 
   # PUT /resource
   # def update
