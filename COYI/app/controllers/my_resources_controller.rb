@@ -39,8 +39,6 @@ class MyResourcesController < ApplicationController
   def create
     @my_resource = MyResource.create!(my_resource_params)
     @my_resource.status = 0
-    puts "HERERERRRERERE"
-    puts @my_resource.uploaded_file.attached?
     respond_to do |format|
       if @my_resource.save
         format.html { redirect_to @my_resource, notice: 'My resource was successfully created.' }

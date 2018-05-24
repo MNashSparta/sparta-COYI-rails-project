@@ -20,14 +20,9 @@
 </p>
 
 <p>
-  <strong>Files:</strong>
-  <ul>
+  <a href="<%= rails_blob_path(@my_resource.uploaded_file, disposition: "attachment", only_path: true)%>"  download>Download Resource</a>
+</p>
 
-  </ul>
-  <p style="background-color: white">
-<%= link_to "#{rails_blob_path(@my_resource.uploaded_file, disposition: "attachment")}" %>
-</p>
-</p>
 
 <%- if user_signed_in? %>
   <%= link_to 'Edit', edit_my_resource_path(@my_resource) %> |
