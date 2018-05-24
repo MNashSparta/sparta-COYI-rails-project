@@ -1,5 +1,6 @@
 class MyResourcesController < ApplicationController
   before_action :set_my_resource, only: [:show, :edit, :update, :destroy]
+  # Only allows logged in users to access those methods
   before_action :authenticate_user!, only: [:user_my_resources, :new, :edit, :create, :destroy]
 
   def level
@@ -78,6 +79,6 @@ class MyResourcesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def my_resource_params
-      params.require(:my_resource).permit(:title, :description, :status)
+      params.require(:my_resource).permit(:title, :description, :status).merge(user_id: current_user.id)
     end
 end
