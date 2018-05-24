@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  # Only allows logged in users to access those methods
+  before_action :authenticate_user!, only: [:user_projects, :new, :edit, :create, :destroy]
 
   # GET /projects
   # GET /projects.json
@@ -18,13 +19,6 @@ class ProjectsController < ApplicationController
     @project = Project.new
   end
 
-  def upload
-    uploaded_io = params[:user][:uploaded]
-
-    File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
-      file.write(uploaded_io.read)
-    end
-  end
 
   # GET /projects/1/edit
   def edit
@@ -37,8 +31,7 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
-    @project = Project.new(project_params)
-    @project.user_id = current_user.id
+    @project = Project.create!(project_params)
     @project.status = 0
     respond_to do |format|
       if @project.save
@@ -56,7 +49,7 @@ class ProjectsController < ApplicationController
   def update
     respond_to do |format|
       if @project.update(project_params)
-        format.html { redirect_to "/", notice: 'Project was successfully updated.' }
+        format.html { redirect_to @project, notice: 'Project was successfully updated.' }
         format.json { render :show, status: :ok, location: @project }
       else
         format.html { render :edit }
@@ -75,6 +68,7 @@ class ProjectsController < ApplicationController
     end
   end
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
@@ -83,6 +77,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:title, :description, :status, :user_id)
+      params.require(:project).permit(:title, :description, :status, uploaded_files: []).merge(user_id: current_user.id)
     end
 end
