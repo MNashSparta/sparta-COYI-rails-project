@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   get 'success',          to: 'success#success',    as: 'stories'
 
-  get 'users',            to: 'profile#profile',    as: 'user_profile'
+  get 'users',            to: 'profile#profile'
 
   resources :challenges
   resources :resources
