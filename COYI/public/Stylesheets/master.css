@@ -286,6 +286,11 @@ body#landing_page {
 .text-color{
   color: white;
 }
+.contact-page-content{
+  padding: 10px;
+  margin-top: 50px;
+  border-radius: 10px;
+}
 @media all and (max-width: 1024px) and (min-height:  400px){
   .navbar-collapse .navbar-expand-md {
     display: flex !important;
