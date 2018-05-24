@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :chapters
   has_many :projects
   has_many :challenges
+  has_many :ask_advocates
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable,
          :validatable, :confirmable, authentication_keys: [:login]

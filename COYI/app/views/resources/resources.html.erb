@@ -86,6 +86,8 @@
   <%elsif policy(:resource).level_2? || policy(:resource).level_5?%>
     <%= render "resources/resourceslevel1" %>
     <%= render "resources/resourceslevel2-4" %>
+
+
   <%end%>
   </ul>
 </div>
@@ -93,9 +95,11 @@
   <ul class="docs">
   <% if policy(:resource).level_5? %>
     <%= render "resources/resourceslevel5" %>
+
   <%end%>
   </ul>
 </div>
+
 
 </div>
 </div>

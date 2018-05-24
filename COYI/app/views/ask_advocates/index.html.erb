@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ask Advocates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ask_advocates.each do |ask_advocate| %>
+      <tr>
+        <td><%= ask_advocate.question %></td>
+        <td><%= link_to 'Show', ask_advocate %></td>
+        <td><%= link_to 'Edit', edit_ask_advocate_path(ask_advocate) %></td>
+        <td><%= link_to 'Destroy', ask_advocate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ask Advocate', new_ask_advocate_path %>

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+
+  resources :ask_advocates
   get 'profile/projects/new', to: 'projects#new', as: 'new_project'
   get 'profile/projects/:id', to: 'projects#show_user_project', as: 'show_user_project'
 
@@ -9,7 +11,7 @@ Rails.application.routes.draw do
 
   get 'circle/global',    to: 'circle#global',      as: 'global'
   get 'circle/chapter',   to: 'circle#chapter',     as: 'chapter'
-  get 'circle/advocate',  to: 'circle#advocate',    as: 'advocate'
+
   get 'circle/rules',     to: 'circle#rules',       as: 'rules'
   get 'news',             to: 'news#index',         as: 'news'
   get 'home',             to: 'home#home',          as: 'home'
