@@ -29,8 +29,6 @@
         <%= f.label 'Company' %><br />
         <div class="field small-margin">
           <%= f.text_field :role, placeholder: 'Company', autocomplete: "off" %>
-
-
         </div>
         <%= f.label 'Password' %>
         <% if @minimum_password_length %>
@@ -44,6 +42,10 @@
         </div>
         <div class="actions">
           <%= f.submit "Sign up", :class => 'login-button' %>
+        </div>
+        <div class="field">
+          <%= f.label :chapter_id %><br>
+          <%= f.collection_select :chapter_id, Chapter.all, :id, :name %>
         </div>
       <% end %>
       <%= render "users/shared/links" %>

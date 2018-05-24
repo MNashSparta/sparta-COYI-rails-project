@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_05_24_105629) do
+=======
+ActiveRecord::Schema.define(version: 2018_05_24_094733) do
+>>>>>>> 80cf533ed512252da4fece75cccd37bab37394af
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -366,9 +370,5 @@ ActiveRecord::Schema.define(version: 2018_05_24_105629) do
   add_foreign_key "news", "chapters"
   add_foreign_key "news", "users"
   add_foreign_key "projects", "users"
-  add_foreign_key "thredded_messageboard_users", "thredded_messageboards", on_delete: :cascade
-  add_foreign_key "thredded_messageboard_users", "thredded_user_details", on_delete: :cascade
-  add_foreign_key "thredded_user_post_notifications", "thredded_posts", column: "post_id", on_delete: :cascade
-  add_foreign_key "thredded_user_post_notifications", "users", on_delete: :cascade
   add_foreign_key "users", "chapters"
 end
