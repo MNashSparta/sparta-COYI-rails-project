@@ -37,17 +37,13 @@ ActiveRecord::Schema.define(version: 2018_05_24_132329) do
   end
 
   create_table "ask_advocates", force: :cascade do |t|
-    t.string "question"
+    t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.text "body"
+    t.integer "email_to"
     t.index ["user_id"], name: "index_ask_advocates_on_user_id"
-  end
-
-  create_table "ask_experts", force: :cascade do |t|
-    t.text "question"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "challenges", force: :cascade do |t|
@@ -70,17 +66,6 @@ ActiveRecord::Schema.define(version: 2018_05_24_132329) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_chapters_on_user_id"
-  end
-
-  create_table "hundred_day_challenges", force: :cascade do |t|
-    t.string "Email"
-    t.string "Address"
-    t.string "First_name"
-    t.string "Last_name"
-    t.string "Location"
-    t.string "Organisation"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "my_resources", force: :cascade do |t|
@@ -126,6 +111,13 @@ ActiveRecord::Schema.define(version: 2018_05_24_132329) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
+    t.integer "failed_attempts", default: 0, null: false
+    t.string "unlock_token"
+    t.datetime "locked_at"
     t.string "first_name"
     t.string "second_name"
     t.string "username"
@@ -137,14 +129,8 @@ ActiveRecord::Schema.define(version: 2018_05_24_132329) do
     t.datetime "updated_at", null: false
     t.boolean "email_confirmed", default: false
     t.string "confirm_token"
-    t.string "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string "unconfirmed_email"
     t.integer "access_level"
-    t.bigint "chapter_id"
     t.string "bio"
-    t.index ["chapter_id"], name: "index_users_on_chapter_id"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
@@ -157,5 +143,4 @@ ActiveRecord::Schema.define(version: 2018_05_24_132329) do
   add_foreign_key "news", "chapters"
   add_foreign_key "news", "users"
   add_foreign_key "projects", "users"
-  add_foreign_key "users", "chapters"
 end
