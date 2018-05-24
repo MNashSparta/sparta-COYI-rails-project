@@ -110,6 +110,13 @@ ActiveRecord::Schema.define(version: 2018_05_24_105500) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
+    t.integer "failed_attempts", default: 0, null: false
+    t.string "unlock_token"
+    t.datetime "locked_at"
     t.string "first_name"
     t.string "second_name"
     t.string "username"
@@ -121,10 +128,6 @@ ActiveRecord::Schema.define(version: 2018_05_24_105500) do
     t.datetime "updated_at", null: false
     t.boolean "email_confirmed", default: false
     t.string "confirm_token"
-    t.string "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string "unconfirmed_email"
     t.integer "access_level"
     t.string "bio"
     t.bigint "chapter_id"
