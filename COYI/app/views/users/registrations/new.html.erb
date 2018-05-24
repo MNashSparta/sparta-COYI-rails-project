@@ -44,7 +44,7 @@
           <%= f.submit "Sign up", :class => 'login-button' %>
         </div>
         <div class="field">
-          <%= f.label :chapter %><br>
+          <%= f.label :chapter_id %><br>
           <%= f.collection_select :chapter_id, Chapter.all, :id, :name %>
         </div>
       <% end %>
