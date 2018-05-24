@@ -24,9 +24,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :chapter %>
-    <br>
-    <%= form.text_field :chapter_id %>
+    <%= form.label :chapter_id %><br>
+    <%= form.collection_select :chapter_id, Chapter.all, :id, :name %>
   </div>
 
   <div class="actions">
