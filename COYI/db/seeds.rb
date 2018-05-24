@@ -11,6 +11,7 @@ Project.create(title: "Third Project", status: "Rework")
 Project.create(title: "Fourth Project", status: "Approved")
 puts "Projects created: #{Project.all.count}"
 
+Chapter.create(name: "New User Chapter", city: "NewCity", country: "NewCountry")
 Chapter.create(name: "Canary Wharf", city: "London", country: "UK")
 Chapter.create(name: "Richmond", city: "London", country: "UK")
 Chapter.create(name: "Eiffel Tower", city: "Paris", country: "France")
