@@ -13,20 +13,18 @@
 
   <div class="field">
     <%= form.label :title %>
+    <br>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
     <%= form.label :story %>
-    <%= form.text_field :story %>
-  </div>
-
-  <div class="field">
-    <%= form.label :published %>
-    <%= form.date_select :published %>
+    <br>
+    <%= form.text_area :story, cols:"50", rows:"10" %>
   </div>
 
   <div class="actions">
+    <br>
     <%= form.submit %>
   </div>
 <% end %>
