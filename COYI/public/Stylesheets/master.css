@@ -193,15 +193,18 @@ body#landing_page {
   border-radius: 50%;
   display: inline;
 }
+
 .user-profile-pic {
   width: 100px;
   height: 100px;
   border-radius: 100%;
   display: inline;
 }
+
 .profile-hr {
   border: 1px solid white;
 }
+
 .profile-background {
   background-color: black;
   opacity: 0.7;
@@ -331,7 +334,7 @@ body#landing_page {
   }
 
   .video-margin {
-    margin-top: 2:q0%;
+    margin-top: 5%;
   }
 
   #mission-state {
