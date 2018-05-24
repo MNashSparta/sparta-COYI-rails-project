@@ -29,8 +29,11 @@ body {
 }
 
 h1 {
-  text-decoration: underline;
+  font-size: 65px;
+  color: white;
   text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .title {
@@ -146,10 +149,6 @@ h1 {
   filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
-.descrip {
-  display: block;
-}
-
 .shadow-one {
   box-shadow: 0px 0px 20px 0px #be6f6f40;
 }
@@ -207,7 +206,16 @@ h1 {
 }
 
 .text-on-bk {
-  background-color: rgba(255,250,250,0.4);
+  background-color: rgba(255,250,250, 0.6);
+}
+
+.text-on-bk-red {
+  background-color: rgba(239, 80, 77, 0.8);
+}
+
+.pad {
+  padding: 15px;
+  margin: 10px;
   border-radius: 10px;
 }
 
@@ -216,6 +224,11 @@ h1 {
   width: 33%;
   padding: 0 2% 0 2%;
   border-radius: 0.25rem;
+}
+
+.white-text {
+  color: white;
+  opacity: 0.9;
 }
 
 body#landing_page {
