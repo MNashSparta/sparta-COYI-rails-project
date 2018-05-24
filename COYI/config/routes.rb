@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'profile/projects/:id', to: 'projects#show_user_project', as: 'show_user_project'
 
 
+
   get 'profile/my_resources/new', to: 'my_resources#new', as: 'new_my_resource'
   get 'profile/my_resources/:id', to: 'my_resources#show', as: 'show_user_my_resource'
 
