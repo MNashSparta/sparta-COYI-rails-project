@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_24_094733) do
+ActiveRecord::Schema.define(version: 2018_05_24_101309) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,17 +58,6 @@ ActiveRecord::Schema.define(version: 2018_05_24_094733) do
     t.index ["user_id"], name: "index_chapters_on_user_id"
   end
 
-  create_table "hundred_day_challenges", force: :cascade do |t|
-    t.string "Email"
-    t.string "Address"
-    t.string "First_name"
-    t.string "Last_name"
-    t.string "Location"
-    t.string "Organisation"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "my_resources", force: :cascade do |t|
     t.string "title"
     t.string "description"
@@ -110,6 +99,13 @@ ActiveRecord::Schema.define(version: 2018_05_24_094733) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
+    t.integer "failed_attempts", default: 0, null: false
+    t.string "unlock_token"
+    t.datetime "locked_at"
     t.string "first_name"
     t.string "second_name"
     t.string "username"
@@ -121,10 +117,6 @@ ActiveRecord::Schema.define(version: 2018_05_24_094733) do
     t.datetime "updated_at", null: false
     t.boolean "email_confirmed", default: false
     t.string "confirm_token"
-    t.string "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string "unconfirmed_email"
     t.integer "access_level"
     t.bigint "chapter_id"
     t.index ["chapter_id"], name: "index_users_on_chapter_id"
