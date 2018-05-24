@@ -9,7 +9,6 @@ Rails.application.routes.draw do
 
 
 
-
   get 'profile/my_resources/new', to: 'my_resources#new', as: 'new_my_resource'
   get 'profile/my_resources/:id', to: 'my_resources#show', as: 'show_user_my_resource'
 
@@ -42,7 +41,7 @@ Rails.application.routes.draw do
   get 'profile/my_resources', to: 'my_resources#user_my_resource', as: 'user_my_resources'
   get 'chapter/news', to: 'news#chapter_news', as: 'chapter_news'
 
-  resources :projects, only: [:create, :new]
+
   resources :my_resources, only: [:create, :new]
 
   get 'about', to: 'about#about'

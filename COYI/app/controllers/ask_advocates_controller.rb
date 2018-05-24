@@ -1,6 +1,6 @@
 class AskAdvocatesController < ApplicationController
   before_action :set_ask_advocate, only: [:show, :edit, :update, :destroy]
-before_action :authenticate_user!
+  before_action :authenticate_user!
   # GET /ask_advocates
   # GET /ask_advocates.json
   def index
@@ -74,6 +74,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ask_advocate_params
-      params.require(:ask_advocate).permit(:question)
+      params.require(:ask_advocate).permit(:title, :body, :email_to)
     end
 end

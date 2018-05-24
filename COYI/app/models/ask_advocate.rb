@@ -1,3 +1,3 @@
 class AskAdvocate < ApplicationRecord
-  belongs_to :user
+  has_many :users
 end
