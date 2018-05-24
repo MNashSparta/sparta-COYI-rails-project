@@ -12,6 +12,8 @@ gem 'popper_js', '~> 1.12.9'
 gem 'figaro'
 gem 'administrate'
 
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record

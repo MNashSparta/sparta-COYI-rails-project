@@ -19,6 +19,20 @@
   <%= @project.user.username %>
 </p>
 
+<p>
+  <strong>Files:</strong>
+  <ul>
+
+
+
+</ul>
+<% @project.uploaded_files.each do |file| %>
+    <li>
+      <%= image_tag file %>
+    </li>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Projects Index', projects_path %> |
 <%= link_to 'My Projects', user_projects_path %>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>COYI</title>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
@@ -8,6 +9,9 @@
   </head>
   <body>
     <link rel="stylesheet" href="/Stylesheets/master.css">
+
+  </head>
+  <body class="title">
     <% url = request.path_info%>
     <% if url == '/' %>
       <%= yield %>
@@ -20,7 +24,5 @@
       <%= render 'layouts/footer' %>
       <link rel="stylesheet" href="/Stylesheets/layouts.css">
     <%end%>
-    <!-- <p class="notice"><%= notice %></p> -->
-    <!-- <p class="alert"><%= alert %></p> -->
   </body>
 </html>
