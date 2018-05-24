@@ -1,30 +1,28 @@
 <body id="home">
 <link rel="stylesheet" href="/Stylesheets/success.css">
 
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid clear-background">
   <div class="container">
-    <h1 class="title display-4">SUCCESS STORIES</h1>
-    <p class="lead">Read on to explore the victories of current intrapreneurs</p>
+    <h1 class="title display-4 text-on-bk">SUCCESS STORIES</h1>
+    <p class="lead text-on-bk">Read on to explore the victories of current intrapreneurs</p>
   </div>
 </div> <!--end of jtron-->
 
 <!-- carousel -->
-<div class="container">
+<div class="container carousel-container">
   <div class="row" id = "widen-row">
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-8">
+    <div class="col-md-10 offset-2 centered">
       <div style="height: 60vh; width: 60vw; margin-left: -10vw;">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block" width="100%" height="100%" src="/RU pitch.jpeg">
+              <img class="d-block" width="100%" height="500px" src="/RU pitch.jpeg" alt="Ru pitch">
             </div>
             <div class="carousel-item">
-              <img class="d-block" width="100%" height="50%" src="/ADP infographic.PNG">
+              <img class="d-block" width="100%" height="500px" src="/ADP infographic.PNG" alt="infographic">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="/connected_homeless.jpg" alt= "Image of connected homeless app">
+              <img class="d-block" src="/connected_homeless.jpg" width="100%" height="500px" alt= "Image of connected homeless app">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -40,6 +38,7 @@
     </div>
   </div>
 </div>
+<div class="top-of-page">
+</div>
     <!-- CAROUSEL END -->
-
     <%= render "layouts/success_stories"%>
