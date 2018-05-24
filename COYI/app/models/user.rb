@@ -5,6 +5,7 @@ class User < ApplicationRecord
 
   has_many :chapters
   has_many :projects
+  has_many :challenges
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable,
          :validatable, :confirmable, authentication_keys: [:login]
@@ -24,11 +25,11 @@ class User < ApplicationRecord
     end
   end
 
-  validates :username, :email, presence: :true, uniqueness: { case_sensitive: false }
-  validate :validate_username
+  validates :email, presence: :true, uniqueness: { case_sensitive: false }
+  # validate :validate_username
   validates :email, :format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/ }
-  validates :first_name, :second_name, :email, :username, :location, :country, :dob, :role, presence: true
-  validates :first_name, :second_name, :location, :country, :role, format: { with: /\A[a-zA-Z]+\z/, message: "No special characters or numbers, only letters" }
+  validates :first_name, :second_name, :email, :location, :country, presence: true
+  validates :first_name, :second_name, :location, :country, format: { with: /\A[a-zA-Z]+\z/, message: "No special characters or numbers, only letters" }
 
   def validate_username
     if User.where(email: username).exists?
@@ -45,4 +46,5 @@ class User < ApplicationRecord
       end
    end
   end
+
 end
