@@ -81,10 +81,14 @@
     </div>
 <div class="col-md-3 first-column">
   <ul class="docs">
-  <% if policy(:resource).level_1? %>
+    <!-- We need a line or some small indication of which resources come from which level for higher levels -->
+    <!-- Level 1 indication -->
+  <% if policy(:myresources).level_1? %>
     <%= render "resources/resourceslevel1" %>
-  <%elsif policy(:resource).level_2? || policy(:resource).level_5?%>
+    <!-- Level 2 indication -->
+  <%elsif policy(:myresources).level_2? || policy(:myresources).level_5?%>
     <%= render "resources/resourceslevel1" %>
+    <!-- level 3 and up -->
     <%= render "resources/resourceslevel2-4" %>
 
 
@@ -93,7 +97,8 @@
 </div>
 <div class="col-md-3 second-column">
   <ul class="docs">
-  <% if policy(:resource).level_5? %>
+    <!-- Level 5 indication -->
+  <% if policy(:myresources).level_5? %>
     <%= render "resources/resourceslevel5" %>
 
   <%end%>
