@@ -16,4 +16,5 @@ Chapter.create(name: "Richmond", city: "London", country: "UK")
 Chapter.create(name: "Eiffel Tower", city: "Paris", country: "France")
 Chapter.create(name: "An Area", city: "Manchester", country: "UK")
 Chapter.create(name: "The Docks", city: "Bristol", country: "UK")
+Chapter.create(name: "The Docks", city: "Los Angeles", country: "US")
 puts "Chapters created: #{Chapter.all.count}"
