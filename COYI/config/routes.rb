@@ -25,7 +25,6 @@ Rails.application.routes.draw do
 
   get 'users',            to: 'profile#profile',    as: 'user_profile'
 
-
   resources :challenges
   resources :resources
   resources :my_resources
