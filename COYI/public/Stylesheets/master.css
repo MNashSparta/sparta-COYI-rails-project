@@ -12,13 +12,13 @@
   src: url('/roboto/Roboto-Bold.ttf')
 }
 
-* {
+*{
   font-family: "Roboto";
 }
 
-.title {
+/* .title {
   font-family: 'Roboto';
-}
+} */
 
 
 #body-home {
@@ -51,7 +51,6 @@ body {
 
 .clear-background{
   background: none;
-  text-shadow: 2px 2px 4px white;
 }
 
 .top-of-page {
@@ -225,7 +224,6 @@ body#landing_page {
 
 .text-on-bk {
   color: white;
-
 }
 
 .login-button {
