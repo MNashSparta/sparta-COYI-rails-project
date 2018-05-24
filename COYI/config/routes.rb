@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   get 'my_resources',     to: 'my_resources#index', as: 'my_resources'
   get 'success',          to: 'success#success',    as: 'stories'
 
+  get 'users',            to: 'profile#profile'
+
   resources :challenges
   resources :resources
   resources :my_resources
