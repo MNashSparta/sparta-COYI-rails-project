@@ -16,6 +16,11 @@
   font-family: "Roboto";
 }
 
+.title {
+  font-family: 'Roboto';
+}
+
+
 #body-home {
   font-family: inherit;
   text-align: center;
@@ -30,6 +35,14 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+}
+
+#user-profile {
+  background-image: url('/images/city_lights.jpeg');
+  background-size: 100%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .home-link {
@@ -92,12 +105,12 @@ body#landing_page {
 }
 
 .page-band-red {
-  background-color: #F0564E;
+  background-color: #f0564eed;
   width: 100%;
 }
 
 .page-band-white {
-  background-color: white;
+  background-color: #FFFFFFed;
   width: 100%;
 }
 
@@ -131,6 +144,20 @@ body#landing_page {
   border-radius: 50%;
   display: inline;
 }
+.user-profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  display: inline;
+}
+.profile-hr {
+  border: 1px solid white;
+}
+.profile-background {
+  background-color: black;
+  opacity: 0.7;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
 
 .descrip {
   display: block;
@@ -156,6 +183,15 @@ body#landing_page {
   background-color: #F0564E;
 }
 
+/* to make input boxes etc more circular */
+#smooth-edges {
+  border-radius: 10%;
+  padding: 25px;
+}
+
+.profile-info {
+  margin-left: 50px;
+}
 .white-background{
   background-color: white;
 }
@@ -165,8 +201,7 @@ body#landing_page {
 }
 
 .form-div {
-  background-color: #F0564E;
-  opacity: 0.9;
+  background-color: #F0564Eed;
   color: white;
   margin: 10% 0;
   border-radius: 0.25em;
@@ -190,6 +225,7 @@ body#landing_page {
 
 .text-on-bk {
   color: white;
+
 }
 
 .login-button {
