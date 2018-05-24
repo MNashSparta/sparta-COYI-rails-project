@@ -16,9 +16,12 @@
     <%= form.text_field :title %>
   </div>
 
-  <%= form.file_field :uploaded %>
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
 
-
+  <%= form.file_field :uploaded_files, multiple: true%>
 
   <div class="actions">
     <%= form.submit %>

@@ -10,10 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_05_23_142211) do
+=======
+ActiveRecord::Schema.define(version: 2018_05_23_124412) do
+>>>>>>> ccafc60b5c3c1addc7926c58c158cfa418c62a87
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.bigint "byte_size", null: false
+    t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
 
   create_table "challenges", force: :cascade do |t|
     t.string "emailaddress"
@@ -23,6 +48,8 @@ ActiveRecord::Schema.define(version: 2018_05_23_142211) do
     t.string "organisation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_challenges_on_user_id"
   end
 
   create_table "chapters", force: :cascade do |t|
@@ -57,10 +84,10 @@ ActiveRecord::Schema.define(version: 2018_05_23_142211) do
 
   create_table "projects", force: :cascade do |t|
     t.string "title"
-    t.integer "status"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "status"
     t.text "description"
     t.index ["user_id"], name: "index_projects_on_user_id"
   end
@@ -91,11 +118,13 @@ ActiveRecord::Schema.define(version: 2018_05_23_142211) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
+    t.integer "access_level"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "challenges", "users"
   add_foreign_key "chapters", "users"
   add_foreign_key "projects", "users"
 end

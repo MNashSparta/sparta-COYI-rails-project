@@ -1,4 +1,5 @@
 <h1>Projects</h1>
+
 <p id="notice"><%= notice %></p>
 <table>
   <thead>
@@ -6,7 +7,7 @@
       <th>Title</th>
       <th>Description</th>
       <th>User</th>
-      <th>Location</th>
+      <th>Chapter</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,12 +16,15 @@
     <% @projects.each do |project| %>
       <tr>
         <td><%= link_to project.title, project %></td>
-        <td><%= link_to project.description, project %></td>
-        <td><%= User.find(project.user_id).username %></td>
+        <td><%= project.description %></td>
+        <td><%= User.find(project.user_id).email %></td>
         <td><%= User.find(project.user_id).location %></td>
+        <%if project.avatar.attached?%>
+        <td>
+          <%= image_tag project.avatar.variant(resize: "100x100") %>
+        </td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<%= link_to 'New Project', new_project_path %>

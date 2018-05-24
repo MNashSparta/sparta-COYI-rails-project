@@ -3,6 +3,15 @@
     src: url('/roboto/Roboto-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: url('/roboto/Roboto-Thin.ttf');
+}
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('/roboto/Roboto-Bold.ttf')
+}
+
 * {
   font-family: "Roboto";
 }
@@ -18,6 +27,10 @@
 
 .home-link {
   color: #F0564E;
+}
+
+.top-of-page {
+  height: 76px;
 }
 
 .home-link:hover {
@@ -57,8 +70,9 @@ body#landing_page {
 .no-margin {
   margin: 0;
 }
-.top_of_page{
-  padding-bottom: 76px;
+
+.small-margin {
+  margin: 10px;
 }
 
 .abso {
@@ -86,6 +100,14 @@ body#landing_page {
 
 .back-img {
   position: fixed;
+}
+
+.red-background {
+  background-color: #F0564E;
+}
+
+.center-text {
+  text-align: center;
 }
 
 #title-on-img {
