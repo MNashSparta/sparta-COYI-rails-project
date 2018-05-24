@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_23_124412) do
+ActiveRecord::Schema.define(version: 2018_05_24_105500) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,12 +69,24 @@ ActiveRecord::Schema.define(version: 2018_05_23_124412) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "news", force: :cascade do |t|
+  create_table "my_resources", force: :cascade do |t|
     t.string "title"
-    t.string "story"
-    t.date "published"
+    t.string "description"
+    t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "news", force: :cascade do |t|
+    t.string "title"
+    t.text "story"
+    t.datetime "published"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "chapter_id"
+    t.index ["chapter_id"], name: "index_news_on_chapter_id"
+    t.index ["user_id"], name: "index_news_on_user_id"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -114,6 +126,9 @@ ActiveRecord::Schema.define(version: 2018_05_23_124412) do
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
     t.integer "access_level"
+    t.bigint "chapter_id"
+    t.string "bio"
+    t.index ["chapter_id"], name: "index_users_on_chapter_id"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
@@ -121,5 +136,8 @@ ActiveRecord::Schema.define(version: 2018_05_23_124412) do
 
   add_foreign_key "challenges", "users"
   add_foreign_key "chapters", "users"
+  add_foreign_key "news", "chapters"
+  add_foreign_key "news", "users"
   add_foreign_key "projects", "users"
+  add_foreign_key "users", "chapters"
 end

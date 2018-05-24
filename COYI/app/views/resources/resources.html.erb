@@ -84,14 +84,12 @@
       </div>
     </div>
   </div>
-  <div class="top-of-page">
-  </div>
+  <div class="top-of-page"></div>
   <div class="row">
-
     <!-- We need a line or some small indication of which resources come from which level for higher levels -->
     <!-- Level 1 indication -->
   <% if policy(:resource).level_1? || policy(:resource).level_2? || policy(:resource).level_5? %>
-  <div class="col-md-4 first-column page-band-red">
+  <div class="col-md-4 first-column">
     <ul class="docs">
     <%= render "resources/resourceslevel1" %>
       </ul>
@@ -100,15 +98,16 @@
     <!-- Level 2 indication -->
   <%if policy(:resource).level_2? || policy(:resource).level_5?%>
     <!-- level 3 and up -->
-    <div class="col-md-4 second-column page-band-red">
+    <div class="col-md-4 second-column">
       <ul class="docs">
     <%= render "resources/resourceslevel2-4" %>
       </ul>
     </div>
   <%end%>
-<!-- Level 5 indication -->
-<% if policy(:resource).level_5? %>
-      <div class="col-md-4 third-column page-band-red">
+
+    <!-- Level 5 indication -->
+  <% if policy(:resource).level_5? %>
+      <div class="col-md-4 third-column">
         <ul class="docs">
     <%= render "resources/resourceslevel5" %>
         </ul>
