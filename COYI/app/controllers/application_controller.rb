@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   include ActiveModel::Validations
   include Pundit
+
   protect_from_forgery only: [:index, :show]
   protected
 
