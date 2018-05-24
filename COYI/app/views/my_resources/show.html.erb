@@ -16,7 +16,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @my_resource.user.username %>
+  <%= @my_resource.user.email %>
 </p>
 
 <p>
@@ -31,6 +31,10 @@
   <% end %>
 </p>
 
-<%= link_to 'Edit', edit_my_resource_path(@my_resource) %> |
-<%= link_to 'Site Resources', resources_path %> |
-<%= link_to 'My Resources', user_my_resources_path %>
+<%- if user_signed_in? %>
+  <%= link_to 'Edit', edit_my_resource_path(@my_resource) %> |
+  <%= link_to 'My Resources', user_my_resources_path %> |
+<% else %>
+<% end %>
+
+<%= link_to 'Resources', resources_path %>

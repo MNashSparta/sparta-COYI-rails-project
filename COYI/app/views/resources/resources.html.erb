@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-<h1>Resources</h1>
-
-<div class="container text-on-bk-red white-text" style="border-radius:10px;">
-=======
 <div class="jumbotron jumbotron-fluid clear-background">
   <div class="container">
     <h1 class="display-4 text-on-bk">RESOURCES</h1>
   </div>
 </div>
 <div class="container">
->>>>>>> b39d3fb7cdfa7d2c33cdc15a6ebfc4518e12c30c
   <div class="row">
     <div class="col-md-12">
       <div id="carouselExampleIndicators" class="carousel slide" class="caro" data-ride="carousel">
@@ -94,7 +88,7 @@
     <!-- We need a line or some small indication of which resources come from which level for higher levels -->
     <!-- Level 1 indication -->
   <% if policy(:resource).level_1? || policy(:resource).level_2? || policy(:resource).level_5? %>
-  <div class="col-md-4 first-column page-band-red">
+  <div class="col-md-4 first-column">
     <ul class="docs">
     <%= render "resources/resourceslevel1" %>
       </ul>
@@ -103,16 +97,16 @@
     <!-- Level 2 indication -->
   <%if policy(:resource).level_2? || policy(:resource).level_5?%>
     <!-- level 3 and up -->
-    <div class="col-md-4 second-column page-band-red">
+    <div class="col-md-4 second-column">
       <ul class="docs">
-    <%= render "resources/resourceslevel2-4"%>
+    <%= render "resources/resourceslevel2-4" %>
       </ul>
     </div>
   <%end%>
 
     <!-- Level 5 indication -->
   <% if policy(:resource).level_5? %>
-      <div class="col-md-4 third-column page-band-red">
+      <div class="col-md-4 third-column">
         <ul class="docs">
     <%= render "resources/resourceslevel5" %>
         </ul>
@@ -122,38 +116,5 @@
 </div>
 </div>
 
-<h1>My Resources</h1>
-<p id="notice"><%= notice %></p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>User</th>
-      <th>Chapter</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @my_resources.each do |my_resource| %>
-      <tr>
-        <th>Title</th>
-        <th>Description</th>
-        <th>User</th>
-        <th>Chapter</th>
-        <th colspan="3"></th>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%- if user_signed_in? %>
-  <%= link_to "Add Resource's", new_my_resource_path %> |
-  <%= link_to 'My Resources', user_my_resources_path %>
-<% else %>
-<% end %>
+</div>
 </div>

@@ -11,6 +11,7 @@ class MyResourcesController < ApplicationController
   # GET /my_resources.json
   def index
     @my_resources = MyResource.where(status: 0)
+
   end
 
   # GET /my_resources/1
@@ -29,6 +30,8 @@ class MyResourcesController < ApplicationController
 
   def user_my_resource
     @my_resources = MyResource.where(user_id: current_user.id)
+    @ask_advocates = AskAdvocate.where(user_id: current_user.id)
+
   end
 
   # POST /my_resources
