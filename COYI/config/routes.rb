@@ -42,6 +42,4 @@ Rails.application.routes.draw do
 
   resources :my_resources, only: [:create, :new]
 
-  get 'about', to: 'about#about'
-
 end
