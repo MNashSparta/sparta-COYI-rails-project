@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'profile/projects/new', to: 'projects#new', as: 'new_project'
-  get 'profile/projects/:id', to: 'projects#show_user_project', as: 'show_user_project'
-  get 'profile/projects', to: 'projects#user_projects'
-  get 'profile/my_resources/new', to: 'my_resources#new', as: 'new_my_resource'
-  get 'profile/my_resources/:id', to: 'my_resources#show', as: 'show_user_my_resource'
-  get 'profile/me',         to: 'profile#profile',    as: 'user_profile'
-  get 'profile/:id',        to: 'profile#show'
+  get 'profile/projects/new',     to: 'projects#new',               as: 'new_project'
+  get 'profile/projects/:id',     to: 'projects#show_user_project', as: 'show_user_project'
+  get 'profile/projects',         to: 'projects#user_projects'
+  get 'profile/my_resources/new', to: 'my_resources#new',           as: 'new_my_resource'
+  get 'profile/my_resources/:id', to: 'my_resources#show',          as: 'show_user_my_resource'
+  get 'profile/me',               to: 'profile#profile',             as: 'user_profile'
+  get 'profile/:id',              to: 'profile#show'
 
   root to: 'home#landing'
 
