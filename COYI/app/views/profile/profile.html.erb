@@ -1,6 +1,8 @@
 <body id="user-profile">
 
-  <div class="jumbotron jumbotron-fluid">
+<div class="container">
+
+  <div id="jtron-width smooth-edges text-black"class="jumbotron page-band-red">
     <div class="container">
       <img src="/images/user_placeholder_img.jpeg" class="user-profile-pic rounded-circle image-responsive" alt="Image of current user">
       <h2><%= "#{current_user.first_name} #{current_user.second_name}'s Profile" %> </h2>
@@ -29,8 +31,8 @@
         <a href="/chapters/<%=current_user.chapter_id%>"class="btn btn-outline-light btn-lg btn-block">My Chapter Hub</a>
         <a href="/profile/my_resources"class="btn btn-outline-light btn-lg btn-block">My Resources</a>
       </div>
-      <div class="col-md-8 offset-1 page-band-red text-on-bk" id="smooth-edges">
-        <h3>Bio</h3>
+      <div class="col-md-8 offset-1 page-band-red" id="smooth-edges">
+        <h3 class="white-text">Bio</h3>
         <hr class="profile-hr">
         <p>
           <%= "#{current_user.bio}" %>
