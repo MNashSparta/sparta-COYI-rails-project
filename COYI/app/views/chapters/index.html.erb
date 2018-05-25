@@ -16,10 +16,9 @@
   <tbody>
     <% @chapters.each do |chapter| %>
       <tr>
-        <td><%= chapter.name %></td>
-        <td><%= chapter.city %></td>
-        <td><%= chapter.country %></td>
-        <td><%= link_to 'Show', chapter %></td>
+        <td><%= link_to "#{chapter.name}", chapter %></td>
+        <td><%= link_to "#{chapter.city}", chapter%></td>
+        <td><%= link_to "#{chapter.country}", chapter%></td>
       </tr>
     <% end %>
   </tbody>
