@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h1><%= @my_resource.title %></h1>
+</p>
+
+<p>
+  <strong>Current Status:</strong>
+  <%= @my_resource.status %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @my_resource.description %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @my_resource.user.email %>
+</p>
+
+<p>
+  <a href="<%= rails_blob_path(@my_resource.uploaded_file, disposition: "attachment", only_path: true)%>"  download>Download Resource</a>
+</p>
+
+
+<%- if user_signed_in? %>
+  <%= link_to 'Edit', edit_my_resource_path(@my_resource) %> |
+  <%= link_to 'My Resources', user_my_resources_path %> |
+<% else %>
+<% end %>
+
+<%= link_to 'Resources', resources_path %>

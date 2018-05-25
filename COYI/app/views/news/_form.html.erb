@@ -1,0 +1,68 @@
+<%= form_with(model: news, local: true) do |form| %>
+  <% if news.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(news.errors.count, "error") %> prohibited this news from being saved:</h2>
+
+      <ul>
+      <% news.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="container">
+        <div class="form-div row">
+          <div class="col-md-12" id="smooth-edges">
+            <div class="advocate-div row">
+              <div class="col-md-10 offset-md-1">
+
+                <form class="" action="advocate.html.erb" method="post">
+                  <p class="center-text">Enter your news story below</p>
+
+                  <div class="no-margin field row">
+                    <div class="col-md-12 center-text">
+                      <%= form.label :title %>
+                    </div>
+                    <div class="col-md-6 offset-md-3">
+                      <%= form.text_field :title, style: 'width:100%'%>
+                    </div>
+                  </div>
+
+                  <br>
+
+                  <div class="no-margin field row">
+                    <div class="col-md-12 center-text">
+                    <%= form.label :story %>
+                    </div>
+                    <div class="col-md-10 offset-md-1">
+                      <%= form.text_area :story, style: 'width:100%;' %>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="no-margin field row">
+                    <div class="col-md-12 center-text">
+                      <%= form.label :chapter_id %>
+                    </div>
+                    <div class="col-md-6 offset-md-3">
+                      <%= form.collection_select :chapter_id, Chapter.all, :id, :name, style: 'width:100%;' %>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="actions row">
+                    <div class="col-md-6 offset-md-3">
+                      <%= form.submit style: 'width:100%;'%>
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

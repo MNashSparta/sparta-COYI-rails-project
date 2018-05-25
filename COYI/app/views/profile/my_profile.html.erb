@@ -1,0 +1,51 @@
+<body id="user-profile">
+
+   <div class="jumbotron jumbotron-fluid">
+    <div class="container text-on-bk">
+      <img src="/images/user_placeholder_img.jpeg" class="user-profile-pic rounded-circle image-responsive" alt="Image of current user">
+      <h2><%= "#{current_user.first_name} #{current_user.second_name}'s Profile" %> </h2>
+      <h4>
+        <i class="fas fa-map-marker"></i>
+        <%= current_user.location %>
+        <span class="profile-info">
+          Current role: <%= current_user.role %>
+        </span>
+        <span class="profile-info">
+
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-twitter-square"></i>
+      </span>
+      </h4>
+
+    </div> <!--end of container-->
+
+  </div> <!--end of jtron-->
+
+  <!-- BOOTSTRAP CONTAINER give everything pleasant margins -->
+  <div class="container">
+<!-- BUTTON"#{current_user.first_name}'s Projects" %> -->
+    <div class="row">
+      <div class="col-md-3 form-div" id="smooth-edges">
+        <a href="users/edit" class="btn btn-outline-light btn-lg btn-block">Edit Profile</a>
+        <a href="/profile/projects" class="btn btn-outline-light btn-lg btn-block"> My Projects</a>
+        <a href="/circle/chapter"class="btn btn-outline-light btn-lg btn-block">My Chapter Hub</a>
+      </div>
+      <div class="col-md-8 offset-1 page-band-red text-on-bk" id="smooth-edges">
+        <h3>Bio</h3>
+        <hr class="profile-hr">
+        <p>
+          <%= "#{current_user.bio}" %>
+          <%= "#{current_user.first_name}" %>
+
+        </p>
+
+      </div> <!--end of col-->
+    </div> <!--end of row-->
+  </div> <!--end of container-->
+
+  </div> <!--end of massive container-->
+
+  <div class="top-of-page">
+  </div>
+  </body>

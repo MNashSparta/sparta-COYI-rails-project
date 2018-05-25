@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/Stylesheets/news.css">
+
+<p id="notice"><%= notice %></p>
+
+
+<div class="row news-title">
+<div class="col-md-10">
+  <h1>News</h1>
+</div>
+<div class="col-md-2">
+  <button class="button-style" type="button" name="button" value=""><%= link_to 'New Article', new_news_path, :class => 'button-style'%></button>
+</div>
+</div>
+
+
+<%= render 'news/news_list' %>
+

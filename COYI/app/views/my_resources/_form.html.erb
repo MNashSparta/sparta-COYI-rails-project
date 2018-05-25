@@ -1,0 +1,32 @@
+<%= form_with(model: my_resource, local: true) do |form| %>
+  <% if my_resource.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(my_resource.errors.count, "error") %> prohibited this my_resource from being saved:</h2>
+
+      <ul>
+      <% my_resource.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="white-text text-on-bk-red pad">
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <%= form.file_field :uploaded_file%>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+</div>

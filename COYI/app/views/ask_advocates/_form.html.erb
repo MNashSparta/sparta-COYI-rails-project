@@ -1,0 +1,38 @@
+<%= form_with(model: ask_advocate, local: true) do |form| %>
+  <% if ask_advocate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ask_advocate.errors.count, "error") %> prohibited this ask_advocate from being saved:</h2>
+
+      <ul>
+      <% ask_advocate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="">
+  <div class="row">
+    <div class="col-md-4 offset-md-4 text-on-bk-red white-text" style="border-radius:10px;">
+      <div class="field">
+        <%= form.label :email_to %>
+        <%= form.text_field :email_to, :class => 'form-control' %>
+      </div>
+
+      <div class="field">
+        <%= form.label :title %>
+        <%= form.text_field :title , :class => 'form-control'%>
+      </div>
+      <div class="field">
+        <%= form.label :body %>
+        <%= form.text_area :body , cols:"50", rows:"10" , :class => 'form-control'%>
+      </div>
+      <br>
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+      <br>
+      <% end %>
+    </div>
+  </div>
+</div>

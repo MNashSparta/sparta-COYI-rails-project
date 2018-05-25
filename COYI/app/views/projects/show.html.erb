@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h1>  <%= @project.title %></h1>
+</p>
+
+<p>
+  <strong>Current Status:</strong>
+  <%= @project.status %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @project.user.username %>
+</p>
+
+<p>
+  <strong>Project Files:</strong>
+  <ul>
+
+
+</ul>
+<% @project.uploaded_files.each do |file| %>
+    <li>
+      <a href="<%= rails_blob_path(file, disposition: "attachment")%>"  download>Download Project File</a>
+    </li>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Projects Index', projects_path %> |
+<%= link_to 'My Projects', user_projects_path %>
