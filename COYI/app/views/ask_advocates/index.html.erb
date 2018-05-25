@@ -25,11 +25,11 @@
             <td><%= ask_advocate.email_to %></td>
             <td><%= link_to 'Show', ask_advocate %></td><br>
             <td><%= link_to 'Destroy', ask_advocate, method: :delete, data: { confirm: 'Are you sure?' } %></td><br>
-            <%= link_to 'New Ask An Expert', new_ask_advocate_path %>
           </tr>
         <% end %>
       </tbody>
     </table>
+    <%= link_to 'New Ask An Expert', new_ask_advocate_path %>
   </div>
   <div class="col-md-3">
 
