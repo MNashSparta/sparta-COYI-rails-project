@@ -122,7 +122,6 @@ body#landing_page {
 }
 
 .news-story {
-<<<<<<< HEAD
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -132,12 +131,6 @@ body#landing_page {
   -webkit-box-orient: vertical;
   text-align: left;
   margin-left: 0%;
-=======
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-height: 85px;
->>>>>>> def48ce2b4af151b7254f0180abd50ad67b2bec3
 }
 
 .news-body {
@@ -154,11 +147,7 @@ body#landing_page {
 }
 
 .news-author {
-<<<<<<< HEAD
   margin: 0% 0% 1% 0%;
-=======
-  margin: 0% 0% 0% 0%;
->>>>>>> def48ce2b4af151b7254f0180abd50ad67b2bec3
 }
 
 .admin-list > .edit-li {
