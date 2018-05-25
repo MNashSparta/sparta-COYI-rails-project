@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: 'users/registrations'}
 
 
-  resources :ask_advocates
+  get 'askanexpert', to: 'ask_advocates#index', as: 'ask_expert'
   get 'profile/projects/new', to: 'projects#new', as: 'new_project'
   get 'profile/projects/:id', to: 'projects#show_user_project', as: 'show_user_project'
 
