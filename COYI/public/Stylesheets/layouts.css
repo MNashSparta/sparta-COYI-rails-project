@@ -1,13 +1,11 @@
 /* FOOTER */
 
 .footer {
-  /* padding: 10px; */
   background-color: #F0564E;
   font-size: 12px;
   text-align: center;
   width: 100%;
   bottom: 0;
-  /* margin-top: 120px; */
 }
 
 .copy-text {
@@ -22,12 +20,6 @@
 .foot {
   list-style-type: none;
   display: inline-block;
-}
-
-#navdrop {
-  border: none;
-  border-radius: 10px;
-  background-color: #f0564e
 }
 
 /* NAVBAR */
@@ -51,4 +43,10 @@
 .nav-link:hover {
   color: white;
   text-shadow: 0px 0px 1px white;
+}
+
+#navdrop {
+  border: none;
+  border-radius: 10px;
+  background-color: #f0564e
 }

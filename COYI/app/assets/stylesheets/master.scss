@@ -1,3 +1,5 @@
+/* Applied on every page */
+
 @font-face {
     font-family: "Roboto";
     src: url('/roboto/Roboto-Regular.ttf');
@@ -16,6 +18,11 @@
   font-family: "Roboto";
 }
 
+#body-home {
+  font-family: inherit;
+  text-align: center;
+}
+
 body {
   background-image: url('/images/city_bg.jpeg');
   -webkit-background-size: cover;
@@ -25,19 +32,14 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  text-align: center;
 }
 
-h1 {
-  font-size: 65px;
-  color: white;
-  text-align: center;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.title {
-  font-family: 'Roboto';
+#user-profile {
+  background-image: url('/images/city_lights.jpeg');
+  background-size: 100%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .home-link {
@@ -66,7 +68,8 @@ h1 {
   background-image: none;
 }
 
-.carousel-control-next-icon:after {
+.carousel-control-next-icon:after
+{
   content: '>';
   font-size: 55px;
   color: #F0564E;
@@ -82,7 +85,14 @@ h1 {
   margin-top: 10%;
 }
 
-.brand-img {
+body#landing_page {
+  background-image: url('/images/landing_logo.gif');
+  background-size: 100%;
+  background-repeat: repeat;
+  background-color: black;
+}
+
+.brand-img{
   width: 50px;
 }
 
@@ -154,7 +164,7 @@ h1 {
   margin: 0;
 }
 
-.success {
+.success{
   background: white;
 }
 
@@ -180,22 +190,23 @@ h1 {
   border-radius: 50%;
   display: inline;
 }
-
 .user-profile-pic {
   width: 100px;
   height: 100px;
   border-radius: 100%;
   display: inline;
 }
-
 .profile-hr {
   border: 1px solid white;
 }
-
 .profile-background {
   background-color: black;
   opacity: 0.7;
   filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.descrip {
+  display: block;
 }
 
 .shadow-one {
@@ -210,7 +221,6 @@ h1 {
 .back-img {
   position: fixed;
 }
-
 .team {
   padding: 5%;
 }
@@ -228,8 +238,7 @@ h1 {
 .profile-info {
   margin-left: 50px;
 }
-
-.white-background {
+.white-background{
   background-color: white;
 }
 
@@ -261,9 +270,7 @@ h1 {
 }
 
 .text-on-bk {
-
   color: white;
-
 }
 
 .login-button {
@@ -277,35 +284,6 @@ h1 {
   color: white;
   background-color: #F0564E;
   border-radius: 0.25em;
-}
-
-.white-text {
-  color: white;
-  opacity: 0.9;
-}
-
-.form-width {
-  width: 400px;
-}
-
-body#landing_page {
-  background-image: url('/images/landing_logo.gif');
-  background-size: 100%;
-  background-repeat: repeat;
-  background-color: black;
-}
-
-#body-home {
-  font-family: inherit;
-  text-align: center;
-}
-
-#user-profile {
-  background-image: url('/images/city_lights.jpeg');
-  background-size: 100%;
-  background-repeat: repeat;
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 #title-on-img {
@@ -327,15 +305,6 @@ body#landing_page {
 }
 
 @media only screen and (max-width: 882px) {
-  .carousel-container{
-    display: none;
-  }
-
-  .nav-link {
-    font-size: 13px;
-  }
-
-@media only screen and (max-width: 882px) {
   #title-on-img {
     color: white;
     text-shadow: 0px 0px 1px black;
@@ -343,35 +312,217 @@ body#landing_page {
     margin-top: 15%;
     font-size: 35px;
   }
-}
 
-@media only screen and (max-width: 768px) {
-  .video-margin {
-    margin-top: 5%;
+  .carousel-container{
+    display: none;
   }
 
+  .nav-link {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 882px) {
   #title-on-img {
     display: none;
+  }
+
+  .video-margin {
+    margin-top: 2%;
   }
 
   #mission-state {
     font-size: 15px;
   }
 }
-.text-color{
-  color: white;
-}
-.contact-page-content{
-  padding: 10px;
-  margin-top: 50px;
-  border-radius: 10px;
-}
+
 @media all and (max-width: 1024px) and (min-height:  400px){
   .navbar-collapse .navbar-expand-md {
     display: flex !important;
     flex-basis: auto !important;
   }
 }
-.clear-background{
-  background-color: #FFFFFFed;
+
+/* CSS specifically for the NAVBAR and FOOTER */
+
+/* FOOTER */
+
+.footer {
+  /* padding: 10px; */
+  background-color: #F0564E;
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  /* margin-top: 120px; */
+}
+
+.copy-text {
+  font-size: 10px;
+}
+
+.container {
+  width: auto;
+  padding: 0 15px;
+}
+
+.foot {
+  list-style-type: none;
+  display: inline-block;
+}
+
+#navdrop {
+  border: none;
+  border-radius: 10px;
+  background-color: #f0564e
+}
+
+/* NAVBAR */
+.nav-bar-style {
+  background-color: #F0564E;
+  color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.nav-link {
+  color: rgba(255,255,255,1);
+}
+
+.nav-link:hover {
+  color: white;
+  text-shadow: 0px 0px 1px white;
+}
+
+
+/* CSS specifically for the homepage */
+
+#map {
+  padding-top: 500px;
+  height: 60%;
+  width: 100%;
+}
+.success{
+  font-size: 1.1em;
+  font-family: 'Roboto-Bold';
+  color: #F0564E;
+}
+.success:hover{
+  font-size: 1.1em;
+  font-family: 'Roboto-Bold';
+  color: #F0564E;
+}
+/* Map Modals */
+.map-social {
+  margin: auto;
+  display: flex;
+}
+.map-social a {
+  flex: 1;
+}
+#map-container {
+  /* height: 70vh; */
+}
+#map-twitter,
+#map-email,
+#map-facebook,
+#map-linkedin {
+  font-size:1.5em;
+  margin:0;
+}
+
+#map-twitter {
+  color:#0074b8;
+}
+
+#map-email {
+  color:#c72121;
+}
+
+#map-facebook {
+  color:#0074b8;
+}
+
+#map-linkedin {
+  color:#0074b8;
+}
+.card-title{
+  color: #F0564E;
+}
+.hr {
+    border-top: grey solid 1.5px;
+    width: 100%;
+    align: center;
+}
+/* Social Link */
+.fab {
+  /* padding: .5em; */
+  font-size: 1.7em;
+  line-height: 1.7em;
+  height: 1.7em;
+  width: 1.7em;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px .7em;
+  border-radius: 50%;
+  border: 1px solid white;
+  color:white;
+  transition: .2s;
+}
+
+/* FAQ Styling */
+.question {
+  list-style-type: none;
+  line-height: 1.7;
+}
+
+.FAQ {
+  text-decoration: underline;
+}
+
+#Q1A, #Q2A, #Q3A, #Q4A{
+  border: solid black 1px;
+  padding: 10px;
+  display: none;
+}
+
+/* CSS specifically for the NEWS page */
+
+body {
+  text-align: center;
+}
+
+.sub {
+  margin: 50px;
+}
+
+/* CSS specifically for the sucesses page */
+
+
+#widen-row {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-images {
+  display: block;
+}
+
+.col-margin {
+  margin-bottom: 70px;
+}
+.wrapper {
+  max-width:200px;
+  width:100%;
+}
+
+.stories {
+  border: 2px solid #F0564E;
 }
