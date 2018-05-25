@@ -14,6 +14,9 @@ class MyResourcesController < ApplicationController
 
   end
 
+  def user_my_resource
+  end
+
   # GET /my_resources/1
   # GET /my_resources/1.json
   def show
