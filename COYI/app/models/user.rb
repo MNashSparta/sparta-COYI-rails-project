@@ -2,7 +2,10 @@ class User < ApplicationRecord
   include ActiveModel::Validations
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-
+  before_save :default_access_level
+  def default_access_level
+     self.access_level ||= 1
+  end
   belongs_to :chapter
   has_many :projects
   has_many :challenges
@@ -32,7 +35,7 @@ class User < ApplicationRecord
   # validate :validate_username
   validates :email, :format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/ }
   validates :first_name, :second_name, :email, :location, :country, presence: true
-  validates :first_name, :second_name, :location, :country, format: { with: /\A[a-zA-Z]+\z/, message: "No special characters or numbers, only letters" }
+  validates :first_name, :second_name, :country, :location, format: { with: /\A[a-z A-Z]+\z/, message: "No special characters or numbers, only letters" }
 
   def validate_username
     if User.where(email: username).exists?
