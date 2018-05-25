@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.where(status: 0)
+    @projects = Project.where(status: 1)
   end
 
   # GET /projects/1
