@@ -2,7 +2,10 @@ class User < ApplicationRecord
   include ActiveModel::Validations
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-
+  before_save :default_access_level
+  def default_access_level
+     self.access_level ||= 1
+  end
   belongs_to :chapter
   has_many :projects
   has_many :challenges
