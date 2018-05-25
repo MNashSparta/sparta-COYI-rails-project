@@ -419,3 +419,11 @@ body#landing_page {
 .news-all {
   margin: 0 5%;
 }
+
+.background-text {
+  text-shadow: 0px 2px 0px black;
+}
+
+.big-font {
+  font-size: 25px;
+}
