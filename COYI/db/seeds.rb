@@ -46,6 +46,18 @@ News.create(title: 'Breaking Headline!',
   user_id: 1,
   chapter_id: 1
 )
+News.create(title: 'Great new website!',
+  story: "This site is literally the best!",
+  published: '2012-11-13T10:39:35Z',
+  user_id: 1,
+  chapter_id: 1
+)
+News.create(title: 'Cheese shortage!',
+  story: "You won't bree-lieve it!",
+  published: '2009-11-13T10:39:35Z',
+  user_id: 1,
+  chapter_id: 1
+)
 puts "News created: #{News.all.count}"
 
 puts "Chapters created: #{Chapter.all.count}"
