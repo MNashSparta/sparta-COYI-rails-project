@@ -11,26 +11,60 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <br>
-    <%= form.text_field :title %>
-  </div>
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="container">
+        <div class="form-div row">
+          <div class="col-md-12" id="smooth-edges">
+            <div class="advocate-div row">
+              <div class="col-md-10 offset-md-1">
 
-  <div class="field">
-    <%= form.label :story %>
-    <br>
-    <%= form.text_area :story, cols:"50", rows:"10" %>
-  </div>
+                <form class="" action="advocate.html.erb" method="post">
+                  <p class="center-text">Enter your news story below</p>
 
-  <div class="field">
-    <%= form.label :chapter %>
-    <br>
-    <%= form.text_field :chapter_id %>
-  </div>
+                  <div class="no-margin field row">
+                    <div class="col-md-12 center-text">
+                      <%= form.label :title %>
+                    </div>
+                    <div class="col-md-6 offset-md-3">
+                      <%= form.text_field :title, style: 'width:100%'%>
+                    </div>
+                  </div>
 
-  <div class="actions">
-    <br>
-    <%= form.submit %>
+                  <br>
+
+                  <div class="no-margin field row">
+                    <div class="col-md-12 center-text">
+                    <%= form.label :story %>
+                    </div>
+                    <div class="col-md-10 offset-md-1">
+                      <%= form.text_area :story, style: 'width:100%;' %>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="no-margin field row">
+                    <div class="col-md-12 center-text">
+                      <%= form.label :chapter_id %>
+                    </div>
+                    <div class="col-md-6 offset-md-3">
+                      <%= form.collection_select :chapter_id, Chapter.all, :id, :name, style: 'width:100%;' %>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="actions row">
+                    <div class="col-md-6 offset-md-3">
+                      <%= form.submit style: 'width:100%;'%>
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 <% end %>
+
+ 
