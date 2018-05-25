@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/Stylesheets/news.css">
+<p id="notice"><%= notice %></p>
+<h1>Chapter News</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Story</th>
+      <th>Published</th>
+      <th>User</th>
+      <th>Chapter</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @news.each do |news| %>
+      <tr>
+        <td><%= news.title %></td>
+        <td><%= news.story %></td>
+        <td><%= news.created_at %></td>
+        <td><%= User.find(news.user_id).first_name %></td>
+        <td><%= Chapter.find(news.chapter_id).name %></td>
+        <td><%= link_to 'Show', news %></td>
+        <td><%= link_to 'Edit', edit_news_path(news) %></td>
+        <td><%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New News', new_news_path %>

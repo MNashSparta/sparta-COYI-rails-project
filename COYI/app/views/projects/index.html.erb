@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+<h1>Projects</h1>
+<div style="margin:30px;" class="white-text text-on-bk-red pad">
+
+
+  <div class="news-all">
+      <% @projects.each do |project| %>
+      <div class="news-band-white">
+        <div class="no-margin row">
+
+          <div class="col-md-6 news-title"><%= project.title %></div>
+          <div class="col-md-6 news-title"><%= project.created_at %></div>
+        </div>
+        <div class="no-margin row news-body" style="color:black"  >
+          <div class="col-md-9 offset-md-1 news-story"><%= project.description %></div>
+          <div class="">
+            <%= link_to 'Read More', project %><br/>
+            <%= link_to 'Edit', edit_project_path(project) %><br/>
+            <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </div>
+        <div>
+          <ul class="admin-list">
+
+          </ul>
+        </div>
+        <div class="no-margin row"style="color:black">
+          <div class="col-md-4 offset-md-2 news-author">Published by: <%= project.user.first_name + " " + project.user.second_name %></div>
+        </div>
+      </div>
+      <% end %>
+
+  </div>
+
+</div>

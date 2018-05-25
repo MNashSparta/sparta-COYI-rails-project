@@ -1,0 +1,53 @@
+<h1> <%= current_user.first_name%>'s Resources</h1>
+
+<%= link_to 'New Resource', new_my_resource_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @my_resources.each do |my_resource| %>
+      <tr>
+        <td><%= link_to my_resource.title, my_resource %></td>
+        <td><%= link_to my_resource.description, my_resource %></td>
+        <td><%= my_resource.status %></td>
+        <td><%= link_to 'Edit', edit_my_resource_path(my_resource) %></td>
+        <td><%= link_to 'Destroy', my_resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h1> <%= current_user.first_name%>'s Questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Question</th>
+      <th>Email to</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+<% @ask_advocates.each do |ask_advocate| %>
+  <tr>
+    <td><%= ask_advocate.title %></td>
+    <td><%= ask_advocate.body %></td>
+    <td><%= ask_advocate.email_to %></td>
+    <td><%= link_to 'Show', ask_advocate %></td>
+    <td><%= link_to 'Destroy', ask_advocate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>

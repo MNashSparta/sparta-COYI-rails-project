@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ask An Expert</h1>
+<div style="margin:30px;" class="white-text text-on-bk-red pad">
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Body</th>
+        <th>To</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @ask_advocates.each do |ask_advocate| %>
+        <tr>
+          <td><%= ask_advocate.title %></td>
+          <td><%= ask_advocate.body %></td>
+          <td><%= ask_advocate.email_to %></td>
+          <td><%= ask_advocate.user_id %></td>
+          <td><%= link_to 'Show', ask_advocate %></td>
+          <td><%= link_to 'Destroy', ask_advocate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Ask Advocate', new_ask_advocate_path %>
+</div>
