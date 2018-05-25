@@ -20,15 +20,14 @@
 </p>
 
 <p>
-  <strong>Files:</strong>
+  <strong>Project Files:</strong>
   <ul>
-
 
 
 </ul>
 <% @project.uploaded_files.each do |file| %>
     <li>
-      <%= image_tag file %>
+      <a href="<%= rails_blob_path(file, disposition: "attachment")%>"  download>Download Project File</a>
     </li>
   <% end %>
 </p>
