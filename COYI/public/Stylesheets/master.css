@@ -12,10 +12,23 @@
   src: url('/roboto/Roboto-Bold.ttf')
 }
 
-* {
+*{
   font-family: "Roboto";
 }
 
+<<<<<<< HEAD
+/* .title {
+  font-family: 'Roboto';
+} */
+
+
+#body-home {
+  font-family: inherit;
+  text-align: center;
+}
+
+=======
+>>>>>>> a1751beb6ae84bbab7836428542e88b324553266
 body {
   background-image: url('/images/city_bg.jpeg');
   -webkit-background-size: cover;
@@ -100,6 +113,51 @@ h1 {
   width: 100%;
 }
 
+.news-band-white {
+  background-color: #FFFFFFed;
+  width: 100%;
+  margin: 2% 0;
+  border-radius: 0.25em;
+}
+
+.news-all {
+  margin: 0 5%;
+}
+
+.news-story {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 85px;
+}
+
+.news-body {
+  padding: 1% 10%;
+  margin: 0% 0% 0% 0%;
+}
+
+.news-title {
+  padding: 1% 10%;
+  text-align: left;
+  background-color: #f0564eed;
+  margin:0;
+  color: white;
+}
+
+.news-author {
+  margin: 0% 0% 0% 0%;
+}
+
+.admin-list > .edit-li {
+  list-style-type: none;
+  display: inline-block;
+  float: right;
+}
+
+.edit-li {
+  margin: 0% 2%;
+}
+
 .no-margin {
   margin: 0;
 }
@@ -147,6 +205,16 @@ h1 {
   opacity: 0.7;
   filter: alpha(opacity=50); /* For IE8 and earlier */
 }
+.padding-table {
+  padding: 20px;
+  background-color: #edd5d5ed;
+
+}
+.project-form {
+  background-color: #595353ed;
+  color: white;
+  border-radius: 0.25em;
+}
 
 .shadow-one {
   box-shadow: 0px 0px 20px 0px #be6f6f40;
@@ -169,6 +237,15 @@ h1 {
   background-color: #F0564E;
 }
 
+<<<<<<< HEAD
+/* to make input boxes etc more circular */
+#smooth-edges {
+  border-radius: 0.25em;
+  padding: 25px;
+}
+
+=======
+>>>>>>> a1751beb6ae84bbab7836428542e88b324553266
 .profile-info {
   margin-left: 50px;
 }
@@ -205,6 +282,9 @@ h1 {
 }
 
 .text-on-bk {
+<<<<<<< HEAD
+  color: white;
+=======
   background-color: rgba(255,250,250, 0.6);
 }
 
@@ -216,15 +296,22 @@ h1 {
   padding: 15px;
   margin: 10px;
   border-radius: 10px;
+>>>>>>> a1751beb6ae84bbab7836428542e88b324553266
 }
 
 .login-button {
   margin: 0 33% 0 33%;
   width: 33%;
   padding: 0 2% 0 2%;
-  border-radius: 0.25rem;
+  border-radius: 0.25em;
 }
 
+<<<<<<< HEAD
+.button-style {
+  color: white;
+  background-color: #F0564E;
+  border-radius: 0.25em;
+=======
 .white-text {
   color: white;
   opacity: 0.9;
@@ -258,6 +345,7 @@ body#landing_page {
 #smooth-edges {
   border-radius: 10%;
   padding: 25px;
+>>>>>>> a1751beb6ae84bbab7836428542e88b324553266
 }
 
 #title-on-img {
@@ -287,6 +375,10 @@ body#landing_page {
     font-size: 13px;
   }
 
+<<<<<<< HEAD
+@media only screen and (max-width: 882px) {
+=======
+>>>>>>> a1751beb6ae84bbab7836428542e88b324553266
   #title-on-img {
     color: white;
     text-shadow: 0px 0px 1px black;

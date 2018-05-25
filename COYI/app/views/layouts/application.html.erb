@@ -6,8 +6,13 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<<<<<<< HEAD
+  </head>
+  <body>
+=======
     <link rel="stylesheet" href="/Stylesheets/master.css">
   </head>
+>>>>>>> a1751beb6ae84bbab7836428542e88b324553266
   <body class="title">
     <% url = request.path_info%>
     <% if url == '/' %>
@@ -19,7 +24,6 @@
       <%= yield %>
       <!-- renders the footer on every page unless we say otherwise -->
       <%= render 'layouts/footer' %>
-      <link rel="stylesheet" href="/Stylesheets/layouts.css">
     <%end%>
   </body>
 </html>
