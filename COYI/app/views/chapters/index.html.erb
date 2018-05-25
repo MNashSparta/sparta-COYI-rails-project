@@ -2,6 +2,12 @@
 
 <h1>Chapters</h1>
 
+<div class="white-text">
+<div class="row">
+<div class="col-md-4">
+
+</div>
+<div class="col-md-4 text-on-bk-red pad">
 <table>
   <thead>
     <tr>
@@ -16,9 +22,11 @@
   <tbody>
     <% @chapters.each do |chapter| %>
       <tr>
-        <td><%= link_to "#{chapter.name}", chapter %></td>
-        <td><%= link_to "#{chapter.city}", chapter%></td>
-        <td><%= link_to "#{chapter.country}", chapter%></td>
+        <td ><%= chapter.name %></td>
+        <td><%= chapter.city %></td>
+        <td><%= chapter.country %></td>
+        <td></td><td></td><td></td><td></td>
+        <td><%= link_to 'Show', chapter %></td>
       </tr>
     <% end %>
   </tbody>
@@ -27,3 +35,9 @@
 <br>
 
 <%= link_to 'New Chapter', new_chapter_path %>
+</div>
+<div class="col-md-4">
+
+</div>
+</div>
+</div>

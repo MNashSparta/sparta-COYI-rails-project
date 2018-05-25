@@ -131,6 +131,7 @@ ActiveRecord::Schema.define(version: 2018_05_24_132329) do
     t.string "confirm_token"
     t.integer "access_level"
     t.bigint "chapter_id"
+    t.string "bio"
     t.index ["chapter_id"], name: "index_users_on_chapter_id"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true

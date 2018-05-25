@@ -1,6 +1,9 @@
 <link rel="stylesheet" href="/Stylesheets/news.css">
+
 <p id="notice"><%= notice %></p>
+
 <h1>News</h1>
+<div style="margin:30px;" class="white-text text-on-bk-red pad">
 <table>
   <thead>
     <tr>
@@ -13,7 +16,7 @@
     </tr>
   </thead>
 
-  <tbody>
+  <!-- <tbody> -->
     <% @news.each do |news| %>
       <tr>
         <td><%= news.title %></td>
@@ -26,9 +29,10 @@
         <td><%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-  </tbody>
+    <%= render 'news/news_list' %>
+  <!-- </tbody> -->
 </table>
 
-<br>
-
 <%= link_to 'New News', new_news_path %>
+</div>
+
