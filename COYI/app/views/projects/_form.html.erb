@@ -10,21 +10,35 @@
       </ul>
     </div>
   <% end %>
+  <div class="row">
+    <div class="col-md-4 offset-4 text-on-bk-red white-text" style="border-radius:10px; ">
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+      <br>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-  </div>
+      <div class="col-md-3 offset-3 field">
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+      </div>
+      <br>
+      <div class="col-md-3 offset-3 field">
+        <%= form.label :description %>
+        <%= form.text_field :description %>
+      </div>
+      <br>
+      <div class="col-md-3 offset-3">
+        <%= form.file_field :uploaded_files, multiple: true%>
+      </div>
+      <br>
+      <div class="col-md-3 offset-3 actions">
+        <%= form.submit %>
+      </div>
+      <br>
+      <div class="top-of-page">
 
-  <%= form.file_field :uploaded_files, multiple: true%>
+      </div>
 
-  <div class="actions">
-    <%= form.submit %>
+    </div>
+
   </div>
 
 <% end %>
