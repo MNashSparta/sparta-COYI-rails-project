@@ -426,3 +426,7 @@ body#landing_page {
 .big-font {
   font-size: 25px;
 }
+
+.width-100 {
+  width: 100%;
+}
