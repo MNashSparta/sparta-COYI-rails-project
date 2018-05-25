@@ -7,6 +7,7 @@
 
   </div>
   <div class="col-md-6 white-text text-on-bk-red pad">
+    <%= link_to 'New Ask An Expert', new_ask_advocate_path %>
     <table>
       <thead>
         <tr>
@@ -22,10 +23,10 @@
           <tr>
             <td><%= ask_advocate.title %></td>
             <td><%= ask_advocate.body %></td>
-            <td><%= ask_advocate.email_to %></td>
-            <td><%= link_to 'Show', ask_advocate %></td><br>
-            <td><%= link_to 'Destroy', ask_advocate, method: :delete, data: { confirm: 'Are you sure?' } %></td><br>
-            <%= link_to 'New Ask An Expert', new_ask_advocate_path %>
+            <td><%= User.find(ask_advocate.email_to).first_name%> <%= User.find(ask_advocate.email_to).second_name %></td>
+            <td><%= link_to 'Show', ask_advocate %></td>
+            <td><%= link_to 'Destroy', ask_advocate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
           </tr>
         <% end %>
       </tbody>
