@@ -38,4 +38,13 @@ Chapter.create(name: "New Delhi", city: "New Delhi", country: "India")
 Chapter.create(name: "Singapore", city: "Singapore", country: "Singapore")
 Chapter.create(name: "Sydney", city: "Sydney", country: "Australia")
 
+# NEWS SEEDS
+News.create(title: 'Breaking Headline!',
+  story: "You won't believe this story!",
+  published: '2009-11-13T10:39:35Z',
+  user_id: 1,
+  chapter_id: 1
+)
+puts "News created: #{News.all.count}"
+
 puts "Chapters created: #{Chapter.all.count}"
