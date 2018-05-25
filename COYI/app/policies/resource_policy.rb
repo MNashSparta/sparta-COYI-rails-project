@@ -6,7 +6,7 @@ def user_present?
 end
 
 def level_1?
-  user.present? ||
+  user.present? &&
   user.access_level == 1
 end
 def level_2?
