@@ -16,16 +16,6 @@
   font-family: "Roboto";
 }
 
-/* .title {
-  font-family: 'Roboto';
-} */
-
-
-#body-home {
-  font-family: inherit;
-  text-align: center;
-}
-
 body {
   background-image: url('/images/city_bg.jpeg');
   -webkit-background-size: cover;
@@ -35,14 +25,19 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  text-align: center;
 }
 
-#user-profile {
-  background-image: url('/images/city_lights.jpeg');
-  background-size: 100%;
-  background-repeat: repeat;
-  background-attachment: fixed;
-  background-size: cover;
+h1 {
+  font-size: 65px;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: 'Roboto';
 }
 
 .home-link {
@@ -71,8 +66,7 @@ body {
   background-image: none;
 }
 
-.carousel-control-next-icon:after
-{
+.carousel-control-next-icon:after {
   content: '>';
   font-size: 55px;
   color: #F0564E;
@@ -88,14 +82,7 @@ body {
   margin-top: 10%;
 }
 
-body#landing_page {
-  background-image: url('/images/landing_logo.gif');
-  background-size: 100%;
-  background-repeat: repeat;
-  background-color: black;
-}
-
-.brand-img{
+.brand-img {
   width: 50px;
 }
 
@@ -167,7 +154,7 @@ body#landing_page {
   margin: 0;
 }
 
-.success{
+.success {
   background: white;
 }
 
@@ -211,10 +198,6 @@ body#landing_page {
   filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
-.descrip {
-  display: block;
-}
-
 .shadow-one {
   box-shadow: 0px 0px 20px 0px #be6f6f40;
 }
@@ -227,6 +210,7 @@ body#landing_page {
 .back-img {
   position: fixed;
 }
+
 .team {
   padding: 5%;
 }
@@ -244,7 +228,8 @@ body#landing_page {
 .profile-info {
   margin-left: 50px;
 }
-.white-background{
+
+.white-background {
   background-color: white;
 }
 
@@ -276,7 +261,9 @@ body#landing_page {
 }
 
 .text-on-bk {
+
   color: white;
+
 }
 
 .login-button {
@@ -290,6 +277,35 @@ body#landing_page {
   color: white;
   background-color: #F0564E;
   border-radius: 0.25em;
+}
+
+.white-text {
+  color: white;
+  opacity: 0.9;
+}
+
+.form-width {
+  width: 400px;
+}
+
+body#landing_page {
+  background-image: url('/images/landing_logo.gif');
+  background-size: 100%;
+  background-repeat: repeat;
+  background-color: black;
+}
+
+#body-home {
+  font-family: inherit;
+  text-align: center;
+}
+
+#user-profile {
+  background-image: url('/images/city_lights.jpeg');
+  background-size: 100%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 #title-on-img {
@@ -311,14 +327,6 @@ body#landing_page {
 }
 
 @media only screen and (max-width: 882px) {
-  #title-on-img {
-    color: white;
-    text-shadow: 0px 0px 1px black;
-    z-index: 1;
-    margin-top: 15%;
-    font-size: 35px;
-  }
-
   .carousel-container{
     display: none;
   }
@@ -326,25 +334,44 @@ body#landing_page {
   .nav-link {
     font-size: 13px;
   }
-}
 
 @media only screen and (max-width: 882px) {
   #title-on-img {
-    display: none;
+    color: white;
+    text-shadow: 0px 0px 1px black;
+    z-index: 1;
+    margin-top: 15%;
+    font-size: 35px;
   }
+}
 
+@media only screen and (max-width: 768px) {
   .video-margin {
     margin-top: 5%;
+  }
+
+  #title-on-img {
+    display: none;
   }
 
   #mission-state {
     font-size: 15px;
   }
 }
-
+.text-color{
+  color: white;
+}
+.contact-page-content{
+  padding: 10px;
+  margin-top: 50px;
+  border-radius: 10px;
+}
 @media all and (max-width: 1024px) and (min-height:  400px){
   .navbar-collapse .navbar-expand-md {
     display: flex !important;
     flex-basis: auto !important;
   }
+}
+.clear-background{
+  background-color: #FFFFFFed;
 }

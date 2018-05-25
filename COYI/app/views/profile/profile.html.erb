@@ -11,25 +11,27 @@
           Current role: <%= current_user.role %>
         </span>
         <span class="profile-info">
-
           <i class="fab fa-linkedin"></i>
           <i class="fab fa-facebook-square"></i>
           <i class="fab fa-twitter-square"></i>
-      </span>
+        </span>
       </h4>
-
     </div> <!--end of container-->
-
   </div> <!--end of jtron-->
 
   <!-- BOOTSTRAP CONTAINER give everything pleasant margins -->
   <div class="container">
 <!-- BUTTON"#{current_user.first_name}'s Projects" %> -->
     <div class="row">
+<<<<<<< HEAD
       <div class="col-md-3 form-div" id="smooth-edges">
         <a href="users/edit" class="btn btn-outline-light btn-lg btn-block">Edit Profile</a>
+=======
+      <div class="col-md-3 profile-background" id="smooth-edges">
+        <a href="/users/edit" class="btn btn-outline-light btn-lg btn-block">Edit Profile</a>
+>>>>>>> def48ce2b4af151b7254f0180abd50ad67b2bec3
         <a href="/profile/projects" class="btn btn-outline-light btn-lg btn-block"> My Projects</a>
-        <a href="/circle/chapter"class="btn btn-outline-light btn-lg btn-block">My Chapter Hub</a>
+        <a href="/chapters/<%=current_user.chapter_id%>" class="btn btn-outline-light btn-lg btn-block">My Chapter Hub</a>
       </div>
       <div class="col-md-8 offset-1 page-band-red text-on-bk" id="smooth-edges">
         <h3>Bio</h3>
@@ -47,13 +49,10 @@
           landjaeger beef ribs jerky chuck. Meatloaf porchetta picanha meatball ham hock. Spare ribs turkey
           pork short loin sausage prosciutto. Tenderloin short loin tri-tip meatball cow. -->
         </p>
-
       </div> <!--end of col-->
     </div> <!--end of row-->
   </div> <!--end of container-->
-
   </div> <!--end of massive container-->
-
   <div class="top-of-page">
   </div>
   </body>

@@ -11,6 +11,7 @@ class MyResourcesController < ApplicationController
   # GET /my_resources.json
   def index
     @my_resources = MyResource.where(status: 0)
+
   end
 
   # GET /my_resources/1
@@ -29,6 +30,8 @@ class MyResourcesController < ApplicationController
 
   def user_my_resource
     @my_resources = MyResource.where(user_id: current_user.id)
+    @ask_advocates = AskAdvocate.where(user_id: current_user.id)
+
   end
 
   # POST /my_resources
@@ -79,6 +82,6 @@ class MyResourcesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def my_resource_params
-      params.require(:my_resource).permit(:title, :description, :status).merge(user_id: current_user.id)
+      params.require(:my_resource).permit(:title, :description, :status, :uploaded_file).merge(user_id: current_user.id)
     end
 end

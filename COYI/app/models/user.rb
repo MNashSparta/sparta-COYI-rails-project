@@ -6,7 +6,9 @@ class User < ApplicationRecord
   belongs_to :chapter
   has_many :projects
   has_many :challenges
+  has_many :email_to, :class_name => 'AskAdvocate', :foreign_key => 'email_to_id'
   has_many :news
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable,
          :validatable, :confirmable, authentication_keys: [:login]
