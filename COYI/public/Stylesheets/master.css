@@ -124,6 +124,14 @@ body#landing_page {
   margin: 0 5%;
 }
 
+.input-width {
+  width: 100%;
+}
+
+.white-text:link {
+  color: white;
+}
+
 .news-story {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -136,6 +144,10 @@ body#landing_page {
   margin-left: 0%;
 }
 
+.news-new-body {
+  width: 100%;
+}
+
 .news-body {
   padding: 1% 10%;
   margin: 0% 0% 0% 0%;
@@ -145,7 +157,7 @@ body#landing_page {
   padding: 1% 10%;
   text-align: left;
   background-color: #f0564eed;
-  margin:0;
+  margin: 0;
   color: white;
 }
 

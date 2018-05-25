@@ -1,0 +1,19 @@
+<div class="news-all">
+    <div class="news-band-white">
+      <div class="no-margin row" style="margin: 0;">
+        <div class="col-md-6 news-title"><%= @news.title %></div>
+        <div class="col-md-6 news-title"><%= @news.created_at %></div>
+      </div>
+      <div class="no-margin row news-body">
+        <div class="col-md-9 offset-md-1 news-story"><%= @news.story %></div>
+      </div>
+      <div>
+        <ul class="admin-list">
+        </ul>
+      </div>
+      <div class="no-margin row">
+        <div class="col-md-4 offset-md-2 news-author">Published by: <%= @news.user.first_name + " " + @news.user.second_name %></div>
+        <div class="col-md-4 news-author"><%= Chapter.find(@news.chapter_id).name %></div>
+      </div>
+    </div>
+</div>

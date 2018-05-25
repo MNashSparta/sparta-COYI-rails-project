@@ -1,23 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @news.title %>
-</p>
+<%= render 'news/show_news' %>
 
-<p>
-  <strong>Story:</strong>
-  <%= @news.story %>
-</p>
-
-<p>
-  <strong>Published:</strong>
-  <%= @news.published %>
-</p>
-<p>
-  <strong>User:</strong>
-  <%= @news.user %>
-</p>
-
-<!-- <%= link_to 'Edit', edit_news_path(@news) %> | -->
-<%= link_to 'Back', news_index_path %>
+<div class="row">
+  <div class="col-md-12 center-text title-style white-text">
+    <%= link_to 'Back', news_index_path %>
+  </div>
+</div>
