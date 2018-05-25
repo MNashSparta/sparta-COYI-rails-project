@@ -2,8 +2,13 @@ Rails.application.routes.draw do
   root to: 'home#landing'
   devise_for :users, controllers: {registrations: 'users/registrations'}
 
+
+
+  resources :ask_advocates
   get 'profile/projects/new', to: 'projects#new', as: 'new_project'
   get 'profile/projects/:id', to: 'projects#show_user_project', as: 'show_user_project'
+
+
   get 'profile/my_resources/new', to: 'my_resources#new', as: 'new_my_resource'
   get 'profile/my_resources/:id', to: 'my_resources#show', as: 'show_user_my_resource'
 
@@ -43,8 +48,6 @@ Rails.application.routes.draw do
 
 
   resources :my_resources, only: [:create, :new]
-
-  get 'about', to: 'about#about'
 
   post 'contact', to: 'about#create'
 

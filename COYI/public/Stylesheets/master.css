@@ -16,6 +16,7 @@
   font-family: "Roboto";
 }
 
+<<<<<<< HEAD
 /* .title {
   font-family: 'Roboto';
 } */
@@ -26,6 +27,8 @@
   text-align: center;
 }
 
+=======
+>>>>>>> a1751beb6ae84bbab7836428542e88b324553266
 body {
   background-image: url('/images/city_bg.jpeg');
   -webkit-background-size: cover;
@@ -35,14 +38,19 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  text-align: center;
 }
 
-#user-profile {
-  background-image: url('/images/city_lights.jpeg');
-  background-size: 100%;
-  background-repeat: repeat;
-  background-attachment: fixed;
-  background-size: cover;
+h1 {
+  font-size: 65px;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: 'Roboto';
 }
 
 .home-link {
@@ -71,8 +79,7 @@ body {
   background-image: none;
 }
 
-.carousel-control-next-icon:after
-{
+.carousel-control-next-icon:after {
   content: '>';
   font-size: 55px;
   color: #F0564E;
@@ -88,14 +95,7 @@ body {
   margin-top: 10%;
 }
 
-body#landing_page {
-  background-image: url('/images/landing_logo.gif');
-  background-size: 100%;
-  background-repeat: repeat;
-  background-color: black;
-}
-
-.brand-img{
+.brand-img {
   width: 50px;
 }
 
@@ -162,7 +162,7 @@ body#landing_page {
   margin: 0;
 }
 
-.success{
+.success {
   background: white;
 }
 
@@ -188,15 +188,18 @@ body#landing_page {
   border-radius: 50%;
   display: inline;
 }
+
 .user-profile-pic {
   width: 100px;
   height: 100px;
   border-radius: 100%;
   display: inline;
 }
+
 .profile-hr {
   border: 1px solid white;
 }
+
 .profile-background {
   background-color: black;
   opacity: 0.7;
@@ -213,10 +216,6 @@ body#landing_page {
   border-radius: 0.25em;
 }
 
-.descrip {
-  display: block;
-}
-
 .shadow-one {
   box-shadow: 0px 0px 20px 0px #be6f6f40;
 }
@@ -229,6 +228,7 @@ body#landing_page {
 .back-img {
   position: fixed;
 }
+
 .team {
   padding: 5%;
 }
@@ -237,16 +237,20 @@ body#landing_page {
   background-color: #F0564E;
 }
 
+<<<<<<< HEAD
 /* to make input boxes etc more circular */
 #smooth-edges {
   border-radius: 0.25em;
   padding: 25px;
 }
 
+=======
+>>>>>>> a1751beb6ae84bbab7836428542e88b324553266
 .profile-info {
   margin-left: 50px;
 }
-.white-background{
+
+.white-background {
   background-color: white;
 }
 
@@ -278,7 +282,21 @@ body#landing_page {
 }
 
 .text-on-bk {
+<<<<<<< HEAD
   color: white;
+=======
+  background-color: rgba(255,250,250, 0.6);
+}
+
+.text-on-bk-red {
+  background-color: rgba(239, 80, 77, 0.8);
+}
+
+.pad {
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+>>>>>>> a1751beb6ae84bbab7836428542e88b324553266
 }
 
 .login-button {
@@ -288,10 +306,46 @@ body#landing_page {
   border-radius: 0.25em;
 }
 
+<<<<<<< HEAD
 .button-style {
   color: white;
   background-color: #F0564E;
   border-radius: 0.25em;
+=======
+.white-text {
+  color: white;
+  opacity: 0.9;
+}
+
+.form-width {
+  width: 400px;
+}
+
+body#landing_page {
+  background-image: url('/images/landing_logo.gif');
+  background-size: 100%;
+  background-repeat: repeat;
+  background-color: black;
+}
+
+#body-home {
+  font-family: inherit;
+  text-align: center;
+}
+
+#user-profile {
+  background-image: url('/images/city_lights.jpeg');
+  background-size: 100%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* to make input boxes etc more circular */
+#smooth-edges {
+  border-radius: 10%;
+  padding: 25px;
+>>>>>>> a1751beb6ae84bbab7836428542e88b324553266
 }
 
 #title-on-img {
@@ -313,14 +367,6 @@ body#landing_page {
 }
 
 @media only screen and (max-width: 882px) {
-  #title-on-img {
-    color: white;
-    text-shadow: 0px 0px 1px black;
-    z-index: 1;
-    margin-top: 15%;
-    font-size: 35px;
-  }
-
   .carousel-container{
     display: none;
   }
@@ -328,15 +374,27 @@ body#landing_page {
   .nav-link {
     font-size: 13px;
   }
+
+<<<<<<< HEAD
+@media only screen and (max-width: 882px) {
+=======
+>>>>>>> a1751beb6ae84bbab7836428542e88b324553266
+  #title-on-img {
+    color: white;
+    text-shadow: 0px 0px 1px black;
+    z-index: 1;
+    margin-top: 15%;
+    font-size: 35px;
+  }
 }
 
-@media only screen and (max-width: 882px) {
-  #title-on-img {
-    display: none;
-  }
-
+@media only screen and (max-width: 768px) {
   .video-margin {
     margin-top: 2:q0%;
+  }
+
+  #title-on-img {
+    display: none;
   }
 
   #mission-state {
