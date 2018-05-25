@@ -84,51 +84,39 @@
   <div class="row">
     <!-- We need a line or some small indication of which resources come from which level for higher levels -->
     <!-- Level 1 indication -->
-  <% if policy(:resource).level_1? || policy(:resource).level_2? || policy(:resource).level_5? %>
-  <div class="col-md-4 first-column page-band-red">
-    <ul class="docs">
-    <%= render "resources/resourceslevel1" %>
-      </ul>
-    </div>
-  <%end%>
-    <!-- Level 2 indication -->
-  <%if policy(:resource).level_2? || policy(:resource).level_5?%>
-    <!-- level 3 and up -->
-    <div class="col-md-4 second-column page-band-red">
-      <ul class="docs">
-    <%= render "resources/resourceslevel2-4"%>
-      </ul>
-    </div>
-  <%end%>
-
-    <!-- Level 5 indication -->
-  <% if policy(:resource).level_5? %>
-      <div class="col-md-4 third-column page-band-red">
+    <% if policy(:resource).level_1? || policy(:resource).level_2? || policy(:resource).level_5? %>
+      <div class="col-md-4 first-column page-band-red">
         <ul class="docs">
-    <%= render "resources/resourceslevel5" %>
+          <%= render "resources/resourceslevel1" %>
         </ul>
       </div>
-  <%end%>
-  </ul>
-</div>
+    <%end%>
+      <!-- Level 2 indication -->
+    <%if policy(:resource).level_2? || policy(:resource).level_5?%>
+      <!-- level 3 and up -->
+      <div class="col-md-4 second-column page-band-red">
+        <ul class="docs">
+          <%= render "resources/resourceslevel2-4"%>
+        </ul>
+      </div>
+    <%end%>
+
+      <!-- Level 5 indication -->
+    <% if policy(:resource).level_5? %>
+        <div class="col-md-4 third-column page-band-red">
+          <ul class="docs">
+            <%= render "resources/resourceslevel5" %>
+          </ul>
+        </div>
+    <%end%>
+  </div>
 </div>
 
 <h1>My Resources</h1>
 <p id="notice"><%= notice %></p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>User</th>
-      <th>Chapter</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @my_resources.each do |my_resource| %>
+<div class="white-text text-on-bk-red pad">
+  <table>
+    <thead>
       <tr>
         <th>Title</th>
         <th>Description</th>
@@ -136,15 +124,28 @@
         <th>Chapter</th>
         <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @my_resources.each do |my_resource| %>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>User</th>
+          <th>Chapter</th>
+          <th colspan="3"></th>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%- if user_signed_in? %>
-  <%= link_to "Add Resource's", new_my_resource_path %> |
-  <%= link_to 'My Resources', user_my_resources_path %>
-<% else %>
-<% end %>
+  <br>
+
+  <%- if user_signed_in? %>
+    <%= link_to "Add Resource's", new_my_resource_path %> |
+    <%= link_to 'My Resources', user_my_resources_path %>
+  <% else %>
+  <% end %>
+  </div>
 </div>
+<br><br>
