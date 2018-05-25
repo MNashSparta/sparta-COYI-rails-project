@@ -26,12 +26,6 @@
         <div class="field">
           <%= f.label :email %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
-
-        <p>
-          <%= f.label :username %><br/>
-          <%= f.text_field :username, class: 'form-control' %>
-        </p>
-
         </div>
 
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
