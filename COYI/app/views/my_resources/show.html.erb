@@ -20,19 +20,7 @@
 </p>
 
 <p>
-<<<<<<< HEAD
-  <strong>Files:</strong>
-  <ul>
-
-  </ul>
-  <% @my_resource.uploaded_files.each do |file| %>
-    <li>
-      <%= image_tag file.preview(resize: "100x100>") %>
-    </li>
-  <% end %>
-=======
   <a href="<%= rails_blob_path(@my_resource.uploaded_file, disposition: "attachment", only_path: true)%>"  download>Download Resource</a>
->>>>>>> 8a17c349634e26ffecb598dfcb1f098188aa97b3
 </p>
 
 
