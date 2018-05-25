@@ -3,27 +3,34 @@
 <p>
   <h1>  <%= @project.title %></h1>
 </p>
+<div class="container-fluid page-band-red">
 
-<p>
-  <strong>Current Status:</strong>
-  <%= @project.status %>
-</p>
+  <div class="row">
+    <div class="col-md-6 offset-3">
 
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
+      <p>
+        <strong>Current Status:</strong>
+        <%= @project.status %>
+      </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @project.user.username %>
-</p>
+      <p>
+        <strong>Description:</strong>
+        <%= @project.description %>
+      </p>
 
-<p>
-  <strong>Project Files:</strong>
-  <ul>
+      <p>
+        <strong>User:</strong>
+        <%= @project.user.username %>
+      </p>
 
+      <p>
+        <strong>Project Files:</strong>
+        <ul>
 
+    </div>
+  </div>
+
+</div>
 </ul>
 <% @project.uploaded_files.each do |file| %>
     <li>
