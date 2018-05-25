@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
-
+<div style="margin:30px;" class="white-text text-on-bk-red pad">
 <p>
   <strong>Question:</strong>
   <%= @ask_advocate.title %>
   <%= @ask_advocate.body %>
   <%= @ask_advocate.email_to %>
-  <%= @ask_advocate.user_id  %>
 </p>
 
 <%= link_to 'Back', ask_advocates_path %>
+</div>
