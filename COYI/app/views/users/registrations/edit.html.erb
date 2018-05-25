@@ -1,11 +1,21 @@
 <div class="top-of-page">
 </div>
+<div class="jumbotron jumbotron-fluid page-band-red">
+  <div class="container">
+    <img src="/images/user_placeholder_img.jpeg" class="user-profile-pic rounded-circle image-responsive" alt="Image of current user">
+    <h2 class="text-on-bk">Edit your Profile </h2>
+    <hr class="profile-hr">
 <div class="container">
   <div class="row">
+
+    <!-- <div class="col-md-4">
+    </div> -->
+    <div class="col-md-8 red-background text-on-bk form-div" id="smooth-edges">
+
     <div class="col-md-4">
     </div>
-    <div class="col-md-4 red-background text-on-bk" id="smooth-edges">
       <h2>Edit your profile</h2>
+
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= devise_error_messages! %>
@@ -18,6 +28,11 @@
           <%= f.label :username %><br/>
           <%= f.text_field :username, class: 'form-control' %>
         </p>
+        <p>
+          <%= f.label :bio %><br/>
+          <%= f.text_area :bio, class: 'form-control' %>
+        </p>
+
         </div>
 
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
