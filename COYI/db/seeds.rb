@@ -5,10 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Project.create(title: "First Project", status: "Approved")
-Project.create(title: "Second Project", status: "Rejected")
-Project.create(title: "Third Project", status: "Rework")
-Project.create(title: "Fourth Project", status: "Approved")
+Project.create(title: "Cheesey bakesale", description: "This is a demo", status: 1, user_id: 1)
+Project.create(title: "Fundraiser", description: "This is a demo", status: 1, user_id: 1)
+Project.create(title: "Food drive", description: "This is a demo", status: 1, user_id: 1)
+Project.create(title: "Musical", description: "This is a demo", status: 1, user_id: 1)
+Project.create(title: "Gala", description: "This is a demo", status: 1, user_id: 1)
 puts "Projects created: #{Project.all.count}"
 
 #US Chapters
