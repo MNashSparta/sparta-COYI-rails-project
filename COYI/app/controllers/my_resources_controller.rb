@@ -82,6 +82,6 @@ class MyResourcesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def my_resource_params
-      params.require(:my_resource).permit(:title, :description, :status).merge(user_id: current_user.id)
+      params.require(:my_resource).permit(:title, :description, :status, :uploaded_file).merge(user_id: current_user.id)
     end
 end
