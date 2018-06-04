@@ -8,7 +8,7 @@ If you are in sparta-COYI-rails-project change directory into COYI.
 If this is the first time using the project run
 
 ```
-rails db:drop db:create db:migrate
+rails db:schema:load
 ```
 
 Otherwise run
